@@ -41,8 +41,9 @@ ul.nav li.ultimo {
     position:fixed;
     width: 100%;
     margin-top: 2%;
-    height: 90px;
+    height: 105px;
     z-index: 10;
+    background-color: rgba(225, 225, 225, 0.10);
 }
 .banner{
     justify-content: center;
@@ -114,7 +115,6 @@ p.top{
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-	
 .flexsearch--submit {
   position: absolute;
 	right: 0;
@@ -153,6 +153,15 @@ input:-moz-placeholder {
     text-decoration: none;
 }
 .uk-grid-match>*>:not([class*=uk-width]) {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+h2.titulo-topcinc{
+  color:  #480082;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+
 }
