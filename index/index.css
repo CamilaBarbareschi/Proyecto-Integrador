@@ -1,3 +1,4 @@
+/*desktop*/
 html, body {
     margin: 0;
 }
@@ -19,6 +20,7 @@ ul.nav{
     font-size: 20px;
     margin-right: 0%;
     width: 50%;
+    padding-left: 30px;
 }
 ul.nav li {
     list-style-type: none;
@@ -91,7 +93,7 @@ p.top{
 }
 	
 .flexsearch--input-wrapper {
-	padding: 0 66px 0 0; /* Right padding for submit button width */
+	padding: 0 66px 0 0; 
 	overflow: hidden;
 }
 
@@ -124,8 +126,8 @@ p.top{
 	height: 60px;
   padding: 0;
   border: none;
-	margin-top: 20px; /* margin-top + border-width */
-  margin-right: 5px; /* border-width */
+	margin-top: 20px; 
+  margin-right: 5px; 
 	background: transparent;
   color: #888;
   font-family: "Raleway", sans-serif;
@@ -172,8 +174,28 @@ footer ul  {
   grid-template-columns: auto auto auto;
   color: white;
   height: 50px;
-  margin: 6px auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  justify-content: center;
+  gap: 100px;
 }
 a.principales  {
   text-decoration: none;
+}
+li.footer a {
+  text-decoration: none;
+
+}
+li.footer{
+  list-style-type: none; 
+   color: black;
+   padding-top: 10px;
+  font-size: 18px;
+}
+ol, ul {
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  
 }
