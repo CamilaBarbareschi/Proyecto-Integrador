@@ -214,6 +214,14 @@ ol, ul {
   padding-left: 0;
 }
 
+/*display none*/
+.buscador{
+  display: none;
+}
+.nav{
+  display: none;
+}
+
 /*tablet*/
 @media screen and (max-width: 768px){
 h1 {
@@ -260,10 +268,32 @@ li.footer {
 .logofooter {
   width: 25px;
 }
+
+/*display none*/
+.buscador{
+  display: none;
+}
+.nav{
+display: none;
+}
 }
 
 /*mobile*/
 @media screen and (max-width: 420px){
-  
+  .buscador{
+    display: block;
+  }
+  .nav{
+  display: block;
+  }
+  .primero{
+    display: none;
+  }
+  .ultimo{
+    display: none;
+  }
+  .fav{
+    display: none;
+  }
 }
 
