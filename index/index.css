@@ -195,7 +195,8 @@ footer {
 footer ul  {
   display: grid;
   grid-template-columns: auto auto auto;
-  height: 50px;
+  margin: 0;
+  padding: 10px;
 }
 li.footer a {
   text-decoration: none;
@@ -221,6 +222,12 @@ ol, ul {
 .nav{
   display: none;
 }
+.publi{
+  display: none;
+}
+div.iframe{
+  display: none;
+}
 
 /*tablet*/
 @media screen and (max-width: 768px){
@@ -233,7 +240,7 @@ h1 {
 }
 p.slogan {
   font-size: 41px;
-  width: 40%;
+  width: 50%;
 }
 ul.nav {
   width: 70%;
@@ -276,6 +283,12 @@ li.footer {
 .nav{
 display: none;
 }
+.publi{
+  display: none;
+}
+div.iframe{
+  display: none;
+}
 }
 
 /*mobile*/
@@ -286,6 +299,9 @@ display: none;
   .nav{
   display: block;
   }
+  .publi{
+    display: block;
+  }
   .primero{
     display: none;
   }
@@ -295,5 +311,50 @@ display: none;
   .fav{
     display: none;
   }
+  ul.nav {
+    gap: 300px;
+  }
+  ul.nav li {
+    font-size: 25px;
+    color: white;
+  }
+  div.banner {
+  height: 56px;
+  width: 100%;
+  }
+  .container {
+    height: 56px;
+  }
+  .logo {
+    display: none;
+  }
+  h1 {
+    font-size: 31px;
+    position: absolute;
+    left: 37%;
+    top: -5%
+  }
+  .slogan{
+    display: none;
+  }
+  li.footer {
+    font-size: 10px;
+  }
+  footer ul {
+  padding: 0px;
+  }
+  #topfive {
+    text-align: unset;
+    padding-left: 34px;
+  }
+  div.iframe{
+    display: block;
+    width: 100%;
+  }
+  .header {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
 }
 
