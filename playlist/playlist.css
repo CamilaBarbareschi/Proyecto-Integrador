@@ -1,0 +1,70 @@
+body {
+    background-color: #D1BAE3;
+    }
+
+header{
+    background: url("../img/latin.jpg");
+    margin: 0 auto;
+    height: 550px;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 8%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.playlist{
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 10%;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.musica{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 5% 30% 30% 20%;
+    padding-top: 15px;
+    border-top: 1px solid black;
+    font-size: 16px;
+    
+}
+.inicio{
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: 33% 34% 20%;
+    margin-left: 5%;
+    font-size: 18px;
+}
+
+
+/*footer*/
+footer {
+    background-color: rgba(250, 108, 61, 0.925);
+  }
+  footer ul  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    padding: 10px;
+  }
+  li.footer a {
+    text-decoration: none;
+  }
+  li.footer{
+    list-style-type: none; 
+    color: black;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .logofooter{
+    width: 30px ;
+  }
+  ol, ul {
+    padding-left: 0;
+  }
