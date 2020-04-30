@@ -124,7 +124,7 @@ img.logo{
     border-bottom: white;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin-left: 6%; 
+    margin-left: 5%; 
     margin-right: 6%;
     background-color:  rgba(225, 225, 225, 0.40);
 }
@@ -141,18 +141,6 @@ li.primero{
 li.op:hover{
     color: #480082;
     cursor: pointer;
-}
-ul.favoritas{
-        display: grid;
-        grid-template-columns: 20% 10%;
-        margin: 1% 0%;
-}
-ul.favoritas li{
-    list-style-type: none;
-    font-size: 25px;
-    font-family: "Raleway";
-    color: black;
-    text-align: center;
 }
 .play {
     color: black;
@@ -193,6 +181,7 @@ ul.favoritas li{
     grid-template-columns: 30% 31% 16%;
     margin-left: 8%;
     font-size: 18px;
+    font-weight: bold;
 }
 footer {
     background-color: rgba(250, 108, 61, 0.925);
@@ -222,7 +211,7 @@ ul.herramientas li{
     padding-top: 5px;
     color: #480082;
     cursor: pointer;
-    margin: 5% 0px;
+    margin: 5% 15px;
     text-align: center;
 }
 div.cuerpo{
@@ -265,4 +254,76 @@ li.vol{
 a:hover{
     color: #480082;
     font-weight: bold;
+}
+@media screen and (max-width: 768px){
+     ul.nav {
+    padding-left: 170px;
+    grid-template-columns: 68% 14% 10%;
+    }  
+     ul.nav li {
+     width: 100%;
+      }
+ul.opciones {
+    padding: 0px;
+}
+.opciones {
+    margin-left: 7%;
+    margin-right: 8%;
+}
+div.cuerpo{
+    display: inline;
+}
+.playlist {
+    width: 79%;
+    margin-left: 7%;
+    margin-bottom: 20px;
+}
+aside ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+li.fav {
+    padding-bottom: 5px;
+}
+li.alea{
+    padding-bottom: 5px;
+}
+li.repro {
+    font-size: 50px;
+    padding-bottom: 5px;
+}
+li.una{
+    padding-bottom: 5px
+}
+ul.herramientas{
+    position: relative;
+   }
+}
+@media screen and (max-width: 425px){
+     aside {
+        display: none;
+    }
+    .playlist {
+        width: 100%;
+        margin: 0% 0%;
+        padding: 2% 0%;
+    }
+    ul.opciones{
+        margin: 10px 0px;
+    }
+    li.footer {
+        font-size: 10px;
+    }
+      li.buscador{
+        display: block;
+    }
+      li.ultimo{
+        display: none;
+    }
+      ul.nav {
+        grid-template-columns: 27% 48% 13%;
+    }
+    img.logo {
+        width: 32%;
+    }
 }
