@@ -126,54 +126,74 @@ img.logo{
     grid-template-columns: auto auto auto auto;
     margin-left: 6%; 
     margin-right: 6%;
-    background-color:  rgba(250, 108, 61, 0.575) ;
+    background-color:  rgba(225, 225, 225, 0.40);
 }
 .opciones li{
     list-style-type: none;
     font-size: 25px;
     font-family: "Raleway";
-    color: white;
+    color: black;
     text-align: center;
 }
 li.primero{
     color: #480082
 }
-li:hover{
+li.op:hover{
     color: #480082;
     cursor: pointer;
 }
-.playlist{
-    margin: 0 auto;
-    width: 80%;
-    margin-bottom: 10%;
-    font-family: 'Raleway', sans-serif;
-    
+ul.favoritas{
+        display: grid;
+        grid-template-columns: 20% 10%;
+        margin: 1% 0%;
 }
-
+ul.favoritas li{
+    list-style-type: none;
+    font-size: 25px;
+    font-family: "Raleway";
+    color: black;
+    text-align: center;
+}
+.play {
+    color: black;
+    background-color: rgba(250, 108, 61);
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 10px;
+    border: 1px solid rgba(250, 108, 61, 0.575) ;
+    cursor: pointer;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 12px;
+    border-radius: 3px;
+    justify-content: center;
+    text-decoration: none;
+}
+.playlist {
+    width: 100%;
+    margin-left: 7%;
+    margin-bottom: 5%;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    background-color: rgba(225, 225, 225, 0.40) ;
+    padding: 5px 25px;
+}
 .musica{
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 5% 30% 30% 20%;
+    grid-template-columns: 8% 28% 28% 28% 8%;
     padding-top: 15px;
-    border-top: 1px solid black;
-    font-size: 16px;
-    
-}
-.inicio{
-    margin: 20px 50px;
-    display: grid;
-    grid-template-columns: 33% 34% 20%;
-    margin-left: 5%;
+    border-top: 1px solid white;
     font-size: 18px;
 }
-
-
-
-
-
-
+.inicio{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 30% 31% 16%;
+    margin-left: 8%;
+    font-size: 18px;
+}
 footer {
     background-color: rgba(250, 108, 61, 0.925);
 }
@@ -196,4 +216,53 @@ li.footer{
 }
 .logofooter{
     width: 30px ;
+}
+ul.herramientas li{
+    list-style: none;
+    padding-top: 5px;
+    color: #480082;
+    cursor: pointer;
+    margin: 5% 0px;
+    text-align: center;
+}
+div.cuerpo{
+    display: grid;
+    grid-template-columns: 70% 18%;
+    gap: 12%;
+}
+ul.herramientas {
+    position: fixed;
+    background-color: rgba(225, 225, 225, 0.40);
+    border-radius: 10px;
+    margin: 2px 5px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+li.fav {
+    padding-bottom: 22px;
+    font-size: 30px;
+}
+li.alea{
+    font-size: 40px;
+    padding-bottom: 22px;
+}
+li.repro {
+    font-size: 50px;
+    padding-bottom: 22px;
+}
+li.una{
+    padding-bottom: 22px;
+    font-size: 40px;
+}
+li.vol{
+    font-size: 30px;
+}
+.playlist a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #480082;
+    font-weight: bold;
 }
