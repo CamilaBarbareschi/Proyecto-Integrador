@@ -1,0 +1,119 @@
+header {
+    background-color: rgb(240, 58, 2);
+    width: 90%;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns:45% 45% ;
+    justify-content: space-around;
+}
+
+div img {
+ width: 260px;
+ height: 260px;
+ border-radius: 50% ;
+ padding-top: 10px;
+ background-clip: padding-box;
+ padding-left: 10px;
+ position: absolute;
+ left: 261px;
+ top: 60px;
+ border-color:black ;
+ border-width: 2px;
+}
+
+.NombreDelArtista {
+font-family: "Roboto" ;
+font-weight: bolder;
+position: absolute;
+top: 90px ;
+right: 500px ;
+}
+
+h2.Subtitulo {
+    font-family: "Raleway";
+    font-weight: normal;
+    position: absolute;
+    top: 139px;
+    right: 657px ;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+article {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 45%;
+    justify-content: space-between;
+}
+section {
+    background-color: chocolate;
+    margin-top: 30px;
+    font-family: "Ubuntu";
+    font-size: 24px;
+    border: 2px  solid  grey ;
+}
+
+aside {
+    background-color: greenyellow;
+    margin-top: 30px;
+}
+
+li.nose {
+    margin-left: 36px;
+    color: darkslategray ;
+    font-size: 20px;
+    width: 33%;
+    font-weight: normal;
+    padding-top: 12px;
+    padding-right: 0px;
+    
+}
+
+ol h1.Top10 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+li a {
+    text-decoration: none;
+    font-family: "Helvetica";
+    font-weight: normal;
+    color: black;
+    border-bottom: 2px solid darkslategray ;
+}
+
+aside {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
