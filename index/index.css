@@ -23,9 +23,9 @@ div.banner{
 }
 .logo {
 position: absolute;
-left: 53%;
+left: 55%;
 top: 105px;
-width: 33%;
+width: 30%;
 border-radius: 50%;
 }
 .flexsearch--wrapper {
@@ -99,7 +99,7 @@ ul.nav{
 display: grid;
 grid-template-columns:  auto auto auto;
 width: 50%;
-margin-left: 25px;
+margin-left: 36px;
 padding-left: 10px;
 padding-top: 10px;
 }
@@ -230,9 +230,10 @@ div.iframe{
 }
 
 /*tablet*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1000px){
 h1 {
   font-size: 85px;
+  top: 8%;
 }
 .logo {
   left: 54%;
@@ -240,7 +241,8 @@ h1 {
 }
 p.slogan {
   font-size: 41px;
-  width: 50%;
+  width: 40%;
+  top: 20%;
 }
 ul.nav {
   width: 70%;
@@ -292,7 +294,7 @@ div.iframe{
 }
 
 /*mobile*/
-@media screen and (max-width: 420px){
+@media screen and (max-width: 600px){
   .buscador{
     display: block;
   }
@@ -301,6 +303,7 @@ div.iframe{
   }
   .publi{
     display: block;
+    margin-left: 15%;
   }
   .primero{
     display: none;
@@ -312,7 +315,7 @@ div.iframe{
     display: none;
   }
   ul.nav {
-    gap: 300px;
+    gap: 110%;
   }
   ul.nav li {
     font-size: 25px;
@@ -331,8 +334,8 @@ div.iframe{
   h1 {
     font-size: 31px;
     position: absolute;
-    left: 37%;
-    top: -5%
+    left: 40%;
+    top: -3%
   }
   .slogan{
     display: none;
@@ -344,8 +347,7 @@ div.iframe{
   padding: 0px;
   }
   #topfive {
-    text-align: unset;
-    padding-left: 34px;
+    text-align: center;
   }
   div.iframe{
     display: block;
