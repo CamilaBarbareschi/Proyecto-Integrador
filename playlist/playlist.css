@@ -189,16 +189,22 @@ footer {
 
   /*tablet*/
 @media screen and (max-width: 768px){
-
+  ul.nav {
+    padding-left: 170px;
+    grid-template-columns: 68% 14% 10%;
+    }  
+     ul.nav li {
+     width: 100%;
+      }
   .imagenes {
-    height: 495px;
+    height: 431px;
 }
  .latin{
    position: absolute;
-   top: 140px;
+   top: 145px;
    left: 27%;
-   width: 43%;
-   height: 50%;
+   width: 45%;
+   height: 42%;
    border-radius: 100%;
  }
 
@@ -237,6 +243,18 @@ footer {
 /*mobile*/
 @media screen and (max-width: 420px){
 
+  li.buscador{
+    display: block;
+}
+  li.ultimo{
+    display: none;
+}
+  ul.nav {
+    grid-template-columns: 27% 48% 13%;
+}
+img.logo {
+    width: 32%;
+}
 .latin{
   position: absolute;
     top: 122px;
