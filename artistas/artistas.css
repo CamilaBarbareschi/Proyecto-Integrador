@@ -1,50 +1,53 @@
+body {
+ background-color: #D1BAE3;
+    }
 header {
-    background-color: rgb(240, 58, 2);
+    background-color: rgba(238, 78, 29, 0.904);
     width: 90%;
     height: 350px;
     margin: 0 auto;
+    background-image: url();
+    border: 1px solid black;
 }
 
 .contenedor{
-    display: grid;
-    grid-template-columns:45% 45% ;
-    justify-content: space-around;
-}
-
-div img {
- width: 260px;
- height: 260px;
- border-radius: 50% ;
- padding-top: 10px;
- background-clip: padding-box;
- padding-left: 10px;
- position: absolute;
- left: 261px;
- top: 60px;
- border-color:black ;
- border-width: 2px;
-}
-
-.NombreDelArtista {
-font-family: "Roboto" ;
-font-weight: bolder;
-position: absolute;
-top: 90px ;
-right: 500px ;
-}
-
-h2.Subtitulo {
-    font-family: "Raleway";
-    font-weight: normal;
-    position: absolute;
-    top: 139px;
-    right: 657px ;
-    font-size: 18px;
-}
+        display: grid;
+        grid-template-columns:35% 55% ;
+        justify-content: space-around;
+    }
+    
+ 
+    div img {
+        width: 260px;
+        height: 260px;
+        border-radius: 50% ;
+        padding-top: 10px;
+        padding-left: 10px;
+        position: relative;
+        left: 77px;
+        top: 15px;
+        border-color:black ;
+        border-width: 2px;
+       }
+       
 
 
-
-
+       .NombreDelArtista {
+        font-family: "Roboto" ;
+        font-weight: bolder;
+        position: relative;
+        top: 52px ;
+        right: 0px ;
+        }
+        
+        h2.Subtitulo {
+            font-family: "Raleway";
+            font-weight: normal;
+            position: relative;
+            top: 40px;
+            right: 0px ;
+            font-size: 18px;
+        }
 
 
 
@@ -54,7 +57,10 @@ h2.Subtitulo {
 
 
 
-article {
+
+
+
+article.Articulo {
     width: 90%;
     margin: 0 auto;
     display: grid;
@@ -62,21 +68,23 @@ article {
     justify-content: space-between;
 }
 section {
-    background-color: chocolate;
+    background-color: rgb(158, 35, 158);
     margin-top: 30px;
     font-family: "Ubuntu";
     font-size: 24px;
-    border: 2px  solid  grey ;
+    border: 2px  solid   ;
 }
 
 aside {
-    background-color: greenyellow;
+    background-color: rgb(158, 35, 158);
     margin-top: 30px;
+    height: 400px;
+    border: 2px solid;
 }
 
 li.nose {
-    margin-left: 36px;
-    color: darkslategray ;
+    margin-left: 50px;
+    color:black ;
     font-size: 20px;
     width: 33%;
     font-weight: normal;
@@ -97,12 +105,277 @@ li a {
     font-family: "Helvetica";
     font-weight: normal;
     color: black;
-    border-bottom: 2px solid darkslategray ;
+    border-bottom: 2px solid grey ;
 }
 
 aside {
-    
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+    width: 100%;
 }
+
+aside div img{
+    position: relative;
+    top: 0px;
+    left:200px ;
+    border-radius: 0px;
+    background-clip: content-box;
+    float: left;
+}
+
+div.textosdos h1 {
+font-family: "Helvetica";
+position: relative;
+top: 77px;
+left: -330px;
+font-size: 29px;
+font-weight: normal;
+}
+
+div.textosdos h2 {
+    font-family: "Helvetica";
+    position: relative;
+    top: 52px;
+    left: -242px;
+    font-size: 18px;
+    font-weight: normal;
+    }
+
+
+aside.New h1 {
+    font-family: "Ubuntu";
+    font-size: 28px;
+    text-align: center;
+}
+
+.textodos {
+    position: relative;
+    left: 10px;
+}
+
+
+
+ main#main {
+      width: 90%;
+      justify-content: space-around;
+      margin: 0 auto;
+      background-color:rgb(158, 35, 158);
+      margin-top: 5px ;
+      padding-top: 20px;
+      padding-left: 6px;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      border-radius: 1px;
+      border-color: black;
+      border-style: solid ;
+  }
+  main.Titulo {
+      width: 90%;
+      justify-content: space-around;
+      margin: 0 auto;
+      padding: 5px 5px;
+      margin-top: 40px ;
+      margin-bottom: 5px;
+      text-align: center;
+      font-family: "Ubuntu";
+      
+      
+  }
+  main.Titulo h1 {
+    background-color:rgb(158, 35, 158);
+    width: 15%;
+    border-radius: 1px;
+      border-color: black;
+      border-style: solid ;
+
+
+  }
+  .nose a {
+      margin-left: 26px;
+  }
+
+
+
+
+
+
+
+article.Principal img {
+width: 100%;
+}
+
+footer {
+    background-color: rgba(250, 108, 61, 0.925);
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black ;
+    margin-top: 30px;
+  }
+  footer ul  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    padding: 10px;
+  }
+  li.footer a {
+    text-decoration: none;
+  }
+  li.footer{
+    list-style-type: none; 
+    color: black;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .logofooter{
+    width: 30px ;
+  }
+  ol, ul {
+    padding-left: 0;
+  }
+
+  .Principal h2 {
+    margin-block-start: 0.43em;
+    margin-block-end: 0.1em;
+  }
+  .Principal p {
+      margin-top: 0px;
+  }
+
+  .flexsearch--input {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 25px;
+    padding: 2px 0px 0 12px;
+    border-color: rgba(250, 108, 61, 0.74);
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 2px;
+    color: #480082;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.flexsearch--input {
+    width: 90%;
+}
+
+.flexsearch--wrapper {
+ text-align: center;   
+}
+
+.Top10 {
+text-align: center;
+}
+
+h2.Titulo {
+    font-family: "Calibri";
+}
+
+@media (max-width:767px){
+    .contenedor, article.Articulo { grid-template-columns:100% ;}
+    div img {
+        width: 208px;
+        height: 208px;
+        padding-left: 0;
+        left: 0px;
+    }
+    .icono{
+        text-align: center;
+    }
+    .NombreDelArtista {
+        top: 0px;
+        text-align: center;
+        bottom: 5px;
+        
+    }
+    .Subtitulo {
+        top: 0px !important;
+        text-align: center;
+    }
+    li.nose {
+        width: 90%;
+        margin-left: 0px;
+    }
+     main.Titulo h1 {
+         width: 157px;
+     }
+
+     main#main {
+         grid-template-columns: 45% 45%;
+     } 
+     .Top ol {
+     margin-left: 40px;
+
+     }
+     .textosdos h1{
+        position: relative !important;
+        left: -262px !important;
+     }
+     .textosdos h2 {
+        position: relative !important;
+        left: -162px !important;
+
+     } 
+    }
+
+
+     @media (min-width:768px) and (max-width: 1199px)  {
+        .contenedor, article.Articulo { grid-template-columns:100% ;}
+        div img {
+            width: 208px;
+            height: 208px;
+            padding-left: 0;
+            left: 0px;
+        }
+        .icono{
+            text-align: center;
+        }
+        .NombreDelArtista {
+            top: 0px;
+            text-align: center;
+            margin-bottom: -8px;
+            
+        }
+        .Subtitulo {
+            top: 0px !important;
+            text-align: center;
+        }
+        li.nose {
+            width: 90%;
+            margin-left: 0px;
+        }
+         main.Titulo h1 {
+             width: 157px;
+         }
+    
+         main#main {
+             grid-template-columns: 30% 30% 30%;
+         } 
+         article.Articulo {
+             width: 60%;
+         }
+         .Top ol {
+            margin-left: 40px;
+       
+            }
+            .textosdos h1{
+               position: relative !important;
+               left: -245px !important;
+            }
+            .textosdos h2 {
+               position: relative !important;
+               left: -162px !important;
+       
+            } 
+        }
+
+
+
+
 
 
 
