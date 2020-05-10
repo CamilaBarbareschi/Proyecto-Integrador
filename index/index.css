@@ -134,7 +134,7 @@ p.slogan{
 position: absolute;
 top: 42%;
 left: 8%;
-font-size: 60px;
+font-size: 50px;
 width: 35%;
 color: rgb(250, 108, 61);
 padding-top: 5px;
@@ -150,13 +150,45 @@ color: white;
 /*header top five*/
 .header{
   background-color: rgba(250, 108, 61,0.925);
-  height: 60px;
+  height: 85px;
+  padding: 10px 0px;
 }
 #topfive{
   color: #480082;
   font-size: 45px;
   font-family: "Raleway";
   text-align: center;
+  padding-top: 5px;
+}
+.uk-subnav-pill>.uk-active>a {
+  color: #480082;
+  font-size: 30px;
+  font-family: "raleway";
+  border-bottom: 2px solid #480082;
+}
+.uk-subnav {
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.uk-subnav-pill>.uk-active>a {
+  background-color: none;
+  color: none;
+}
+.uk-subnav-pill>.uk-active>a {
+  background-color: #ffffff00; 
+  color: #480082;
+}
+.uk-subnav-pill>*>:first-child {
+  padding: 5px 10px;
+  background: 0 0;
+  color: #480082;
+}
+.uk-subnav>*>:first-child {
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 /*slideshows*/
@@ -187,10 +219,11 @@ h2.titulo-topcinc{
 a.principales h2:hover{
   color: rgb(250, 108, 61);
 }
-
+  
 /*footer*/
 footer {
   background-color: rgba(250, 108, 61, 0.925);
+  margin-top: 75px;
 }
 footer ul  {
   display: grid;
@@ -214,7 +247,6 @@ li.footer{
 ol, ul {
   padding-left: 0;
 }
-
 /*display none*/
 .buscador{
   display: none;
@@ -233,16 +265,22 @@ div.iframe{
 @media screen and (max-width: 1000px){
 h1 {
   font-size: 85px;
-  top: 8%;
+  top: 16%;
+}
+.uk-child-width-1-2>* {
+  width: 28%;
 }
 .logo {
   left: 54%;
   top: 118px;
 }
 p.slogan {
-  font-size: 41px;
+  font-size: 40px;
   width: 40%;
-  top: 20%;
+  top: 35%;
+}
+.scrolld{
+  display: none;
 }
 ul.nav {
   width: 70%;
@@ -294,10 +332,22 @@ div.iframe{
 }
 
 /*mobile*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
   .buscador{
     display: block;
   }
+  .uk-child-width-1-2>* {
+    width: 80%;
+}
+ul.nav {
+    gap: 100%;
+    grid-template-columns: auto auto;
+    margin-left: 10%;
+}
+img.uk-cover{
+  height: 270px;
+  width: 270px;
+}
   .nav{
   display: block;
   }
@@ -313,9 +363,6 @@ div.iframe{
   }
   .fav{
     display: none;
-  }
-  ul.nav {
-    gap: 110%;
   }
   ul.nav li {
     font-size: 25px;
@@ -334,9 +381,18 @@ div.iframe{
   h1 {
     font-size: 31px;
     position: absolute;
-    left: 40%;
-    top: -3%
+    left: 38%;
+    top: -4%
   }
+  .uk-subnav-pill>.uk-active>a {
+    font-size: 20px;
+}
+.uk-subnav>*>:first-child {
+  font-size: 20px;
+}
+#topfive {
+  font-size: 30px;
+}
   .slogan{
     display: none;
   }
