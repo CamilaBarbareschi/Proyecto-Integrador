@@ -267,6 +267,10 @@ h1 {
   font-size: 85px;
   top: 16%;
 }
+img.uk-cover {
+  height: 270px;
+  width: 288px;
+}
 .uk-child-width-1-2>* {
   width: 28%;
 }
@@ -276,7 +280,7 @@ h1 {
 }
 p.slogan {
   font-size: 40px;
-  width: 40%;
+  width: 41%;
   top: 35%;
 }
 .scrolld{
