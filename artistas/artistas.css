@@ -1,382 +1,546 @@
 body {
- background-color: #D1BAE3;
-    }
-header {
-    background-color: rgba(238, 78, 29, 0.904);
-    width: 90%;
-    height: 350px;
-    margin: 0 auto;
-    background-image: url();
-    border: 1px solid black;
-}
-
-.contenedor{
-        display: grid;
-        grid-template-columns:35% 55% ;
-        justify-content: space-around;
-    }
-    
- 
-    div img {
-        width: 260px;
-        height: 260px;
-        border-radius: 50% ;
-        padding-top: 10px;
-        padding-left: 10px;
-        position: relative;
-        left: 77px;
-        top: 15px;
-        border-color:black ;
-        border-width: 2px;
+    background-color: #D1BAE3;
+    margin: 0;
+       }
+   header {
+       width: 90%;
+       height: 350px;
+       margin: 0 auto;
+       border: 1px solid black;
+       margin-top: 40px;
+       background: linear-gradient(150deg,#dc3d05,#f06e3e, #dc3d05, #9e00c5, #9e00c5, #9500cf);
+       background-size: 400% 300%;
+       animation: BgGradient 45s ease infinite;
+   }
+   
+   @keyframes BgGradient {
+       0% {background-position: 0% 50%;}
+       50% {background-position: 100% 50%;}
+       100% {background-position: 0% 50%;}
+   }
+   
+   .contenedor{
+           display: grid;
+           grid-template-columns:35% 55% ;
+           justify-content: space-around;
        }
        
-
-
-       .NombreDelArtista {
-        font-family: "Roboto" ;
-        font-weight: bolder;
-        position: relative;
-        top: 52px ;
-        right: 0px ;
-        }
-        
-        h2.Subtitulo {
-            font-family: "Raleway";
-            font-weight: normal;
-            position: relative;
-            top: 40px;
-            right: 0px ;
-            font-size: 18px;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-article.Articulo {
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 50% 45%;
-    justify-content: space-between;
-}
-section {
-    background-color: rgb(158, 35, 158);
-    margin-top: 30px;
-    font-family: "Ubuntu";
-    font-size: 24px;
-    border: 2px  solid   ;
-}
-
-aside {
-    background-color: rgb(158, 35, 158);
-    margin-top: 30px;
-    height: 400px;
-    border: 2px solid;
-}
-
-li.nose {
-    margin-left: 50px;
-    color:black ;
-    font-size: 20px;
-    width: 33%;
-    font-weight: normal;
-    padding-top: 12px;
-    padding-right: 0px;
     
-}
-
-ol h1.Top10 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 28px;
-}
-
-
-li a {
-    text-decoration: none;
-    font-family: "Helvetica";
-    font-weight: normal;
-    color: black;
-    border-bottom: 2px solid grey ;
-}
-
-aside {
-    grid-template-columns: 40% 40%;
-    justify-content: space-between;
-    width: 100%;
-}
-
-aside div img{
-    position: relative;
-    top: 0px;
-    left:200px ;
-    border-radius: 0px;
-    background-clip: content-box;
-    float: left;
-}
-
-div.textosdos h1 {
-font-family: "Helvetica";
-position: relative;
-top: 77px;
-left: -330px;
-font-size: 29px;
-font-weight: normal;
-}
-
-div.textosdos h2 {
-    font-family: "Helvetica";
-    position: relative;
-    top: 52px;
-    left: -242px;
-    font-size: 18px;
-    font-weight: normal;
-    }
-
-
-aside.New h1 {
-    font-family: "Ubuntu";
-    font-size: 28px;
-    text-align: center;
-}
-
-.textodos {
-    position: relative;
-    left: 10px;
-}
-
-
-
- main#main {
-      width: 90%;
-      justify-content: space-around;
-      margin: 0 auto;
-      background-color:rgb(158, 35, 158);
-      margin-top: 5px ;
-      padding-top: 20px;
-      padding-left: 6px;
-      display: grid;
-      grid-template-columns: 20% 20% 20% 20%;
-      border-radius: 1px;
-      border-color: black;
-      border-style: solid ;
-  }
-  main.Titulo {
-      width: 90%;
-      justify-content: space-around;
-      margin: 0 auto;
-      padding: 5px 5px;
-      margin-top: 40px ;
-      margin-bottom: 5px;
-      text-align: center;
-      font-family: "Ubuntu";
-      
-      
-  }
-  main.Titulo h1 {
-    background-color:rgb(158, 35, 158);
-    width: 15%;
-    border-radius: 1px;
-      border-color: black;
-      border-style: solid ;
-
-
-  }
-  .nose a {
-      margin-left: 26px;
-  }
-
-
-
-
-
-
-
-article.Principal img {
-width: 100%;
-}
-
-footer {
-    background-color: rgba(250, 108, 61, 0.925);
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid black ;
-    margin-top: 30px;
-  }
-  footer ul  {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 0;
-    padding: 10px;
-  }
-  li.footer a {
-    text-decoration: none;
-  }
-  li.footer{
-    list-style-type: none; 
-    color: black;
-    padding-top: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
-  .logofooter{
-    width: 30px ;
-  }
-  ol, ul {
-    padding-left: 0;
-  }
-
-  .Principal h2 {
-    margin-block-start: 0.43em;
-    margin-block-end: 0.1em;
-  }
-  .Principal p {
-      margin-top: 0px;
-  }
-
-  .flexsearch--input {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 25px;
-    padding: 2px 0px 0 12px;
-    border-color: rgba(250, 108, 61, 0.74);
-    border-radius: 35px;
-    border-style: solid;
-    border-width: 2px;
-    color: #480082;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-.flexsearch--input {
-    width: 90%;
-}
-
-.flexsearch--wrapper {
- text-align: center;   
-}
-
-.Top10 {
-text-align: center;
-}
-
-h2.Titulo {
-    font-family: "Calibri";
-}
-
-@media (max-width:767px){
-    .contenedor, article.Articulo { grid-template-columns:100% ;}
-    div img {
-        width: 208px;
-        height: 208px;
-        padding-left: 0;
-        left: 0px;
-    }
-    .icono{
-        text-align: center;
-    }
-    .NombreDelArtista {
-        top: 0px;
-        text-align: center;
-        bottom: 5px;
-        
-    }
-    .Subtitulo {
-        top: 0px !important;
-        text-align: center;
-    }
-    li.nose {
-        width: 90%;
-        margin-left: 0px;
-    }
+       div img {
+           width: 260px;
+           height: 260px;
+           border-radius: 50% ;
+           padding-top: 10px;
+           padding-left: 10px;
+           position: relative;
+           left: 131px;
+           top: 17px;
+           border-color:black ;
+           border-width: 2px;
+          }
+          
+   
+   
+          .NombreDelArtista {
+           font-family: "Roboto" ;
+           font-weight: bolder;
+           position: relative;
+           top: 52px ;
+           right: 0px ;
+           }
+           
+           h2.Subtitulo {
+               font-family: "Raleway";
+               font-weight: normal;
+               position: relative;
+               top: 40px;
+               right: 0px ;
+               font-size: 18px;
+           }
+   
+   
+   .nose2 p, .nose p{
+       float: right;
+       margin: 0;
+   }
+   
+   .fas.fa-play{
+       color: black;
+       cursor: pointer;
+       padding-left: 14px;
+   }
+   .fas.fa-play:hover {
+       color:#480082;
+   }
+   .fas.fa-heart{
+       color: black;
+       cursor: pointer;
+       padding-left: 12px;
+   }
+   .fas.fa-heart:hover {
+       color:#480082;
+   }
+   
+   p.minutos {
+       padding-left: 20px;
+   }
+   
+   article.Articulo {
+       width: 90%;
+       margin: 0 auto;
+       display: grid;
+       grid-template-columns: 53% 42%;
+       justify-content: space-between;
+   }
+   section {
+       background-color: rgb(158, 35, 158);
+       margin-top: 30px;
+       font-family: "Ubuntu";
+       font-size: 24px;
+       border: 2px  solid   ;
+   }
+   
+   aside {
+       background-color: rgb(158, 35, 158);
+       margin-top: 30px;
+       height: 400px;
+       border: 2px solid;
+   }
+   
+   li.nose {
+       margin-left: 50px;
+       color:black ;
+       font-size: 20px;
+       width: 85%;
+       font-weight: normal;
+       padding-top: 6px;
+       padding-bottom: 6px;
+       padding-right: 0px;
+       border-bottom: 1px solid black;   
+   }
+   
+   li.nose2 {
+       margin-left: 50px;
+       color:black ;
+       font-size: 20px;
+       width: 85% !important;
+       font-weight: normal;
+       padding-top: 6px;
+       padding-bottom: 6px;
+       padding-right: 0px;
+       border-bottom: 1px solid black;   
+     border-top: 1px solid black;   
+   
+   }
+   
+   ol h1.Top10 {
+       text-align: center !important;
+       font-weight: bold;
+       font-size: 28px;
+   }
+   
+   h1.Top10 {
+       text-align: center;
+   }
+   
+   
+   li a {
+       text-decoration: none;
+       font-family: "Helvetica";
+       font-weight: normal;
+       color: black;
+   }
+   
+   aside {
+       grid-template-columns: 40% 40%;
+       justify-content: space-between;
+       width: 100%;
+   }
+   
+   aside div img{
+       position: relative;
+       top: 0px;
+       left:200px ;
+       border-radius: 0px;
+       background-clip: content-box;
+       float: left;
+   }
+   
+   div.textosdos h1 {
+   font-family: "Helvetica";
+   position: relative;
+   top: 77px;
+   left: -154px;
+   font-size: 29px;
+   font-weight: normal;
+   }
+   
+   div.textosdos h2 {
+       font-family: "Helvetica";
+       position: relative;
+       top: 52px;
+       left: -158px;
+       font-size: 18px;
+       font-weight: normal;
+       }
+   
+   
+   aside.New h1 {
+       font-family: "Ubuntu";
+       font-size: 28px;
+       text-align: center;
+   }
+   
+   .textodos {
+       position: relative;
+       left: 10px;
+       width: 100%;
+       height: 100%;
+   }
+   
+   
+   
+    main#main {
+         width: 90%;
+         justify-content: space-around;
+         margin: 0 auto;
+         background-color:rgb(158, 35, 158);
+         margin-top: 5px ;
+         padding-top: 20px;
+         padding-left: 6px;
+         display: grid;
+         grid-template-columns: 20% 20% 20% 20%;
+         border-radius: 1px;
+         border-color: black;
+         border-style: solid ;
+     }
+     main.Titulo {
+         width: 90%;
+         justify-content: space-around;
+         margin: 0 auto;
+         padding: 5px 5px;
+         margin-top: 40px ;
+         margin-bottom: 5px;
+         text-align: center;
+         font-family: "Ubuntu";
+         
+         
+     }
      main.Titulo h1 {
-         width: 157px;
+       background-color:rgb(158, 35, 158);
+       width: 12%;
+       border-radius: 1px;
+         border-color: black;
+         border-style: solid ;
      }
-
-     main#main {
-         grid-template-columns: 45% 45%;
-     } 
-     .Top ol {
-     margin-left: 40px;
-
+   
+   
+     .nose a, .nose2 a {
+         margin-left: 26px;
+         
+   
      }
-     .textosdos h1{
-        position: relative !important;
-        left: -262px !important;
+   
+   article.Principal img {
+   width: 100%;
+   }
+   
+   footer {
+       background-color: rgba(250, 108, 61, 0.925);
+       width: 90%;
+       margin: 0 auto;
+       border: 1px solid black ;
+       margin-top: 30px;
      }
-     .textosdos h2 {
-        position: relative !important;
-        left: -162px !important;
-
-     } 
-    }
-
-
-     @media (min-width:768px) and (max-width: 1199px)  {
-        .contenedor, article.Articulo { grid-template-columns:100% ;}
-        div img {
-            width: 208px;
-            height: 208px;
-            padding-left: 0;
-            left: 0px;
-        }
-        .icono{
-            text-align: center;
-        }
-        .NombreDelArtista {
-            top: 0px;
-            text-align: center;
-            margin-bottom: -8px;
-            
-        }
-        .Subtitulo {
-            top: 0px !important;
-            text-align: center;
-        }
-        li.nose {
-            width: 90%;
-            margin-left: 0px;
-        }
-         main.Titulo h1 {
-             width: 157px;
-         }
-    
-         main#main {
-             grid-template-columns: 30% 30% 30%;
-         } 
-         article.Articulo {
-             width: 60%;
-         }
-         .Top ol {
-            margin-left: 40px;
+     footer ul  {
+       display: grid;
+       grid-template-columns: auto auto auto;
+       margin: 0;
+       padding: 10px;
+     }
+     li.footer a {
+       text-decoration: none;
+     }
+     li.footer{
+       list-style-type: none; 
+       color: black;
+       padding-top: 10px;
+       font-size: 18px;
+       text-align: center;
+     }
+     .logofooter{
+       width: 30px ;
+     }
+     ol, ul {
+       padding-left: 0;
+     }
+   
+     .Principal h2 {
+       margin-block-start: 0.43em;
+       margin-block-end: 0.1em;
+       width: 100%;
+     }
+     
+   .Principal a h2 {
+       color: black;
+   }
+   .Principal a h2:hover {
+       text-decoration: underline;
+   }
+   
+     .Principal p {
+         margin-top: 0px;
+     }
+   
+   
+     #encabezado .buscador{
+       display: none;
+     }
+     #encabezado li.nav{
+         display: none;
+     }
+     
+     .flexsearch--wrapper {
+         height: auto;
+         width: auto;
+         max-width: 100%;
+         overflow: hidden;
+         background: transparent;
+         margin: 0;
+         position: static;
+     }
+     .flexsearch--form {
+         overflow: hidden;
+         position: relative;
+     }
+     .flexsearch--input-wrapper {
+         padding: 0 66px 0 0; 
+         overflow: hidden;
+     }
+     .flexsearch--input {
+         width: 100%;
+     }
+     .flexsearch--input {
+         -webkit-box-sizing: content-box;
+         -moz-box-sizing: content-box;
+         box-sizing: content-box;
+         height: 25px;
+         padding: 2px 0px 0 12px;
+         border-color: rgba(250, 108, 61, 0.74);
+         border-radius: 35px;
+         border-style: solid;
+         border-width: 2px;
+         color: #480082;
+         font-family: 'Raleway', sans-serif;
+         font-size: 18px;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+     }
+     .flexsearch--submit {
+         position: absolute;
+         right: 0;
+         top: 0;
+         display: block;
+         width: 60px;
+         height: 60px;
+         padding: 0;
+         border: none;
+         margin-top: 20px; 
+         margin-right: 5px; 
+         background: transparent;
+         color: #888;
+         font-family: "Raleway", sans-serif;
+         font-size: 40px;
+         line-height: 60px;
+     }
+     .flexsearch--input:focus {
+         outline: none;
+         border-color: #480082;
+     }
+     .flexsearch--submit:hover { 
+         color: #480082;
+         cursor: pointer;
+     }
+     ::-webkit-input-placeholder {
+         color:  #480082;  
+     }
+     input:-moz-placeholder {
+         color:  #480082;
+     }
+     #encabezado ul.nav {
+         display: grid;
+         grid-template-columns: 80% 7% 10%;
+         padding-left: 325px;
+         margin: 0px;
+         padding-top: 16px;
+     }
+     #encabezado ul.nav li {
+         list-style-type: none;
+         width: 90%;
+         font-size: 25px;
+         text-align: center;
+         color: white;
+         margin-bottom: none;
+         padding-left: none;
+     }
+     #encabezado ul.nav a{
+         text-decoration: none;
+         color: white;    
+     }
+     #encabezado ul.nav a:hover {
+         color: #480082;;
+     }
+     #encabezado img.logo {
+         position: absolute;
+         top: 10px;
+         left: 10px;
+         width: 10%;
+         height: auto;
+         border-radius: 0px;
+         padding-top: 0px;
+         padding-left: 0px;
+     }
+     #encabezado.container{
+         background-image: url(../img/header-play.jpg);
+         height: 65px;
+     }
+     #encabezado .header{
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         background-color: rgba(225, 225, 225, 0.40);
+         height: 65px;
+         width: 100%;
        
+        }
+   
+   
+   @media (max-width:767px){
+       .contenedor, article.Articulo { grid-template-columns:100% ;}
+       div img {
+           width: 208px;
+           height: 208px;
+           padding-left: 0;
+           left: 0px;
+       }
+       .icono{
+           text-align: center;
+       }
+       .NombreDelArtista {
+           top: 0px;
+           text-align: center;
+           bottom: 5px;
+           
+       }
+       .Subtitulo {
+           top: 0px !important;
+           text-align: center;
+       }
+       li.nose, li.nose2 {
+           width: 90% !important;
+           margin-left: 0px;
+       }
+        main.Titulo h1 {
+            width: 157px;
+        }
+   
+        main#main {
+            grid-template-columns: 45% 45%;
+        } 
+        .Top ol {
+        margin-left: 40px;
+   
+        }
+        .textosdos h1{
+           position: relative !important;
+           left: -262px !important;
+        }
+        .textosdos h2 {
+           position: relative !important;
+           left: -162px !important;
+   
+        } 
+   
+        #encabezado ul.nav {
+           padding-left: 170px;
+           grid-template-columns: 68% 14% 10%;
+           }  
+           #encabezado ul.nav li {
+            width: 100%;
+             }
+       }
+   
+   
+        @media (min-width:768px) and (max-width: 1199px)  {
+           .contenedor, article.Articulo { grid-template-columns:100% ;}
+           div img {
+               width: 208px;
+               height: 208px;
+               padding-left: 0;
+               left: 0px;
+           }
+           .icono{
+               text-align: center;
+           }
+           .NombreDelArtista {
+               top: 0px;
+               text-align: center;
+               margin-bottom: -8px;
+               
+           }
+           .Subtitulo {
+               top: 0px !important;
+               text-align: center;
+           }
+           li.nose.li.nose2 {
+               width: 90%;
+               margin-left: 0px;
+           }
+            main.Titulo h1 {
+                width: 157px;
             }
-            .textosdos h1{
-               position: relative !important;
-               left: -245px !important;
-            }
-            .textosdos h2 {
-               position: relative !important;
-               left: -162px !important;
        
+            main#main {
+                grid-template-columns: 30% 30% 30%;
             } 
-        }
-
-
-
-
-
+            article.Articulo {
+                width: 60%;
+            }
+            .Top ol {
+               margin-left: 40px;
+          
+               }
+               .textosdos h1{
+                  position: relative !important;
+                  left: -245px !important;
+               }
+               .textosdos h2 {
+                  position: relative !important;
+                  left: -162px !important;
+          
+               } 
+           }
+           @media screen and (max-width: 420px){
+   
+               #encabezado li.buscador{
+                 display: block;
+             }
+             #encabezado li.ultimo{
+                 display: none;
+             }
+             #encabezado ul.nav {
+                 grid-template-columns: 27% 48% 13%;
+             }
+             #encabezado img.logo {
+                 width: 32%;
+             }
+             #encabezado.latin{
+               position: absolute;
+                 top: 122px;
+                 left: 27%;
+                 width: 46%;
+                 height: 29%;
+             }
 
 
 
