@@ -7,6 +7,11 @@ html {
   font-family: 'Oswald', sans-serif; 
   background-color: rgba(207, 182, 238, 0.781);
 }
+.uk-link, a {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
 /*PORTADA*/
 .ondasWrapper{
   width: 300%;
@@ -151,6 +156,10 @@ ul.playerbuttons{
   display: grid;
   padding-top: 5px;
   grid-template-columns: 7% 7% 7% 5%;
+}
+p.titulo a {
+  text-decoration: none;
+  color: grey;
 }
 div.playerbutton{
   width: 50%;
