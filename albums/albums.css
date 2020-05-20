@@ -205,6 +205,35 @@ div.toolbar{
 main{
     width: 75%;
     margin: 0 auto;
+    color: black;
+}
+.uk-card-media-top img{
+    border-radius: 3%;
+}
+div.uk-card.uk-card-small.uk-card-default{
+    border-radius: 3%;
+}
+div.uk-card.uk-card-small.uk-card-default a{
+    text-decoration: none;
+}
+.texto p {
+    font-size: 18px;
+    font-family: "raleway";
+    color: black;
+    margin-top: 6%;
+    margin-left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.texto p:hover{
+    color: #480082 ;
+}
+.uk-card-media-top img.artistasim{
+    border-radius: 50%;
+    background-color: rgba(207, 182, 238, 0);
+}
+.uk-card.uk-card-small.uk-card-default{
+    background-color: rgba(255, 255, 255, 0);
 }
 .canciones{
     margin: 0 auto;
@@ -216,6 +245,16 @@ main{
     padding-left: 18px;
     border-top: 1px solid white;
     font-size: 17px;
+}
+.uk-card-default {
+    box-shadow: none;
+}
+div.uk-card-body{
+    background-color: rgba(255, 255, 255, 0);
+}
+.tarjetas{
+    width: 80%;
+    margin: 50px auto;
 }
 i:hover{
     color:#dbff4b;
@@ -243,6 +282,16 @@ li.footer{
 }
 .logofooter{
     width: 30px ;
+}
+a.slide-button {
+    background-color: rgba(255, 107, 57, 0.842);
+    border-radius: 50%;
+}
+.uk-card-body{
+    background-color: rgba(207, 182, 238, 0.87);
+}
+h3.uk-card-title{
+    font-size: 16px;
 }
 
 
