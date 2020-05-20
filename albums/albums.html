@@ -17,45 +17,26 @@
  <body>
 
    <!-- encabezado -->
+   <div class="container">
    <header>
-        <div class="menuButton">
-             <i class="fas fa-bars"></i>
-        </div>
-        <div class="searchButton">
-             <i class="fas fa-search"></i>
-        </div>  
-        <nav class="menu">
-             <ul class="mainMenu">
-                 <li><a class="menuLink" href="">Home</a></li>
-                 <li><a class="menuLink" href="">Artists</a></li>
-                 <li><a class="menuLink" href="">Albums</a></li>
-                 <li><a class="menuLink" href="">Playlists</a></li>
-                 <li><a class="menuLink" href="">Favoritos</a></li>
-                 <li class="ultimo"><a class="menuLink" href="https://www.deezer.com/es/"><img src="../img/deezer.png" alt="">  Provided by deezer</a>
-             </ul>
-        </nav>   
-    <!--Mini reproductor-->
-        <nav class="miniPlayer"> 
-            <div class="info">
-                <div  class="imagenTrack"><img src="../img/album.jpg" alt=""></div> 
-                    <div class="infotyc">
-                       <p class="titulo"> Riot Van</p>
-                       <p class="cantante"><a href="../artistas/artistas.html"> Arctic Monkeys</a></p>
-                    </div> 
-                </div>
-                <div class="playerbutton">
-                     <ul class="playerbuttons">
-                        <li><i class="fas fa-step-backward"></i></li>
-                        <li><i class="fas fa-play"></i> </li>
-                        <li><i class="fas fa-step-forward"></i></li>
-                        <li><i class="fas fa-list-ul"></i></li>
-                     </ul>
-                </div>   
-            </div>        
-        </nav> 
-        <div class="spanLastSong"><i class="fas fa-list-ul"></i></div>
+      <img class= "logo" src="../img/biboplog.png" alt="BIBOP logo"> 
+      <ul class="nav">
+          <li class="nav"> <i class="fas fa-bars"></i></li>
+          <li class="buscador"><i class="fas fa-search"></i></li>
+          <li class="ultimo">
+               <div class="flexsearch--wrapper">
+               <form class="flexsearch--form" action="#" method="post">
+                   <div class="flexsearch--input-wrapper">
+                       <input class="flexsearch--input" type="search" placeholder="search">
+                   </div>
+               </form>
+               </div>
+          </li>
+          <li class="primero"><a href="../index/index.html"><i class="fas fa-home"></i></a></li>
+          <li class="navEspecial"><i class="fas fa-heart"></i></li>
+       </ul> 
    </header>
-
+   </div>
     <!-- titulo album  -->
     <section>
         <figure>

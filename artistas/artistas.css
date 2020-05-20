@@ -121,7 +121,12 @@ body {
       overflow: hidden;
       padding-top: 7px;
   }
-
+div.header ul.nav i.fas.fa-heart{
+    color: white;
+}
+div.header ul.nav i.fas.fa-heart:hover{
+    color: #480082;
+}
   .simbolos {
       margin: 0 auto;
       padding-top: 8px;
@@ -501,16 +506,4 @@ font-family: "Arial";
                  width: 46%;
                  height: 29%;
              }
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
