@@ -1,9 +1,11 @@
-html, body {
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body {
-  background-color: #D1BAE3;
+html {
+    font-family: 'Oswald', sans-serif; 
+    background-color: rgba(207, 182, 238, 0.781);
 }
 .buscador{
   display: none;

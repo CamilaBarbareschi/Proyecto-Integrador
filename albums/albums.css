@@ -1,141 +1,141 @@
-html, body {
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body {
-  background-color: #D1BAE3;
-  font-family: "raleway";
+html {
+    font-family: 'Oswald', sans-serif; 
+    background-color: rgba(207, 182, 238, 0.781);
 }
-.buscador{
-  display: none;
+/*ENCABEZADO*/
+.menuButton {
+    position: absolute;
+    top: 4%;
+    color: #440875;
+    left: 4%;
+    z-index: 6;
+    font-size: 25px;
 }
-li.nav{
+.menuButton:hover {
+    color: #dbff4b ;
+}
+.searchButton{
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    z-index: 6;
+    font-size: 25px;
+    color:#440875;
+}
+.searchButton:hover {
+    color: #dbff4b;
+}
+ol, ul {
+    padding-left: 0px;
+}
+nav.menu{
+    padding-left: 4%;
+    padding-top: 3%;
+    background-color: rgba(255, 255, 255, 0.274);
+    width: 30%;
+    height: 100vh;
+    z-index: 6;
     display: none;
 }
-.flexsearch--wrapper {
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    overflow: hidden;
-    background: transparent;
-    margin: 0;
-    position: static;
-}
-.flexsearch--form {
-    overflow: hidden;
-    position: relative;
-}
-.flexsearch--input-wrapper {
-    padding: 0 66px 0 0; 
-    overflow: hidden;
-}
-.flexsearch--input {
-    width: 100%;
-}
-.flexsearch--input {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 25px;
-    padding: 2px 0px 0 12px;
-    border-color: rgba(250, 108, 61, 0.74);
-    border-radius: 35px;
-    border-style: solid;
-    border-width: 2px;
-    color: #480082;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-.flexsearch--submit {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    width: 60px;
-    height: 60px;
-    padding: 0;
-    border: none;
-    margin-top: 20px; 
-    margin-right: 5px; 
-    background: transparent;
-    color: #888;
-    font-family: "Raleway", sans-serif;
-    font-size: 40px;
-    line-height: 60px;
-}
-.flexsearch--input:focus {
-    outline: none;
-    border-color: #480082;
-}
-.flexsearch--submit:hover { 
-    color: #480082;
-    cursor: pointer;
-}
-::-webkit-input-placeholder {
-    color:  #480082;  
-}
-input:-moz-placeholder {
-    color:  #480082;
-}
-ul.nav {
-    display: grid;
-    grid-template-columns: 80% 7% 10%;
-    padding-left: 325px;
-    margin: 0px;
-    padding-top: 16px;
-}
-ul.nav li {
-    list-style-type: none;
-    width: 90%;
-    font-size: 25px;
-    text-align: center;
-    color: white;
-    margin-bottom: none;
-    padding-left: none;
-}
-ul.nav a{
+a.menuLink{
+    font-size: 28px;
+    color: grey;
     text-decoration: none;
-    color: white;    
 }
-ul.nav a:hover {
-    color: #480082;;
+a.menuLink:hover{
+    color:#440875 ;
 }
-img.logo{
+ul.mainMenu{
+    padding-top: 15%;
+}
+li {
+    position: relative;
+    list-style: none;
+    line-height: 55px;
+}
+li.ultimo a{
+    font-size: 20px;
+    padding-top: 10px;
+}
+li.ultimo a img {
+    width: 7%;
+}
+/*REPRODUCTOR*/
+nav.miniPlayer{
+    width: 35%;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 10%;
-    height: auto;
+    right: 2%;
+    top: 3%;
+    z-index: 12;
 }
-.container{
-    background-image: url(../img/header-play.jpg);
-    height: 65px;
+ul.playerbuttons{
+    display: grid;
+    padding-top: 5px;
+    grid-template-columns: 7% 7% 7% 5%;
 }
-.header{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(225, 225, 225, 0.40);
+div.playerbutton{
+    width: 50%;
+    position: fixed;
+    left: 83%;
+    top: 4%;
+}
+ul.playerbuttons li i{
+    font-size: 25px;
+    color: #440875;
+}
+ul.playerbuttons li i:hover {
+    color: #dbff4b ;
+}
+div.info{
+    display: grid;
+    grid-template-columns: 20% 30%;
+}
+div.infotyc{
+    padding-top: 5px;
+}
+div.imagenTrack{
+    width: 65px;
     height: 65px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: solid 1px #dbff4b;
+}
+div.imagenTrack img{
     width: 100%;
 }
-div.catalogo{
+.titulo {
+    font-size: 18px;
+    color:gray;
+}
+p.cantante a{
+    font-size: 16px;
+    color:gray;
+    text-decoration: none;
+}
+.spanLastSong{
+    display: none;
+}
+/*TITULO*/
+section{
     display: grid;
     grid-template-columns: 25% 55%;
     margin: 0 auto;
-    width: 80%;
-    margin-top: 5px;
-    height: 303px;
+    width: 75%;
+    margin-top: 10%;
+    font-family: "raleway";
 }
 figure{
     width: 100%;
 }
 img.portada{
     border-radius: 3%;
-    width: 100%;
-    height: 260px;
+    width: 250px;
+    height: 250px;
 }
 figure div i{
     color: black;
@@ -170,7 +170,7 @@ a{
     text-decoration: none;
     color: black;    
 }
-a:hover{
+.info-container a:hover{
     color: #480082;
     font-weight: bold;
 }
@@ -193,12 +193,16 @@ button{
     background-color:  #480082;
     border: 1px solid #480082;
 } 
+button.escuchar {
+    width: 90%;
+}
 div.toolbar{
     display: grid;
-    grid-template-columns: 8% 25%;
+    grid-template-columns: 15% 25%;
     margin-left: 13%;
 }
-div.cuerpo{
+/*DETALLE*/
+main{
     width: 75%;
     margin: 0 auto;
 }
@@ -207,40 +211,16 @@ div.cuerpo{
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 8% 76% 12% 8% ;
+    grid-template-columns: 4% 6% 71% 14% 5%;;
     padding-top: 15px;
+    padding-left: 18px;
     border-top: 1px solid white;
-    font-size: 18px;
+    font-size: 17px;
 }
-li.fav {
-    font-size: 30px;
+i:hover{
+    color:#dbff4b;
 }
-li.alea{
-    font-size: 40px;
-}
-li.repro {
-    font-size: 50px;
-}
-li.una{
-    font-size: 40px;
-}
-li.vol{
-    font-size: 30px;
-}
-ul.herramientas li{
-    list-style: none;
-    padding-top: 5px;
-    color: #480082;
-    cursor: pointer;
-    margin: 5% 15px;
-    text-align: center;
-    font-size: medium;
-}
-ul.herramientas {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    background-color: rgba(225, 225, 225, 0.40);
-}
+/*FOOTER*/
 footer {
     background-color: rgba(250, 108, 61, 0.925);
 }
@@ -264,73 +244,73 @@ li.footer{
 .logofooter{
     width: 30px ;
 }
-@media screen and (max-width: 850px){
-    ul.nav {
-        padding-left: 170px;
-        grid-template-columns: 68% 14% 10%;
-    }  
-    ul.nav li {
-        width: 100%;
-    }
-    div.catalogo {
-        grid-template-columns: 35% 65%;
-        width: 100%;
-    }
-    div.toolbar {
-        grid-template-columns: 15% 25%;
-        margin-left: 15%;
-    }
-    div.cuerpo {
-        width: 75%;
-        margin-left: 12%;
-    }
-    .canciones {
-        grid-template-columns: 8% 75% 12% 8%;
-    }
-    .info-container {
-        margin-left: 18%;
-    }
-    figure {
-        padding-left: 12%;
-    }
+
+
+@media screen and (max-width: 768px){
+nav.miniPlayer{
+    display: none;
+}
+.spanLastSong{
+    display: block;
+    font-size: 22px;
+    color:  #480082;
+    position: absolute;
+    top: 4%;
+    z-index: 8;
+    right: 4%
+}
+.spanLastSong:hover{
+    color: #dbff4b ;
+}
+.searchButton {
+    left: 13%;
+    font-size: 22px;
+}
+div.toolbar {
+    grid-template-columns: 15% 25%;
+    margin-left: 15%;
+}
+main {
+    width: 75%;
+    margin-left: 12%;
+}
+img.portada {
+    border-radius: 3%;
+    width: 225px;
+    height: 225px;
+}
+ul.datos-album {
+    display: none;
+}
+section {
+    grid-template-columns: 58% 13%;
+    width: 100%;
+    padding-left: 15%;
+    margin-top: 12%;
+}
+h1{
+  padding-top: 70px;
+}
+div.toolbar {
+    grid-template-columns: 30% 25%;
+}
 }
 @media screen and (max-width: 425px){
-    li.footer {
-        font-size: 10px;
-    }
-    img.logo {
+li.footer {
+    font-size: 10px;
+}
+img.logo {
         width: 32%;
-    }
-    ul.nav {
-        grid-template-columns: 27% 48% 13%;
-    }
-    li.buscador{
-        display: block;
-    }
-    li.ultimo{
-        display: none;
-    }
-    .canciones {
-        grid-template-columns: 8% 67% 19% 8%;
-    }
-    div.toolbar {
-        grid-template-columns: 29% 25%;
-        margin-left: 12%;
-    }
-    ul.datos-album{
-        display: none;
-    }
-    img.portada {
-        width: 100%;
-        height: 175px;
-    }
-    div.catalogo {
-        height: 225px;
-    }
-    figure {
-        padding-left: 0px;
-    }
-    .info-container {
-        margin-left: 22%;
-    }
+}
+.canciones {
+    font-size: 12px;
+}
+img.portada {
+    width: 195px;
+    height: 195px;
+}
+section {
+    grid-template-columns: 60% 13%;
+    margin-top: 18%;
+}
 }

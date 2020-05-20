@@ -7,6 +7,11 @@
      <link rel="shortcut icon" href="../img/logo-cd.png" type="image/x-icon">
      <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Ubuntu&display=swap" rel="stylesheet">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+     <!-- UIkit CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+     <!-- UIkit JS -->
+     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>>
      <link rel="stylesheet" href="favoritos.css">
  </head>
  <body>
@@ -31,27 +36,16 @@
          </ul>
       </div>
     </div>
-    <!-- navegador playlist con JS después se va a poder cambiar-->
-      <div class="opciones-play">
-         <ul class="opciones">
-             <li class="primero"> Canciones </li>
-             <li class="op"> Playlist </li>
-             <li class="op"> Álbumes </li>
-             <li class="op"> Artistas </li>
+
+    <!-- NAVEGADOR -->
+     <nav class="navWrapper">
+        <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade">
+            <li class="type"><a href="#">Mis favoritas</a></li>
+            <li class="type"><a href="#">Playlists</a></li>
+            <li class="type"><a href="#">Albums</a></li>
+            <li class="type"><a href="#">Artistas</a></li>
          </ul>
-     </div>
-
-     <!-- favoritos -->
-
-    <div class="cuerpo">
-  <section class="playlist"> 
-        <article class="inicio">
-          <div>Canción</div>
-          <div>Artista</div>
-          <div>Álbum</div>
-        </article>
-
-        <article class="musica">
+        <article class="Playlists">
             <div><i class="fas fa-play-circle"></i></div>
             <div>Rojo</div>
             <div><a href="../artistas/artistas.html">J Balvin</a></div>
@@ -62,6 +56,14 @@
                   </label>
             </div>
         </article> 
+     </nav>
+
+     <!-- favoritos -->
+
+    <div class="cuerpo">
+  <section class="playlist"> 
+  
+        
 
         <article class="musica">
             <div><i class="fas fa-play-circle"></i></div>
