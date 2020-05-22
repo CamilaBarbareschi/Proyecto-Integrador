@@ -201,10 +201,11 @@ div.imagenTrack img{
 /*RANKINGS*/
 section.rankings{
   display: none;
-  padding-top: 5%;
+  padding-top: 7%;
 }
 a.nombreLink{
   text-decoration: none;
+
 }
 ul.uk-switcher.uk-margin{
   width: 98%;
@@ -237,16 +238,23 @@ ul.uk-switcher.uk-margin{
   font-size: 30px;
   text-transform: uppercase;
 }
-img.slide.artistacontenedor.uk-cover{
+img.imgSlide.slide.artistacontenedor{
   border-radius: 50%;
 }
-div.uk-cover-container.itemcontenedorA{
-  border-radius: 100%;
+.itemcontenedor img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-div.itemcontenedor:hover{
+.container.itemcontenedor{
+   width: 100%;
+   position: relative;
+   height: 50vh;
+}
+div.itemcontenedor:hover img{
   border: solid 3px #dbff4b;
 }
-div.itemcontenedorA:hover{
+div.itemcontenedorA:hover img{
   border: solid 3px #dbff4b;
 }
 a.slide-button {
@@ -276,7 +284,7 @@ div.btnback div.textoBack a{
 .spanLastSong{
   display: none;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 930px){
 nav.miniPlayer{
   display: none;
 }
@@ -309,9 +317,6 @@ div.btnback div.textoBack{
   left: 13%;
   font-size: 22px;
 }
-section.rankings {
-  padding-top: 6%;
-}
 .uk-subnav>*>:first-child {
   font-size: 26px;
 }
@@ -327,8 +332,11 @@ div.textoBack a{
 }
 .menuButton {
   font-size: 22px;
+}
+section.rankings {
+  padding-top: 12%;
 }}
-@media screen and (max-width: 425px){
+@media screen and (max-width: 550px){
 .searchButton {
   left: 18%;
 }
