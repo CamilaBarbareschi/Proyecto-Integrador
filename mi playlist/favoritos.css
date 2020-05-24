@@ -3,15 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+ol, ul{
+    padding-left: 0%;
+}
 html {
     font-family: 'Oswald', sans-serif; 
     background-color: rgba(207, 182, 238, 0.781);
 }
 .buscador{
-  display: none;
-}
-li.nav{
     display: none;
+}
+div.user{
+    width: 87%;
+    margin: 15px auto 10px auto;
+    height: 20vh;
+    color: white;
+    font-family: "raleway";
+    background: linear-gradient(150deg,#dc3e0591,#f06d3ebd, #dc3e05b2, #9e00c5b6, #9e00c5a9, #9400cfa8);
+    background-size: 400% 300%;
+    animation: BgGradient 10s ease infinite;
+    text-align: center;
+}
+@keyframes BgGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+div.user ul li{
+    list-style: none;
+    font-size: 40px;
+    padding-top: 5vh;
 }
 .flexsearch--wrapper {
     height: auto;
@@ -68,21 +89,21 @@ li.nav{
 }
 .flexsearch--input:focus {
     outline: none;
-    border-color: #480082;
+    border-color: #dbff4b;
 }
 .flexsearch--submit:hover { 
-    color: #480082;
+    color: #dbff4b;
     cursor: pointer;
 }
 ::-webkit-input-placeholder {
-    color:  #480082;  
+color:  #480082;  
 }
 input:-moz-placeholder {
     color:  #480082;
 }
 ul.nav {
     display: grid;
-    grid-template-columns: 80% 7% 10%;
+    grid-template-columns: 80% 7% 5%;
     padding-left: 325px;
     margin: 0px;
     padding-top: 16px;
@@ -100,21 +121,24 @@ ul.nav a{
     text-decoration: none;
     color: white;    
 }
-ul.nav a:hover {
-    color: #480082;;
+ ul.nav a:hover {
+    color: #dbff4b;
 }
-img.logo{
+img.logo {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 10%;
     height: auto;
+    border-radius: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
 }
 .container{
     background-image: url(../img/header-play.jpg);
     height: 65px;
 }
-.header{
+header{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -122,49 +146,13 @@ img.logo{
     height: 65px;
     width: 100%;
 }
-.opciones{
-    border-bottom: white;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin-left: 5%; 
-    margin-right: 6%;
-    background-color:  rgba(225, 225, 225, 0.40);
-}
-.opciones li{
-    list-style-type: none;
-    font-size: 25px;
-    font-family: "Raleway";
-    color: black;
-    text-align: center;
-}
-li.primero{
-    color: #480082
-}
-li.op:hover{
-    color: #480082;
-    cursor: pointer;
-}
-.play {
-    color: black;
-    background-color: rgba(250, 108, 61);
-    font-family: 'Raleway', sans-serif;
-    padding: 10px 10px;
-    border: 1px solid rgba(250, 108, 61, 0.575) ;
-    cursor: pointer;
-    height: 36px;
-    padding: 0 12px;
-    font-size: 12px;
-    border-radius: 3px;
-    justify-content: center;
-    text-decoration: none;
-}
+
 .playlist {
-    width: 100%;
-    margin-left: 7%;
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 5%;
     font-family: 'Raleway', sans-serif;
     color: black;
-    background-color: rgba(225, 225, 225, 0.40) ;
     padding: 5px 25px;
 }
 .musica{
@@ -172,7 +160,7 @@ li.op:hover{
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 8% 28% 28% 28% 8%;
+    grid-template-columns:  4% 5% 5% 30% 30% 30%;
     padding-top: 15px;
     border-top: 1px solid white;
     font-size: 18px;
@@ -181,10 +169,26 @@ li.op:hover{
     margin-top: 20px;
     display: grid;
     grid-template-columns: 30% 31% 16%;
-    margin-left: 8%;
     font-size: 18px;
     font-weight: bold;
 }
+.musica div a {
+    color: black;
+    text-decoration: none;
+}
+.musica div a:hover{
+    color: #480082;
+    font-weight: bold;
+}
+.musica div button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 17px;
+}
+.musica div button i:hover{
+    color: #480082;
+}
+/*FOOTER*/
 footer {
     background-color: rgba(250, 108, 61, 0.925);
 }
@@ -208,124 +212,77 @@ li.footer{
 .logofooter{
     width: 30px ;
 }
-ul.herramientas li{
-    list-style: none;
-    padding-top: 5px;
-    color: #480082;
-    cursor: pointer;
-    margin: 5% 15px;
-    text-align: center;
+ul.redesSociales i:hover{
+    color:#dbff4b;
 }
-div.cuerpo{
-    display: grid;
-    grid-template-columns: 70% 18%;
-    gap: 12%;
-}
-ul.herramientas {
-    position: fixed;
-    background-color: rgba(225, 225, 225, 0.40);
-    border-radius: 10px;
-    margin: 2px 5px;
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-li.fav {
-    padding-bottom: 22px;
-    font-size: 30px;
-}
-li.alea{
-    font-size: 40px;
-    padding-bottom: 22px;
-}
-li.repro {
-    font-size: 50px;
-    padding-bottom: 22px;
-}
-li.una{
-    padding-bottom: 22px;
-    font-size: 40px;
-}
-li.vol{
-    font-size: 30px;
-}
-.playlist a{
-    text-decoration: none;
-    color: black;
-}
-a:hover{
-    color: #480082;
-    font-weight: bold;
-}
-@media screen and (max-width: 768px){
-     ul.nav {
-    padding-left: 170px;
-    grid-template-columns: 68% 14% 10%;
-    }  
-     ul.nav li {
-     width: 100%;
-      }
-ul.opciones {
-    padding: 0px;
-}
-.opciones {
-    margin-left: 7%;
-    margin-right: 8%;
-}
-div.cuerpo{
-    display: inline;
-}
-.playlist {
-    width: 79%;
-    margin-left: 7%;
-    margin-bottom: 20px;
-}
-aside ul{
+ul.redesSociales{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    list-style: none;
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px 0px 0px 0px;
 }
-li.fav {
-    padding-bottom: 5px;
+ul.redesSociales i{
+    color: black;
 }
-li.alea{
-    padding-bottom: 5px;
+@media screen and (max-width: 800px){
+li.footer{
+    font-size: 15px;
 }
-li.repro {
-    font-size: 50px;
-    padding-bottom: 5px;
+.musica{
+    font-size: 16px;
 }
-li.una{
-    padding-bottom: 5px
+div.user ul li{
+    list-style: none;
+    font-size: 35px;
 }
-ul.herramientas{
-    position: relative;
-   }
+.playlist{
+    padding: 0px 0px 0px 0px;
 }
-@media screen and (max-width: 425px){
-     aside {
-        display: none;
-    }
-    .playlist {
-        width: 100%;
-        margin: 0% 0%;
-        padding: 2% 0%;
-    }
-    ul.opciones{
-        margin: 10px 0px;
-    }
-    li.footer {
-        font-size: 10px;
-    }
-      li.buscador{
-        display: block;
-    }
-      li.ultimo{
-        display: none;
-    }
-      ul.nav {
-        grid-template-columns: 27% 48% 13%;
-    }
-    img.logo {
-        width: 32%;
-    }
+ul.nav {
+    display: grid;
+    grid-template-columns: 74% 10% 16%;
+    padding-left: 248px;
+    margin: 0px;
+    padding-top: 16px;
+}
+img.logo {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 18%;
+}
+}
+@media screen and (max-width: 550px){
+li.footer {
+    font-size: 10px;
+}
+.musica{
+    font-size: 12px;
+}
+img.logo {
+    width: 34%;
+    top: 18%;
+}
+li.buscador{
+    display: block;
+}
+li.ultimo{
+    display: none;
+}
+ul.nav {
+    grid-template-columns: 34% 26% 34%;
+    padding-left: 136px;
+}
+img.logo{
+    width: 28%;
+}
+.musica div button {
+    font-size: 9px;
+}
+div.user ul li{
+    list-style: none;
+    font-size: 25px;
+}
 }

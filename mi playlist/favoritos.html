@@ -11,161 +11,117 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
      <!-- UIkit JS -->
      <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>>
+     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
      <link rel="stylesheet" href="favoritos.css">
  </head>
  <body>
-   <!-- encabezado -->
+
+   <!-- Header -->
    <div class="container">
-      <div class="header">
-        <img class= "logo" src="../img/biboplog.png" alt="BIBOP logo"> 
-        <ul class="nav">
-            <li class="nav"> <i class="fas fa-bars"></i></li>
-            <li class="buscador"><i class="fas fa-search"></i></li>
-            <li class="ultimo">
-                 <div class="flexsearch--wrapper">
-                 <form class="flexsearch--form" action="#" method="post">
-                     <div class="flexsearch--input-wrapper">
-                         <input class="flexsearch--input" type="search" placeholder="search">
-                     </div>
-                 </form>
+   <header>
+    <img class= "logo" src="../img/biboplog.png" alt="BIBOP logo"> 
+    <ul class="nav">
+        <li class="buscador"><i class="fas fa-search"></i></li>
+        <li class="ultimo">
+             <div class="flexsearch--wrapper">
+             <form class="flexsearch--form" action="#" method="post">
+                 <div class="flexsearch--input-wrapper">
+                     <input class="flexsearch--input" type="search" placeholder="search">
                  </div>
-            </li>
-            <li class="primero"><a href="../index/index.html"><i class="fas fa-home"></i></a></li>
-            <li><i class="fas fa-user-circle"></i></li>
-         </ul>
-      </div>
+             </form>
+             </div>
+        </li>
+        <li class="primero"><a href="../index/index.html"><i class="fas fa-home"></i></a></li>
+        <li class="generos"><a class="uk-active menuLink" href=""><i class="fas fa-music"></i></a></li></li>
+     </ul> 
+    </header>
     </div>
-
-    <!-- NAVEGADOR -->
-     <nav class="navWrapper">
-        <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade">
-            <li class="type"><a href="#">Mis favoritas</a></li>
-            <li class="type"><a href="#">Playlists</a></li>
-            <li class="type"><a href="#">Albums</a></li>
-            <li class="type"><a href="#">Artistas</a></li>
+      
+     <div class="user">
+         <ul>
+             <li class="nombre"> Canciones favoritas de Camila</li>  <!-- el nombre se reemplaza por el de la persona propmt -->
+             
          </ul>
-        <article class="Playlists">
-            <div><i class="fas fa-play-circle"></i></div>
-            <div>Rojo</div>
-            <div><a href="../artistas/artistas.html">J Balvin</a></div>
-            <div><a href="../albums/albums.html">Colores</a></div>
-            <div class="elimi-toggle">
-                  <label class="toggle">
-                  <input class="toggle__input" type="checkbox" >
-                  </label>
-            </div>
-        </article> 
-     </nav>
-
-     <!-- favoritos -->
-
-    <div class="cuerpo">
-  <section class="playlist"> 
-  
-        
-
+     </div>
+     <!-- FAVORITOS CUERPO -->
+    <section class="playlist"> 
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div> 1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>Safaera</div>
             <div><a href="../artistas/artistas.html"> Bad Bunny</a></div>
             <div><a href="../albums/albums.html">YHLQMDLG </a></div>
-            <div class="elimi-toggle">
-                 <label class="toggle">
-                  <input class="toggle__input" type="checkbox" >
-                  </label>
-            </div>
-        </article>
 
+        </article>
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div> 1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>Diosa</div>
             <div> <a href="../artistas/artistas.html">Myke Towers </a></div>
             <div><a href="../albums/albums.html">Easy Money Baby</a></div>
-            <div class="elimi-toggle">
-                   <label class="toggle">
-                   <input class="toggle__input" type="checkbox" >
-                   </label>
-            </div>
         </article>
 
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div> 1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>Yo Perreo Sola</div>
             <div><a href="../artistas/artistas.html"> Bad Bunny</a></div>
-            <div><a href="../albums/albums.html">YHLQMDLG </a></div>
-            <div class="elimi-toggle">
-                 <label class="toggle">
-                 <input class="toggle__input" type="checkbox" >
-                 </label>
-            </div>
+            <div><a href="../albums/albums.html">YHLQMDLG </a></div> 
         </article>
 
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div> 1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>Tatoo</div>
             <div> <a href="../artistas/artistas.html">  Rauw Alejandro</a></div>
             <div><a href="../albums/albums.html">Tatoo</a> </div>
-            <div class="elimi-toggle">
-                 <label class="toggle">
-                 <input class="toggle__input" type="checkbox" >
-                </label>
-            </div>
         </article>
 
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div> 1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>Follow</div>
             <div> <a href="../artistas/artistas.html">KAROL G,Anuel AA</a> </div>
             <div> <a href="../albums/albums.html"> Follow</a></div> 
-            <div class="elimi-toggle">
-               <label class="toggle">
-               <input class="toggle__input" type="checkbox" >
-               </label>
-            </div>
         </article> 
 
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div>1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>Amarillo</div>
             <div> <a href="../artistas/artistas.html">J Balvin</a></div>
             <div> <a href="../albums/albums.html"> Colores </a></div>
-            <div class="elimi-toggle">
-               <label class="toggle">
-               <input class="toggle__input" type="checkbox" >
-               </label>  
-            </div>
         </article>
 
         <article class="musica">
-            <div><i class="fas fa-play-circle"></i></div>
+            <div>1</div>
+            <div><button><i class="fas fa-heart"></i></button></div>
+            <div><button><i class="fas fa-play"></i></button></div>
             <div>PORFA</div>
-            <div>  <a href="../artistas/artistas.html">Feid, Justin Quiles</a></div>
+            <div><a href="../artistas/artistas.html">Feid, Justin Quiles</a></div>
             <div><a href="../albums/albums.html">Porfa</a></div> 
-            <div class="elimi-toggle">
-               <label class="toggle">
-                <input class="toggle__input" type="checkbox" >
-            </label>
-            </div>
         </article>
-       
     </section> 
-    <aside>
-        <ul class="herramientas">
-                <li class="fav"><i class="fas fa-heart"></i></li>
-                <li class="alea"><i class="fas fa-random"></i></li>
-                <li class="repro"><i class="fas fa-play"></i></li>
-                <li class="una"><i class="fas fa-redo-alt"></i></li>
-                <li class="vol"><i class="fas fa-volume-up"></i></li>
-        </ul>
-    </aside>
-    </div>
 
       <!-- footer -->
 <footer>
     <ul>
         <li class="footer"><img class="logofooter"src="../img/logo-cd.png" alt="BIBOP"></li>
-        <li class="footer"> © 2020 by BIBOP. ELIA, LEMOINE & BARBARESCHI</li>
+        <li class="footer"> © 2020 by BIBOP. ELIA, LEMOINE & BARBARESCHI
+            <ul class="redesSociales">
+                <li class="redes"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li class="redes"><a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a></li>
+                <li class="redes"><a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
+                <li class="redes"><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> </li>
+                <li class="redes"><a href="https://ar.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul> 
+        </li>
         <li class="footer"> <a href="https://www.deezer.com/es/"><img class="logofooter" src="../img/deezer.png" alt="deezer"></a></li>
     </ul>
 </footer>
