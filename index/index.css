@@ -59,8 +59,23 @@ html {
     transform: rotate(360deg);
   }
 }
+ul.uk-subnav.uk-subnav-pill{
+  background: linear-gradient(150deg,#dc3e0581,#f06d3e7c, #dc3e058a, #c5008385, #9e00c571, #9400cf85);
+  background-size: 400% 300%;
+  animation: BgGradient 7s ease infinite;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+
+}
+@keyframes BgGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
 .textoWrapper{
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -86,33 +101,73 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   margin: 0 0 0px 0;
 }
 /*HAMBURGESA*/
-.menuButton {
+#menuButton {
   position: absolute;
-  top: 4%;
+  top: 5%;
   color: #440875;
   left: 4%;
   z-index: 6;
   font-size: 25px;
 }
-.menuButton:hover {
+#menuButton:hover {
   color: #dbff4b ;
 }
-.searchButton{
+#searchButton{
   position: absolute;
-  top: 4%;
+  top: 5%;
   left: 10%;
   z-index: 6;
   font-size: 25px;
   color:#440875;
 }
-.searchButton:hover {
+ul.redesSociales{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto ;
+}
+ul.mainMenu li.opcion a.menuLink{
+  color: black;
+}
+ul.mainMenu li.opcion a.menuLink:hover{
+  color: #440875;
+}
+ul.mainMenu li.opcion{
+  color: black;
+  font-size: 1px;
+}
+li.opcion.icono ul.tool{
+  display: grid;
+  grid-template-columns: 8% auto;
+}
+li.opcion.icono ul.tool i{
+  font-size: 18px;
+}
+ul.tool li.textMenu{
+  padding-left: 20px;
+}
+li.opcion.icono ul.tool i a:hover{
+  color: #440875; 
+}
+hr{
+  color: black;
+}
+ul.redesSociales li.redes i{
+  color: black;
+  font-size: 25px;
+}
+ul.redesSociales li.redes i:hover{
+  color: #480075;
+}
+#searchButton:hover {
   color: #dbff4b;
 }
 ol, ul {
   padding-left: 0px;
 }
-
-nav.menu{
+.uk-open>.uk-offcanvas-bar {
+  left: 0;
+  background-color: #dcff4f ;
+}
+.menu{
   padding-left: 4%;
   padding-top: 3%;
   background-color: rgba(255, 255, 255, 0.274);
@@ -130,12 +185,18 @@ a.menuLink:hover{
   color:#440875 ;
 }
 ul.mainMenu{
-  padding-top: 15%;
+  padding-top: 10%;
+}
+.uk-button{
+  padding: 0px 0px;
 }
 li {
   position: relative;
   list-style: none;
   line-height: 55px;
+}
+li.ultimo {
+  padding-left: 12%;
 }
 li.ultimo a{
   font-size: 20px;
@@ -186,7 +247,7 @@ div.imagenTrack{
   height: 65px;
   margin-right: 10px;
   border-radius: 3px;
-  border: solid 1px #dbff4b;
+  
 }
 div.imagenTrack img{
   width: 100%;
@@ -201,11 +262,10 @@ div.imagenTrack img{
 /*RANKINGS*/
 section.rankings{
   display: none;
-  padding-top: 7%;
+  padding-top: 2%;
 }
 a.nombreLink{
   text-decoration: none;
-
 }
 ul.uk-switcher.uk-margin{
   width: 98%;
@@ -303,9 +363,7 @@ nav.miniPlayer{
 div.textoWrapper p.brand {
   font-size: 98px;
 }
-.ondasWrapper {
-  height: 500px;
-}
+
 div.btnback div.circulo{
   width: 20px;
   height: 20px;
@@ -313,7 +371,7 @@ div.btnback div.circulo{
 div.btnback div.textoBack{
   font-size: 20px;
 }
-.searchButton {
+#searchButton {
   left: 13%;
   font-size: 22px;
 }
@@ -330,14 +388,11 @@ div.btnback div.circulo {
 div.textoBack a{
   font-size: 18px;
 }
-.menuButton {
+#menuButton {
   font-size: 22px;
-}
-section.rankings {
-  padding-top: 12%;
 }}
-@media screen and (max-width: 550px){
-.searchButton {
+@media screen and (max-width: 500px){
+#searchButton {
   left: 18%;
 }
 div.playerbutton ul.playerbuttons li.ultimo{
@@ -361,7 +416,7 @@ div.btnback div.circulo {
   height: 18px;
 }
 section.rankings {
-  padding-top: 10%;
+  padding-top: 12%;
 }
 .uk-subnav>*>:first-child {
   font-size: 18px;
@@ -373,9 +428,9 @@ div.btnback div.circulo {
   width: 16px;
   height: 16px;
 }
-.searchButton {
+#searchButton {
   font-size: 20px;
 }
-.menuButton {
+#menuButton {
   font-size: 22px;
 }}
