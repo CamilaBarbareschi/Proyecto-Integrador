@@ -251,6 +251,7 @@ div.imagenTrack{
 }
 div.imagenTrack img{
   width: 100%;
+  border: 1px solid  #dbff4b;
 }
 .titulo {
   font-size: 18px;
@@ -260,6 +261,58 @@ div.imagenTrack img{
   color:gray;
 }
 /*RANKINGS*/
+div.container.itemcontenedor.imgArt button.repro{
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  top: 69%;
+  left: 20%;
+  transform: translateY(-69%);
+  background-color: cornsilk;
+}
+div.container.itemcontenedor  button.repro{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 69%;
+  left: 5%;
+  transform: translateY(-69%);
+  background-color: cornsilk;
+}
+div.container.itemcontenedor.imgArt button.save{
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  top: 69%;
+  left: 23%;
+  transform: translateY(-69%);
+  background-color: cornsilk;
+}
+div.container.itemcontenedor  button.save{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  top: 69%;
+  transform: translateY(-69%);
+  left: 10%;
+  background-color: cornsilk;
+}
 section.rankings{
   display: none;
   padding-top: 2%;
@@ -363,7 +416,16 @@ nav.miniPlayer{
 div.textoWrapper p.brand {
   font-size: 98px;
 }
-
+button.repro {
+  width: 40px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 62%;
+  left: 17%;
+  background-color: cornsilk;
+}
 div.btnback div.circulo{
   width: 20px;
   height: 20px;
@@ -406,7 +468,7 @@ button.textoLink {
   margin-left: 0%;
 }
 .uk-subnav-pill>.uk-active>a {
-  font-size: 16px;
+  font-size: 15px;
 }
 div.btnback div.textoBack a {
   font-size: 20px;
@@ -433,4 +495,12 @@ div.btnback div.circulo {
 }
 #menuButton {
   font-size: 22px;
+}
+div.container.itemcontenedor.imgArt button.save {
+  top: 64%;
+  transform: translateY(-64%);
+}
+div.container.itemcontenedor.imgArt button.repro {
+  top: 64%;
+  transform: translateY(-64%);
 }}

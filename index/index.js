@@ -16,7 +16,7 @@ window.addEventListener ("load", function (){
 
            let coverAlbums = cadaAlbum.cover_medium
            let tituloAlbums = cadaAlbum.title
-           let nuevoHtmlAlbumSlideShow = "<li class='uk-transition-toggle' tabindex='0'>" + "<div class='container itemcontenedor'>" +  "<img class='imgSlideAlbum' src=" + coverAlbums +  "></img>" + "<div class='uk-position-center uk-panel'>" + "<a class='nombreLink' href='../albums/albums.html'>" + " <h2 class='uk-transition-slide-bottom-small'>"+  tituloAlbums + "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
+           let nuevoHtmlAlbumSlideShow = "<li class='uk-transition-toggle' tabindex='0'>" + "<div class='container itemcontenedor'>" +  "<img class='imgSlideAlbum' src=" + coverAlbums +  "></img>" + "<button class='repro'><i class='fas fa-play'></i></button>"+ "<button class='save'><i class='fas fa-heart'></i></button>"+"<div class='uk-position-center uk-panel'>" + "<a class='nombreLink' href='../albums/albums.html'>" + " <h2 class='uk-transition-slide-bottom-small'>"+  tituloAlbums + "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
            document.querySelector("ul.listadoAlbums").innerHTML += nuevoHtmlAlbumSlideShow
         }
       
@@ -27,7 +27,7 @@ window.addEventListener ("load", function (){
 
             let imgArtista = cadaArtista.picture_medium 
             let nombreArtista = cadaArtista.name
-            let nuevoHtmlArtistaSlideShow = "<li class='uk-transition-toggle' tabindex='0'>" + "<div class='container itemcontenedor imgArt'>" +  "<img class='imgSlide slide artistacontenedor' src=" + imgArtista +  "></img>" + "<div class='uk-position-center uk-panel'>" + "<a class='nombreLink' href='../artistas/artistas.html'>" + " <h2 class='uk-transition-slide-bottom-small'>"+  nombreArtista + "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
+            let nuevoHtmlArtistaSlideShow = "<li class='uk-transition-toggle' tabindex='0'>" + "<div class='container itemcontenedor imgArt'>" +  "<img class='imgSlide slide artistacontenedor' src=" + imgArtista +  "></img>" + "<button class='repro'><i class='fas fa-play'></i></button>"+ "<button class='save'><i class='fas fa-heart'></i></button>" +"<div class='uk-position-center uk-panel'>" + "<a class='nombreLink' href='../artistas/artistas.html'>"  + "<h2 class='uk-transition-slide-bottom-small'>"+  nombreArtista + "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
             document.querySelector("ul.listadoArtistas").innerHTML += nuevoHtmlArtistaSlideShow
         }
 
@@ -38,7 +38,7 @@ window.addEventListener ("load", function (){
 
             let coverPlaylist = cadaPlaylist.picture_medium 
             let tituloPlaylist = cadaPlaylist.title
-            let nuevoHtmlPlaylistSlideShow = "<li class='uk-transition-toggle' tabindex='0'>" + "<a class='nombreLink' href='../playlist/playlist.html'>" +"<div class='container itemcontenedor'>" +  "<img class='imgSlide' src=" + coverPlaylist +  "></img>" + "</div>"+ "</a>" + "</li>"
+            let nuevoHtmlPlaylistSlideShow = "<li class='uk-transition-toggle' tabindex='0'>" + "<div class='container itemcontenedor'>"+"<a class='nombreLink' href='../playlist/playlist.html'>"  +  "<img class='imgSlide' src=" + coverPlaylist +  "></img>" + "</a>"+ "<button class='repro'><i class='fas fa-play'></i></button>"+ "<button class='save'><i class='fas fa-heart'></i></button>"+ "</div>" + "</li>"
             document.querySelector("ul.listadoPlaylist").innerHTML += nuevoHtmlPlaylistSlideShow
         }
       })

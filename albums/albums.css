@@ -81,10 +81,9 @@ color:  #480082;
 input:-moz-placeholder {
     color:  #480082;
 }
-
 ul.nav {
     display: grid;
-    grid-template-columns: 80% 7% 10%;
+    grid-template-columns: 78% 7% 7% 5%;
     padding-left: 325px;
     margin: 0px;
     padding-top: 16px;
@@ -130,11 +129,11 @@ header{
 /*TITULO*/
 section{
     display: grid;
-    grid-template-columns: 25% 55%;
-    margin: 0 auto;
-    width: 75%;
-    margin-top: 10%;
+    margin-top: 5%;
     font-family: "raleway";
+    grid-template-columns: 250px auto;
+    padding-left: 13%;
+  
 }
 figure{
     width: 100%;
@@ -151,6 +150,9 @@ figure div i{
     left: 20px;
     font-size: 40px;
 }
+div.i {
+    height: 10px;
+}
 figure div i:hover{
     color:#480082 ;
 }
@@ -160,18 +162,17 @@ h1{
     padding-top: 20px;
 }
 ul.datos-album{
-    display: grid;
-    grid-template-columns: 18% 10% 18% 18%;
+
     padding-left: 0px;
     margin-left: 0px;
-    margin-top: 95px;
+    margin-top: 30px;
 }
 ul.datos-album li{
     list-style: none;
     font-size: 12px;
 }
 .info-container{
-    margin-left: 12%
+    margin-left: 5%
 }
 a{
     text-decoration: none;
@@ -207,6 +208,38 @@ div.toolbar{
     display: grid;
     grid-template-columns: 15% 25%;
     margin-left: 13%;
+}
+ul.redesSociales{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style: none;
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px 0px 0px 0px;
+}
+button.escuchar ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    list-style: none;
+    padding: 0px 0px;
+}
+button.agregar ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    list-style: none;
+    padding: 0px 0px;
+}
+button.agregar ul li.icono{
+    padding-right: 10px;
+}
+button.escuchar ul li.icono{
+    padding-right: 10px;
+}
+button.escuchar ul li.icono i:hover{
+    color: white;
+}
+button.agregar ul li.icono i:hover {
+    color: white;
 }
 /*DETALLE*/
 main{
@@ -299,12 +332,19 @@ a.slide-button {
 }
 h3.uk-card-title{
     font-size: 16px;
+    text-align: center;
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 710px){
 nav.miniPlayer{
     display: none;
+}
+li.footer{
+    font-size: 16px;
+}
+h1{
+    padding-top: 15px;
 }
 .spanLastSong{
     display: block;
@@ -335,37 +375,36 @@ img.portada {
     width: 225px;
     height: 225px;
 }
-ul.datos-album {
-    display: none;
-}
+
 section {
-    grid-template-columns: 58% 13%;
     width: 100%;
-    padding-left: 15%;
-    margin-top: 12%;
+    
 }
-h1{
-  padding-top: 70px;
-}
+
 div.toolbar {
     grid-template-columns: 30% 25%;
 }
 ul.nav {
-    padding-left: 170px;
-    grid-template-columns: 68% 14% 10%;
+    padding-left: 180px;
+    grid-template-columns: 64% 9% 16% 6%;
 }  
 ul.nav li {
     width: 100%;
 }
 img.logo {
-    width: 18%;
+    width: 21%;
+    top: 12%
 }}
-@media screen and (max-width: 425px){
+@media screen and (max-width: 480px){
 li.footer {
     font-size: 10px;
 }
+h1{
+    padding-top: 0px;
+}
 img.logo {
-        width: 32%;
+        width: 34%;
+        top: 18%;
 }
 .canciones {
     font-size: 12px;
@@ -375,8 +414,13 @@ img.portada {
     height: 195px;
 }
 section {
-    grid-template-columns: 60% 13%;
-    margin-top: 18%;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    margin-top: 9%;
+}
+.info-container{
+    margin-left: 0px;
 }
 li.buscador{
     display: block;
@@ -385,9 +429,13 @@ li.ultimo{
     display: none;
 }
 ul.nav {
-    grid-template-columns: 27% 48% 13%;
+    grid-template-columns: 11% 41% 14% 34%;
+    padding-left: 134px;
 }
 img.logo {
-    width: 32%;
+    width: 28%;
+}
+ul.datos-album{
+    display: none;
 }
 }
