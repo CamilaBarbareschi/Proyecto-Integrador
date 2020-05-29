@@ -299,6 +299,12 @@ div.uk-card-body{
 i:hover{
     color:#dbff4b;
 }
+button.escuchar ul.escucharbutton li{
+    padding-top: 20px;
+}
+button.agregar ul li{
+    padding-top: 20px;
+}
 /*FOOTER*/
 footer {
     background-color: rgba(250, 108, 61, 0.925);
@@ -438,4 +444,7 @@ img.logo {
 ul.datos-album{
     display: none;
 }
+button {
+    max-width: 136%;
+
 }
