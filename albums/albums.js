@@ -1,14 +1,21 @@
-window.addEventListener ("load", function (){
+window.addEventListener("load", function() {
 
-    fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album")
+    let queryString = new URLSearchParams(location.search);
+
+    let codigoDelAlbum = queryString.get("idAlbum");
+    console.log (codigoDelAlbum)
+
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/" + codigoDelAlbum)
     .then(
-        function (respuesta){
-          return respuesta.json();
+        function(respuesta) {
+            return respuesta.json();            
         }
     )
-    .then (
-        function (informacion) {
-        let albums = infomacion.data
-        console.log(albums)
-    })
+    .then(
+        function(informacion) {
+            let album = informacion.title
+            let img = informacion.cover
+            console.log(img)
+        }
+    )
 })

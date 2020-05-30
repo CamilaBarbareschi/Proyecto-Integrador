@@ -207,60 +207,18 @@ li.ultimo a img {
 }
 /*MINI PLAYER*/
 nav.miniPlayer{
- width: 35%;
  position: fixed;
  right: 2%;
- top: 3%;
+ top: 2%;
  z-index: 12;
 }
-ul.playerbuttons{
-  display: grid;
-  padding-top: 5px;
-  grid-template-columns: 7% 7% 7% 5%;
-}
-p.titulo a {
-  text-decoration: none;
-  color: grey;
-}
-div.playerbutton{
-  width: 50%;
-  position: fixed;
-  left: 83%;
-  top: 4%;
-}
-ul.playerbuttons li i{
-  font-size: 25px;
-  color: #440875;
-}
-ul.playerbuttons li i:hover {
-  color: #dbff4b ;
-}
-div.info{
-  display: grid;
-  grid-template-columns: 20% 30%;
-}
-div.infotyc{
-  padding-top: 5px;
-}
-div.imagenTrack{
-  width: 65px;
-  height: 65px;
-  margin-right: 10px;
-  border-radius: 3px;
-  
-}
-div.imagenTrack img{
-  width: 100%;
-  border: 1px solid  #dbff4b;
-}
-.titulo {
-  font-size: 18px;
-}
-.cantante{
-  font-size: 16px;
-  color:gray;
+nav.miniPlayer iframe{
+  height: 70px;
 }
 /*RANKINGS*/
+button:focus{
+outline: 0px;
+}
 div.container.itemcontenedor.imgArt button.repro{
   width: 36px;
   height: 36px;
@@ -497,10 +455,26 @@ div.btnback div.circulo {
   font-size: 22px;
 }
 div.container.itemcontenedor.imgArt button.save {
-  top: 64%;
+  top: 58%;
   transform: translateY(-64%);
+  width: 28px;
+  height: 28px;
 }
 div.container.itemcontenedor.imgArt button.repro {
-  top: 64%;
+  top: 58%;
   transform: translateY(-64%);
+  width: 28px;
+  height: 28px;
+}
+div.container.itemcontenedor button.repro {
+  top: 58%;
+  transform: translateY(-64%);
+  width: 28px;
+  height: 28px;
+}
+div.container.itemcontenedor button.save{
+  top: 58%;
+  transform: translateY(-64%);
+  width: 28px;
+  height: 28px;
 }}
