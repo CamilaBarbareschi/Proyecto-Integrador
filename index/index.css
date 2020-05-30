@@ -112,14 +112,6 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #menuButton:hover {
   color: #dbff4b ;
 }
-#searchButton{
-  position: absolute;
-  top: 5%;
-  left: 10%;
-  z-index: 6;
-  font-size: 25px;
-  color:#440875;
-}
 ul.redesSociales{
   display: grid;
   grid-template-columns: auto auto auto auto auto ;
@@ -214,6 +206,75 @@ nav.miniPlayer{
 }
 nav.miniPlayer iframe{
   height: 70px;
+}
+
+/*BUSCADOR*/
+.flexsearch--wrapper {
+  height: auto;
+  width: 20%;
+  overflow: hidden;
+  background: transparent;
+  margin: 0;
+  position: static;
+  z-index: 25;
+}
+.flexsearch--form {
+  overflow: hidden;
+  padding-left: 40%;
+  position: relative;
+  z-index: 25;
+}
+.flexsearch--input-wrapper {
+  padding: 0px 20px 0 0;
+  z-index: 25;
+  position: fixed;
+  top: 5%;
+}
+.flexsearch--input {
+  width: 100%;
+  z-index: 25;
+  height: 20px;
+  padding: 2px 0px 2px 12px;
+  border-color: #480082;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: content-box;
+  color: #480082;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+.flexsearch--submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  z-index: 25;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  margin-top: 20px; 
+  margin-right: 5px; 
+  background: transparent;
+  color: #888;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+}
+.flexsearch--input:focus {
+  outline: none;
+  border-color: #dbff4b;
+}
+.flexsearch--submit:hover { 
+  color: #dbff4b;
+  cursor: pointer;
+}
+::-webkit-input-placeholder {
+color:  #480082;  
+}
+input:-moz-placeholder {
+  color:  #480082;
 }
 /*RANKINGS*/
 button:focus{
@@ -368,6 +429,10 @@ nav.miniPlayer{
   z-index: 8;
   right: 4%
 }
+.flexsearch--form {
+  overflow: hidden;
+  padding-left: 50%;
+}
 .spanLastSong:hover{
   color: #dbff4b ;
 }
@@ -409,7 +474,7 @@ div.textoBack a{
   font-size: 18px;
 }
 #menuButton {
-  font-size: 22px;
+  font-size: 26px;
 }}
 @media screen and (max-width: 500px){
 #searchButton {
@@ -439,7 +504,7 @@ section.rankings {
   padding-top: 12%;
 }
 .uk-subnav>*>:first-child {
-  font-size: 18px;
+  font-size: 15px;
 }
 div.btnback div.textoBack a {
   font-size: 18px;
@@ -448,11 +513,8 @@ div.btnback div.circulo {
   width: 16px;
   height: 16px;
 }
-#searchButton {
-  font-size: 20px;
-}
-#menuButton {
-  font-size: 22px;
+.flexsearch--form {
+  padding-left: 70%;
 }
 div.container.itemcontenedor.imgArt button.save {
   top: 58%;

@@ -1,9 +1,434 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 html {
-    font-family: 'Oswald', sans-serif; 
-    background-color: rgba(207, 182, 238, 0.781);
+   font-family: 'Oswald', sans-serif; 
+   background-color: rgba(207, 182, 238, 0.781);
+}
+.uk-link, a {
+   color: gray;
+   text-decoration: none;
+   cursor: pointer;
+}
+/*MENU HAMBURGUESA*/
+#menuButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 4%;
+    z-index: 6;
+    font-size: 25px;
+}
+#menuButton:hover {
+    color: #dbff4b ;
+}
+ul.redesSociales{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+}
+ul.mainMenu li.opcion a.menuLink{
+    color: black;
+}
+ul.mainMenu li.opcion a.menuLink:hover{
+    color: #440875;
+}
+ul.mainMenu li.opcion{
+    color: black;
+    font-size: 1px;
+}
+li.opcion.icono ul.tool{
+    display: grid;
+    grid-template-columns: 8% auto;
+}
+li.opcion.icono ul.tool i{
+    font-size: 18px;
+}
+ul.tool li.textMenu{
+    padding-left: 20px;
+}
+li.opcion.icono ul.tool i a:hover{
+    color: #440875; 
+}
+hr{
+    color: black;
+}
+ul.redesSociales li.redes i{
+    color: black;
+    font-size: 25px;
+}
+ul.redesSociales li.redes i:hover{
+    color: #480075;
+}
+ol, ul {
+    padding-left: 0px;
+}
+.uk-open>.uk-offcanvas-bar {
+    left: 0;
+    background-color: #dcff4f ;
+}
+.menu{
+    padding-left: 4%;
+    padding-top: 3%;
+    background-color: rgba(255, 255, 255, 0.274);
+    width: 30%;
+    height: 100vh;
+    z-index: 6;
+    display: none;
+}
+a.menuLink{
+    font-size: 28px;
+    color: grey;
+    text-decoration: none;
+}
+a.menuLink:hover{
+    color:#440875 ;
+}
+ul.mainMenu{
+    padding-top: 10%;
+}
+.uk-button{
+    padding: 0px 0px;
+}
+li {
+    position: relative;
+    list-style: none;
+    line-height: 55px;
+}
+li.ultimo {
+    padding-left: 12%;
+}
+li.ultimo a{
+    font-size: 20px;
+    padding-top: 10px;
+}
+li.ultimo a img {
+    width: 7%;
+}
+/*MINI PLAYLIST*/
+/*BUSCADOR*/
+.flexsearch--wrapper {
+    height: auto;
+    width: 20%;
+    overflow: hidden;
+    background: transparent;
+    margin: 0;
+    position: static;
+    z-index: 25;
+}
+.flexsearch--form {
+    overflow: hidden;
+    padding-left: 40%;
+    position: relative;
+    z-index: 25;
+}
+.flexsearch--input-wrapper {
+    padding: 0px 20px 0 0;
+    z-index: 25;
+    position: fixed;
+    top: 5%;
+}
+.flexsearch--input {
+    width: 100%;
+    z-index: 25;
+    height: 20px;
+    padding: 2px 0px 2px 12px;
+    border-color: #480082;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: content-box;
+    color: #480082;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+.flexsearch--submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    z-index: 25;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    margin-top: 20px; 
+    margin-right: 5px; 
+    background: transparent;
+    color: #888;
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+}
+.flexsearch--input:focus {
+    outline: none;
+    border-color: #dbff4b;
+}
+.flexsearch--submit:hover { 
+    color: #dbff4b;
+    cursor: pointer;
+}
+::-webkit-input-placeholder {
+  color:  #480082;  
+}
+input:-moz-placeholder {
+    color:  #480082;
+}
+/*SIN RESULTADOS*/
+div.sinResultados{
+    width: 90%;
+    height: 50vh;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    background: linear-gradient(150deg,#dc3e0581,#f06d3e7c, #dc3e058a, #c5008385, #9e00c571, #9400cf85);
+    background-size: 400% 300%;
+    animation: BgGradient 7s ease infinite;
+    display: none;
+}
+@keyframes BgGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+div.sinResultados p{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 60px;
+}
+div.sinResultados img{
+    position: absolute;
+    bottom: 5%;
+    width: 20%;
+    left: 1%;
+}
+nav.miniPlayer{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    z-index: 12;
+}
+nav.miniPlayer iframe{
+     height: 70px;
+}
+/*RESULTADOS CANCIONES*/
+main.resultadosDeBusqueda{
+    width: 85%;
+    margin: 0 auto;
+    color: black;
+}
+.uk-card-media-top img{
+    border-radius: 3%;
+}
+div.uk-card.uk-card-small.uk-card-default{
+    border-radius: 3%;
+}
+div.uk-card.uk-card-small.uk-card-default a{
+    text-decoration: none;
+}
+.texto p {
+    font-size: 18px;
+    font-family: "raleway";
+    color: black;
+    margin-top: 6%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.texto p:hover{
+    color: #480082 ;
+}
+.uk-card-media-top img.artistasim{
+    border-radius: 50%;
+    background-color: rgba(207, 182, 238, 0);
+}
+.uk-card.uk-card-small.uk-card-default{
+    background-color: rgba(255, 255, 255, 0);
+}
+.uk-card-small .uk-card-body, .uk-card-small.uk-card-body {
+    padding: 20px 20px;
+    text-align: center;
+}
+.portada{
+  border-radius: 10px;
+}
+h1{
+    font-size: 30px;
+    color: black;
+    padding-left: 10px;
+    font-family: "raleway";
+}
+h1:hover{
+    color: #480075;
+    font-weight: bolder;
+}
+.info-container a{
+    text-decoration: none;
+}
+section.resultadoArtista figure button.repro{
+    margin-left: 0px;
+}
+.canciones{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 7% 72% 15% 6%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    border-top: 1px solid white;
+    font-size: 17px;
+    width: 85%;
+    color: black;
+}
+button{
+    border: none;
+    background: none;
+}
+.canciones i{
+    font-size: 18px;
+}
+button:focus{
+    outline: 0px;
+}
+.uk-card-default {
+    box-shadow: none;
+}
+div.uk-card-body{
+    background-color: rgba(255, 255, 255, 0);
+}
+.tarjetas{
+    width: 85%;
+    margin: 50px auto;
+}
+.canciones i:hover{
+    color:#dbff4b;
+}
+button.escuchar ul.escucharbutton li{
+    padding-top: 20px;
+}
+button.agregar ul li{
+    padding-top: 20px;
+}
+a.slide-button {
+    background-color: rgba(255, 107, 57, 0.842);
+    border-radius: 50%;
+}
+.uk-card-body{
+    background-color: rgba(207, 182, 238, 0.87);
+}
+h3.uk-card-title{
+    font-size: 18px;
+    text-align: center;
+    margin: 0px;
+}
+h3.uk-card-title:hover{
+    font-weight: bold;
+    color:#480075;
+}
+button.save {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
+button.repro {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+    margin-right: 10px;
+}
+@media screen and (max-width: 690px){
+    div.cancionesContainer {
+        margin-top: 20%;
+    }
+    .flexsearch--input-wrapper {
+        padding: 0px 20px 0 0;
+        z-index: 25;
+        position: fixed;
+        top: 14%;
+        left: 3%;
+    }
+    #menuButton {
+        position: fixed;
+        top: 6%;
+        color: #440875;
+        left: 6%;
+    }
+}
+@media screen and (max-width: 500px){
+.texto p{
+    font-size: 28px;
+    padding-left: 17px;
+}
+h3.uk-card-title {
+    font-size: 16px;
+}
+button.repro {
+    width: 26px;
+    height: 26px;
+    margin-right: 2px;
+}
+button.save{
+    width: 26px;
+    height: 26px;
+}
+figure div{
+    padding-left: 28px;
+}
+section.resultadoArtista figure button.repro{
+    margin-left: 28px;
+}
+.uk-card-small .uk-card-body, .uk-card-small.uk-card-body{
+    text-align: left;
+}
+h1 {
+    font-size: 28px;
+}
+img.portada{
+    width: 80%;
+    margin: 0 auto;
+}
+main.resultadosDeBusqueda{
+    width: 98%;
+    margin: 0 auto;
+}
+div.cancionesContainer{
+    width: 100%;
+    margin-top: 30%;
+}
+.flexsearch--input-wrapper {
+    padding: 0px 20px 0 0;
+    z-index: 25;
+    top: 14%;
+    left: 21%;
+}
+#menuButton {
+    position: fixed;
+    top: 14%;
+    color: #440875;
+    left: 9%;
+    z-index: 6;
+    font-size: 25px;
+}
+.canciones i{
+    font-size: 15px;
+}
+.canciones{
+    padding-left: 0px;
+    font-size: 15px;
+}
+nav.miniPlayer {
+    position: fixed;
+    top: 2%;
+    left: 3%;
+    z-index: 15;
+}
+nav.miniPlayer iframe {
+    height: 70px;
+    width: 96%;
+}
 }
