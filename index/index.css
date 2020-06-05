@@ -123,6 +123,12 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 #generoButton:hover {
   color: #dbff4b ;
 }
+li.uk-active.cadaGenero a:hover{
+  color: #dbff4b ;
+}
+li.uk-active.cadaGenero a{
+  color: #440875 ;
+}
 ul.redesSociales{
   display: grid;
   grid-template-columns: auto auto auto auto auto ;
