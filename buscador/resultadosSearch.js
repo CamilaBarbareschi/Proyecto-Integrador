@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
                 document.querySelector("main.resultadosDeBusqueda").style.display = "none"
             }
         
-            for (let index = 0; index < 10; index++) {
+            for (let index = 0; index < 8; index++) {
                 const cadaCancion = resultadoBusquedaDeezer[index];
                 
                 let cancionTitulo = cadaCancion.title
@@ -63,7 +63,6 @@ window.addEventListener("load", function() {
                 "<button class='repro' id-album='" + albumID + "'><i class='fas fa-play'></i></button>" +
                 "<button class='save'><i class='fas fa-heart'></i></button>" +
                 "</div></div></li>"
-    
                 document.querySelector("ul.resultadoAlbum").innerHTML += albumNuevoHTML
     
             }
@@ -85,14 +84,14 @@ window.addEventListener("load", function() {
                "<div class='uk-card-media-top'>" + "<img class='artistasim' src='"+ artistaImg + "'>" +
                "</div> <div class='uk-card-body'>"+
                "<a href='../artistas/artistas.html'><h3 class='uk-card-title'>" + artistaName + "</h3></a>"+
-               "<button class='repro' id-artista='"+ artistaId + "'><i class='fas fa-play'></i></button>" +
+               "<button class='reproArtista' id-artista='"+ artistaId + "'><i class='fas fa-play'></i></button>" +
                "<button class='save'><i class='fas fa-heart'></i></button>" +    
                "</div></div></li>"
     
                 document.querySelector("ul.resultadoArtista").innerHTML += artistaNuevoHTML
     
             }
-            var buttonReproArtista = document.querySelectorAll("button.repro")
+            var buttonReproArtista = document.querySelectorAll("button.reproArtista")
             for (let i = 0; i < buttonReproArtista.length; i++) {
               buttonReproArtista[i].onclick = function (){
                 document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=artist&id=' + this.getAttribute("id-artista") +'&app_id=1" width="350" height="350"></iframe>'

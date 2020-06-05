@@ -109,12 +109,24 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   z-index: 6;
   font-size: 25px;
 }
+#generoButton {
+  position: fixed;
+  top: 5%;
+  color: #440875;
+  left: 10%;
+  z-index: 6;
+  font-size: 25px;
+}
 #menuButton:hover {
+  color: #dbff4b ;
+}
+#generoButton:hover {
   color: #dbff4b ;
 }
 ul.redesSociales{
   display: grid;
   grid-template-columns: auto auto auto auto auto ;
+  margin-top: 30%
 }
 ul.mainMenu li.opcion a.menuLink{
   color: black;
@@ -125,6 +137,7 @@ ul.mainMenu li.opcion a.menuLink:hover{
 ul.mainMenu li.opcion{
   color: black;
   font-size: 1px;
+  padding-top: 5px;
 }
 li.opcion.icono ul.tool{
   display: grid;
@@ -138,6 +151,9 @@ ul.tool li.textMenu{
 }
 li.opcion.icono ul.tool i a:hover{
   color: #440875; 
+}
+li.opcion ul.tool  li a.textmenuLink{
+  font-size: 30px;
 }
 hr{
   color: black;
@@ -206,6 +222,9 @@ nav.miniPlayer{
 }
 nav.miniPlayer iframe{
   height: 70px;
+  position: absolute;
+    top: 5%;
+    right: 3%;
 }
 
 /*BUSCADOR*/
@@ -229,6 +248,7 @@ nav.miniPlayer iframe{
   z-index: 25;
   position: fixed;
   top: 5%;
+  left: 16%;
 }
 .flexsearch--input {
   width: 100%;
@@ -338,6 +358,7 @@ section.rankings{
 }
 a.nombreLink{
   text-decoration: none;
+  text-align: center;
 }
 ul.uk-switcher.uk-margin{
   width: 98%;
@@ -418,7 +439,8 @@ div.btnback div.textoBack a{
 }
 @media screen and (max-width: 930px){
 nav.miniPlayer{
-  display: none;
+  width: 96%;
+  margin: 0px auto 0px auto;
 }
 .spanLastSong{
   display: block;
@@ -475,7 +497,8 @@ div.textoBack a{
 }
 #menuButton {
   font-size: 26px;
-}}
+}
+}
 @media screen and (max-width: 500px){
 #searchButton {
   left: 18%;

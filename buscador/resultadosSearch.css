@@ -12,6 +12,7 @@ html {
    text-decoration: none;
    cursor: pointer;
 }
+   
 /*MENU HAMBURGUESA*/
 #menuButton {
     position: fixed;
@@ -232,9 +233,9 @@ div.uk-card.uk-card-small.uk-card-default a{
     font-size: 18px;
     font-family: "raleway";
     color: black;
-    margin-top: 6%;
     font-size: 30px;
     font-weight: bold;
+    padding-top: 5%;
 }
 .texto p:hover{
     color: #480082 ;
@@ -341,6 +342,14 @@ button.repro {
     background-color: cornsilk;
     margin-right: 10px;
 }
+button.reproArtista {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+    margin-right: 10px;
+}
 @media screen and (max-width: 690px){
     div.cancionesContainer {
         margin-top: 20%;
@@ -350,13 +359,14 @@ button.repro {
         z-index: 25;
         position: fixed;
         top: 14%;
-        left: 3%;
+        right: 3%;
     }
     #menuButton {
         position: fixed;
-        top: 6%;
+        top: 7%;
         color: #440875;
-        left: 6%;
+        left: 9%;
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 500px){
@@ -368,6 +378,11 @@ h3.uk-card-title {
     font-size: 16px;
 }
 button.repro {
+    width: 26px;
+    height: 26px;
+    margin-right: 2px;
+}
+button.reproArtista {
     width: 26px;
     height: 26px;
     margin-right: 2px;
@@ -395,6 +410,7 @@ img.portada{
 main.resultadosDeBusqueda{
     width: 98%;
     margin: 0 auto;
+   padding-top: 6%;
 }
 div.cancionesContainer{
     width: 100%;
@@ -403,12 +419,12 @@ div.cancionesContainer{
 .flexsearch--input-wrapper {
     padding: 0px 20px 0 0;
     z-index: 25;
-    top: 14%;
+    top: 16%;
     left: 21%;
 }
 #menuButton {
     position: fixed;
-    top: 14%;
+    top: 16%;
     color: #440875;
     left: 9%;
     z-index: 6;

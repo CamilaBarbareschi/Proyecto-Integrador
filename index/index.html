@@ -38,21 +38,16 @@
                     <ul class="uk-nav uk-nav-default mainMenu">
                         <li class="opcion icono">
                             <ul class="tool">
-                                <li><a class="uk-active menuLink" href="index.html"><i class="fas fa-home"></i></a></li>
-                                <li class="textMenu"><a class="uk-active menuLink" href="index.html">Home</a></li>
+                                <li><a class="uk-active menuLink textmenuLink " href="index.html"><i class="fas fa-home"></i></a></li>
+                                <li class="textMenu"><a class="uk-active menuLink textmenuLink" href="index.html">Home</a></li>
                             </ul>
                         </li>
                         <li class="opcion icono">
                             <ul class="tool">
-                                <li><a class="uk-active menuLink" href="../generos/generos.html"><i class="fas fa-music"></i></a></li>
-                                <li class="textMenu"><a class="uk-active menuLink" href="../generos/generos.html">Géneros</a></li>
+                                <li><a class=" uk-active menuLink textmenuLink" href="../mi playlist/favoritos.html"><i class="fas fa-heart"></i></a></li>
+                                <li class="textMenu"><a class=" uk-active menuLink textmenuLink" href="../mi playlist/favoritos.html">Favoritos</a></li>
                             </ul>
-                        </li>
-                        <li class="opcion icono">
-                            <ul class="tool">
-                                <li><a class=" uk-active menuLink" href="../mi playlist/favoritos.html"><i class="fas fa-heart"></i></a></li>
-                                <li class="textMenu"><a class=" uk-active menuLink" href="../mi playlist/favoritos.html">Favoritos</a></li>
-                            </ul>
+                        </li>    
                         <br> <br> <br>
                         <li class="opcion">
                             <ul class="redesSociales">
@@ -62,10 +57,19 @@
                                 <li class="redes"><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> </li>
                                 <li class="redes"><a href="https://ar.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>  
+                        </li>
                         <li class="ultimo opcion"><a class="menuLink" href="https://www.deezer.com/es/"><img src="../img/deezer.png" alt="">  Provided by deezer</a>
                         <li class="opcion"> © 2020 by BIBOP. ELIA, LEMOINE & BARBARESCHI</li>       
                     </ul>
                 </div>
+        </div>
+        <div class="uk-inline generos">
+            <button class="uk-button uk-button-default" type="button"><i class="fas fa-music" id="generoButton"></i></button>
+            <div uk-dropdown="pos: right-center">
+                <ul class="uk-nav uk-dropdown-nav cadaGeneroContenedor">
+                  
+                </ul>
+            </div>
         </div>
         <div class="flexsearch--wrapper">
             <form class="flexsearch--form" action="../buscador/resultadosSearch.html" method="GET">
@@ -79,7 +83,7 @@
    
         <!--Mini reproductor-->
         <nav class="miniPlayer"> 
-           
+           <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=false&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=artist&id=27&app_id=1" width="350" height="350"></iframe>
         </nav> 
     </header>
  
@@ -135,4 +139,4 @@
 </html>
 
 <script src="index.js"></script>
-
+<script src="../generos/generos.js"></script>

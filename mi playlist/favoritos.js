@@ -7,6 +7,8 @@ window.addEventListener('load', function(){
    } else {
        document.querySelector('div.user ul li.nombre').innerHTML += "Canciones favoritas"
    }
-    
 
+
+;
+  
 })
