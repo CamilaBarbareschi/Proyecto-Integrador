@@ -64,6 +64,8 @@ window.addEventListener("load", function() {
                 "<button class='save'><i class='fas fa-heart'></i></button>" +
                 "</div></div></li>"
                 document.querySelector("ul.resultadoAlbum").innerHTML += albumNuevoHTML
+
+                
     
             }
             var buttonRepro = document.querySelectorAll("button.repro")
@@ -89,7 +91,7 @@ window.addEventListener("load", function() {
                "</div></div></li>"
     
                 document.querySelector("ul.resultadoArtista").innerHTML += artistaNuevoHTML
-    
+                
             }
             var buttonReproArtista = document.querySelectorAll("button.reproArtista")
             for (let i = 0; i < buttonReproArtista.length; i++) {

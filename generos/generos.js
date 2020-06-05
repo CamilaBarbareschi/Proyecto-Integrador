@@ -12,9 +12,8 @@ window.addEventListener("load", function() {
             
             let cadaGeneroNombre = cadaGenero.name
             
-            let nuevoHTML =
-            '<li class="uk-active cadaGenero"><a href="../generos/generos.html">' +  cadaGeneroNombre + '</a></li>'
-            document.querySelector ("ul.cadaGeneroContenedor").innerHTML += nuevoHTML
+            let nuevoHTML ='<li class="uk-active cadaGenero"><a href="../generos/generos.html">'+ cadaGeneroNombre +'</a></li>' 
+            document.querySelector (".cadaGeneroContenedor").innerHTML += nuevoHTML
         }
 
     })

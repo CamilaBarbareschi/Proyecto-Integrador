@@ -42,6 +42,7 @@ window.addEventListener ("load", function (){
           const cadaArtista = artistas[index];
 
             let imgArtista = cadaArtista.picture_medium 
+         
             let nombreArtista = cadaArtista.name
             let previewArtista = cadaArtista.id
             
@@ -115,11 +116,27 @@ window.addEventListener ("load", function (){
   goGobackTexto.addEventListener ("mouseout", function(){
       goGobackTexto.style.color = "gray"
   });
-
+  
+  document.querySelector("button.save").addEventListener("click", function() {
+    let arrayDeCancionesFavoritas;
+    
+    // Me fijo si hay cosas en storage
+    if (localStorage.getItem("cancionesPreferidos") != null) {
+        //arrayDeGifsFavoritos y le voy a agregar el código el GIF
+        arrayDeCancionesFavoritas = localStorage.getItem("cancionesPreferidos").split(",")
+        arrayDeCancionesFavoritas.push(previewArtista)
+    } else {
+        //TENGO QUE CREAR UN ARRAY NUEVO CON EL CODIGO DEL GIF
+        arrayDeCancionesFavoritas = []
+        arrayDeCancionesFavoritas.push(previewArtista)
+    }
+    
+    localStorage.setItem("cancionesPreferidos", arrayDeCancionesFavoritas);
+    console.log(localStorage)
+})
+  
 
   
-  
-
 
 
 

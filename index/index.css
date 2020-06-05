@@ -302,6 +302,10 @@ color:  #480082;
 input:-moz-placeholder {
   color:  #480082;
 }
+.uk-dropdown-nav {
+  height: 60vh;
+  overflow-y: scroll;
+}
 /*RANKINGS*/
 button:focus{
 outline: 0px;
@@ -501,8 +505,25 @@ div.btnback div.circulo {
 div.textoBack a{
   font-size: 18px;
 }
+.flexsearch--input-wrapper {
+  padding: 0px 20px 0 0;
+  z-index: 25;
+  position: fixed;
+  top: 15%;
+  right: 5%;
+  left: auto;
+}
+.flexsearch--input {
+  width: none;
+}
 #menuButton {
   font-size: 26px;
+}
+#generoButton {
+  left: 14%;
+}
+section.rankings {
+  padding-top: 10%;
 }
 }
 @media screen and (max-width: 500px){
@@ -530,7 +551,10 @@ div.btnback div.circulo {
   height: 18px;
 }
 section.rankings {
-  padding-top: 12%;
+  padding-top: 20%;
+}
+.flexsearch--input {
+  width: 90%;
 }
 .uk-subnav>*>:first-child {
   font-size: 15px;
@@ -563,9 +587,32 @@ div.container.itemcontenedor button.repro {
   width: 28px;
   height: 28px;
 }
+nav.miniPlayer {
+  position: fixed;
+  top: 2%;
+  left: 3%;
+  z-index: 15;
+}
+nav.miniPlayer iframe {
+  height: 70px;
+  width: 96%;
+}
 div.container.itemcontenedor button.save{
   top: 58%;
   transform: translateY(-64%);
   width: 28px;
   height: 28px;
+}
+#menuButton {
+  top: 15%;
+}
+#generoButton {
+
+  top: 15%;
+  left: 15%;
+}
+.flexsearch--input-wrapper {
+  top: 15%;
+  right: 0%;
+  left: auto;
 }}
