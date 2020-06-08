@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     .then(function(informacion) {
         let listadoGenero = informacion.data
 
-        for (let index = 0; index < listadoGenero.length; index++) {
+        for (let index = 1; index < listadoGenero.length; index++) {
             const cadaGenero = listadoGenero[index];
             
             let cadaGeneroNombre = cadaGenero.name

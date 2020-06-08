@@ -12,7 +12,26 @@ html {
    text-decoration: none;
    cursor: pointer;
 }
-   
+div.tarjetas.albumTarjeta.uk-position-relative.uk-visible-toggle.uk-light.uk-slider-container{
+    margin: 50px auto 0px auto;
+}
+header{
+    width: 100%;
+    height: 16vh;
+    position: fixed;
+    z-index: 1;
+    background-image: url(../img/header-play.jpg);
+
+}
+.banner{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(225, 225, 225, 0.40);
+    height: 16vh;
+    width: 100%;
+    z-index: 2;
+}
 /*MENU HAMBURGUESA*/
 #menuButton {
     position: fixed;
@@ -22,13 +41,45 @@ html {
     z-index: 6;
     font-size: 25px;
 }
+li.uk-active.cadaGenero a{
+    color: #440875 ;
+  }
+  li.uk-active.cadaGenero a:hover{
+    color: #dbff4b ;
+  }
+  #searchButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 13%;
+    z-index: 6;
+    font-size: 25px;
+  }
+#generoButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 8%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  #generoButton:hover {
+    color: #dbff4b ;
+  }
+  #searchButton:hover {
+    color: #dbff4b ;
+  }
 #menuButton:hover {
     color: #dbff4b ;
 }
 ul.redesSociales{
     display: grid;
     grid-template-columns: auto auto auto auto auto ;
+    margin-top: 20%
 }
+li.opcion ul.tool  li a.textmenuLink{
+    font-size: 30px;
+  }
 ul.mainMenu li.opcion a.menuLink{
     color: black;
 }
@@ -68,6 +119,9 @@ ol, ul {
 .uk-open>.uk-offcanvas-bar {
     left: 0;
     background-color: #dcff4f ;
+}
+div.texto p.tituloAlbum {
+    padding-top: 0%;
 }
 .menu{
     padding-left: 4%;
@@ -109,6 +163,9 @@ li.ultimo a img {
 }
 /*MINI PLAYLIST*/
 /*BUSCADOR*/
+div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
+    padding: 0%;
+  }
 .flexsearch--wrapper {
     height: auto;
     width: 20%;
@@ -128,8 +185,13 @@ li.ultimo a img {
     padding: 0px 20px 0 0;
     z-index: 25;
     position: fixed;
-    top: 5%;
+    top: 10%;
+    left: 3%;
 }
+.uk-dropdown-nav {
+    height: 60vh;
+    overflow-y: scroll;
+  }
 .flexsearch--input {
     width: 100%;
     z-index: 25;
@@ -196,7 +258,7 @@ div.sinResultados{
 div.sinResultados p{
     color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 43px;
     padding-top: 60px;
 }
 div.sinResultados img{
@@ -219,6 +281,7 @@ main.resultadosDeBusqueda{
     width: 85%;
     margin: 0 auto;
     color: black;
+    padding-top: 13vh;
 }
 .uk-card-media-top img{
     border-radius: 3%;
@@ -334,6 +397,20 @@ button.save {
     border: none;
     background-color: cornsilk;
 }
+button.saveAlbum {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
+button.saveArtista {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
 button.repro {
     width: 40px;
     height: 38px;
@@ -351,31 +428,71 @@ button.reproArtista {
     margin-right: 10px;
 }
 @media screen and (max-width: 690px){
-    div.cancionesContainer {
-        margin-top: 20%;
+    div.sinResultados p {
+        color: white;
+        text-align: center;
+        font-size: 38px;
+        padding-top: 26px;
+    }
+    div.sinResultados img {
+        position: absolute;
+        bottom: 5%;
+        width: 29%;
+        left: 1%;
     }
     .flexsearch--input-wrapper {
         padding: 0px 20px 0 0;
         z-index: 25;
         position: fixed;
-        top: 14%;
-        right: 3%;
+        top: 10%;
+        right: 71%;
+        left: auto;
     }
     #menuButton {
         position: fixed;
-        top: 7%;
+        top: 4%;
         color: #440875;
-        left: 9%;
-        font-size: 30px;
+        left: 4%;
+        font-size: 28px;
     }
+    #generoButton {
+        position: fixed;
+        top: 4%;
+        color: #440875;
+        left: 12%;
+        z-index: 6;
+        font-size: 28px;
+    }
+    #searchButton {
+        position: fixed;
+        top: 4%;
+        color: #440875;
+        left: 21%;
+        z-index: 6;
+        font-size: 28px;
+    }
+   
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 530px){
 .texto p{
     font-size: 28px;
     padding-left: 17px;
-}
+} 
+.banner{
+        height: 23vh;
+    }
+header{
+    height: 23vh;
+};
 h3.uk-card-title {
     font-size: 16px;
+}
+.flexsearch--input-wrapper {
+    padding: 0px 20px 0 0;
+    z-index: 25;
+    top: 16%;
+    left: 29%;
+    right: 11%;
 }
 button.repro {
     width: 26px;
@@ -391,6 +508,14 @@ button.save{
     width: 26px;
     height: 26px;
 }
+button.saveAlbum{
+    width: 26px;
+    height: 26px;
+}
+button.saveArtista{
+    width: 26px;
+    height: 26px;
+}
 figure div{
     padding-left: 28px;
 }
@@ -398,7 +523,7 @@ section.resultadoArtista figure button.repro{
     margin-left: 28px;
 }
 .uk-card-small .uk-card-body, .uk-card-small.uk-card-body{
-    text-align: left;
+    text-align: center;
 }
 h1 {
     font-size: 28px;
@@ -414,14 +539,9 @@ main.resultadosDeBusqueda{
 }
 div.cancionesContainer{
     width: 100%;
-    margin-top: 30%;
+    padding-top: 19vh;
 }
-.flexsearch--input-wrapper {
-    padding: 0px 20px 0 0;
-    z-index: 25;
-    top: 16%;
-    left: 21%;
-}
+
 #menuButton {
     position: fixed;
     top: 16%;
@@ -429,6 +549,22 @@ div.cancionesContainer{
     left: 9%;
     z-index: 6;
     font-size: 25px;
+}
+#searchButton {
+    position: fixed;
+    top: 16%;
+    color: #440875;
+    left: 31%;
+    z-index: 6;
+    font-size: 26px;
+}
+#generoButton {
+    position: fixed;
+    top: 16%;
+    color: #440875;
+    left: 19%;
+    z-index: 6;
+    font-size: 26px;
 }
 .canciones i{
     font-size: 15px;
@@ -446,5 +582,21 @@ nav.miniPlayer {
 nav.miniPlayer iframe {
     height: 70px;
     width: 96%;
+}
+div.sinResultados p {
+    color: white;
+    text-align: center;
+    font-size: 37px;
+    padding-top: 28px;
+}
+div.sinResultados {
+    margin-top: 5%;
+    height: 65vh;
+}
+div.sinResultados img {
+    position: absolute;
+    bottom: 5%;
+    width: 45%;
+    left: 1%;
 }
 }
