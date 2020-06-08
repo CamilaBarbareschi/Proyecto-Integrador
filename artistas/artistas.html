@@ -21,15 +21,15 @@
           <li class="buscador"><i class="fas fa-search"></i></li>
           <li class="ultimo">
                <div class="flexsearch--wrapper">
-               <form class="flexsearch--form" action="#" method="post">
+               <form class="flexsearch--form" action="../buscador/resultadosSearch.html" method="GET">
                    <div class="flexsearch--input-wrapper">
-                       <input class="flexsearch--input" type="search" placeholder="search">
+                       <input class="flexsearch--input" type="search" name="search" placeholder="Realice su busqueda">
                    </div>
                </form>
                </div>
           </li>
           <li class="primero"><a href="../index/index.html"><i class="fas fa-home"></i></a></li>
-          <li><i class="fas fa-heart"></i></li>
+          <li><a href="../mi playlist/favoritos.html"><i class="fas fa-heart"></i></a></li>
        </ul>
     </div>
   </div>  
@@ -42,7 +42,7 @@
    </div>
    <div clase="Texto">
          <h1 class="NombreDelArtista"> Lisandro Aristimuño</h1>
-         <h2 class= "Subtitulo"> 23.000 oyentes</h2>
+         <h2 class= "Subtitulo"> 23.000 fans</h2>
    </div>
     </header>
     <article class="Articulo">
@@ -207,10 +207,19 @@
     <footer>
         <ul>
             <li class="footer"><img class="logofooter"src="../img/logo-cd.png" alt="BIBOP"></li>
-            <li class="footer"> © 2020 by BIBOP. ELIA, LEMOINE & BARBARESCHI</li>
+            <li class="footer"> © 2020 by BIBOP. ELIA, LEMOINE & BARBARESCHI
+                <ul class="redesSociales">
+                    <li class="redes"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li class="redes"><a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a></li>
+                    <li class="redes"><a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
+                    <li class="redes"><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a> </li>
+                    <li class="redes"><a href="https://ar.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul> 
+            </li>
             <li class="footer"> <a href="https://www.deezer.com/es/"><img class="logofooter" src="../img/deezer.png" alt="deezer"></a></li>
         </ul>
     </footer>
 
 </body>
 </html>
+<script src="artistas.js"></script>

@@ -84,7 +84,7 @@ window.addEventListener("load", function() {
                "<li>" + "<div class='uk-card uk-card-small uk-card-default'>" +
                "<div class='uk-card-media-top'>" + "<img class='artistasim' src='"+ artistaImg + "'>" +
                "</div> <div class='uk-card-body'>"+
-               "<a href='../artistas/artistas.html'><h3 class='uk-card-title'>" + artistaName + "</h3></a>"+
+               "<a href='../artistas/artistas.html?id-artista="+ artistaId +"'><h3 class='uk-card-title'>" + artistaName + "</h3></a>"+
                "<button class='repro' id-artista='"+ artistaId + "'><i class='fas fa-play'></i></button>" +
                "<button class='save'><i class='fas fa-heart'></i></button>" +    
                "</div></div></li>"

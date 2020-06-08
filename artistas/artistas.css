@@ -236,31 +236,44 @@ font-family: "Arial";
    width: 100%;
    }
    
-   footer {
-       background-color: rgba(250, 108, 61, 0.925);
-       width: 100%;
-       margin: 0 auto;
-       margin-top: 30px;
-     }
-     footer ul  {
-       display: grid;
-       grid-template-columns: auto auto auto;
-       margin: 0;
-       padding: 10px;
-     }
-     li.footer a {
-       text-decoration: none;
-     }
-     li.footer{
-       list-style-type: none; 
-       color: black;
-       padding-top: 10px;
-       font-size: 18px;
-       text-align: center;
-     }
-     .logofooter{
-       width: 30px ;
-     }
+/*FOOTER*/
+footer {
+    background-color: rgba(250, 108, 61, 0.925);
+}
+footer ul  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    padding: 10px;
+}
+li.footer a {
+    text-decoration: none;
+}
+li.footer{
+    list-style-type: none; 
+    color: black;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "raleway";
+}
+.logofooter{
+    width: 30px ;
+}
+ul.redesSociales i:hover{
+    color:#dbff4b;
+}
+ul.redesSociales{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style: none;
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px 0px 0px 0px;
+}
+ul.redesSociales i{
+    color: black;
+}
      ol, ul {
        padding-left: 0;
      }
@@ -446,6 +459,9 @@ font-family: "Arial";
            #encabezado ul.nav li {
             width: 100%;
              }
+             li.footer{
+                font-size: 15px;
+            }
        }
    
    
@@ -490,6 +506,9 @@ font-family: "Arial";
                #encabezado li.buscador{
                  display: block;
              }
+             li.footer {
+                font-size: 10px;
+            }
              #encabezado li.ultimo{
                  display: none;
              }
