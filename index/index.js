@@ -117,12 +117,12 @@ window.addEventListener ("load", function (){
       goGobackTexto.style.color = "gray"
   });
   
-  document.querySelector("button.save").addEventListener("click", function() {
+  document.querySelector(".save").addEventListener("click", function() {
     let arrayDeCancionesFavoritas;
     
     // Me fijo si hay cosas en storage
-    if (localStorage.getItem("cancionesPreferidos") != null) {
-        //arrayDeGifsFavoritos y le voy a agregar el código el GIF
+    if (localStorage.getItem("cancionesPreferidas") != null) {
+        
         arrayDeCancionesFavoritas = localStorage.getItem("cancionesPreferidos").split(",")
         arrayDeCancionesFavoritas.push(previewArtista)
     } else {

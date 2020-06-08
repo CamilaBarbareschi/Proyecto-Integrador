@@ -109,11 +109,19 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   z-index: 6;
   font-size: 25px;
 }
+#searchButton {
+  position: fixed;
+  top: 5%;
+  color: #440875;
+  left: 15%;
+  z-index: 6;
+  font-size: 25px;
+}
 #generoButton {
   position: fixed;
   top: 5%;
   color: #440875;
-  left: 10%;
+  left: 9%;
   z-index: 6;
   font-size: 25px;
 }
@@ -234,6 +242,9 @@ nav.miniPlayer iframe{
 }
 
 /*BUSCADOR*/
+div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
+  padding: 0%;
+}
 .flexsearch--wrapper {
   height: auto;
   width: 20%;
@@ -253,8 +264,8 @@ nav.miniPlayer iframe{
   padding: 0px 20px 0 0;
   z-index: 25;
   position: fixed;
-  top: 5%;
-  left: 16%;
+  top: 11%;
+  left: 3%;
 }
 .flexsearch--input {
   width: 100%;
@@ -310,6 +321,7 @@ input:-moz-placeholder {
 button:focus{
 outline: 0px;
 }
+
 div.container.itemcontenedor.imgArt button.repro{
   width: 36px;
   height: 36px;
@@ -318,8 +330,8 @@ div.container.itemcontenedor.imgArt button.repro{
   border-radius: 50%;
   border: none;
   position: relative;
-  top: 69%;
-  left: 20%;
+  top: 67%;
+  left: 26%;
   transform: translateY(-69%);
   background-color: cornsilk;
 }
@@ -331,7 +343,7 @@ div.container.itemcontenedor  button.repro{
   border: none;
   cursor: pointer;
   position: relative;
-  top: 69%;
+  top: 68%;
   left: 5%;
   transform: translateY(-69%);
   background-color: cornsilk;
@@ -344,8 +356,8 @@ div.container.itemcontenedor.imgArt button.save{
   border-radius: 50%;
   border: none;
   position: relative;
-  top: 69%;
-  left: 23%;
+  top: 67%;
+  left: 30%;
   transform: translateY(-69%);
   background-color: cornsilk;
 }
@@ -357,18 +369,19 @@ div.container.itemcontenedor  button.save{
   cursor: pointer;
   text-align: center;
   position: relative;
-  top: 69%;
+  top: 68%;
   transform: translateY(-69%);
   left: 10%;
   background-color: cornsilk;
 }
 section.rankings{
   display: none;
-  padding-top: 2%;
+  padding-top: 3%;
 }
 a.nombreLink{
   text-decoration: none;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0);
 }
 ul.uk-switcher.uk-margin{
   width: 98%;
@@ -403,11 +416,13 @@ ul.uk-switcher.uk-margin{
 }
 img.imgSlide.slide.artistacontenedor{
   border-radius: 50%;
+  width: 100%;
 }
 .itemcontenedor img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 100%;
 }
 .container.itemcontenedor{
    width: 100%;
@@ -452,6 +467,15 @@ nav.miniPlayer{
   width: 96%;
   margin: 0px auto 0px auto;
 }
+ul.listadoAlbums{
+  width: 102%;
+}
+ul.listadoPlaylist{
+  width: 102%;
+}
+ul.listadoArtistas{
+  width: 102%;
+}
 .spanLastSong{
   display: block;
   font-size: 22px;
@@ -477,7 +501,7 @@ button.repro {
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 62%;
+  top: 68%;
   left: 17%;
   background-color: cornsilk;
 }
@@ -489,8 +513,8 @@ div.btnback div.textoBack{
   font-size: 20px;
 }
 #searchButton {
-  left: 13%;
-  font-size: 22px;
+  left: 25%;
+  font-size: 25px;
 }
 .uk-subnav>*>:first-child {
   font-size: 26px;
@@ -505,16 +529,13 @@ div.btnback div.circulo {
 div.textoBack a{
   font-size: 18px;
 }
-.flexsearch--input-wrapper {
-  padding: 0px 20px 0 0;
-  z-index: 25;
-  position: fixed;
-  top: 15%;
-  right: 5%;
-  left: auto;
-}
+
 .flexsearch--input {
-  width: none;
+  width: 90%;
+}
+.flexsearch--input-wrapper {
+  top: 11%;
+  left: 3%;
 }
 #menuButton {
   font-size: 26px;
@@ -523,12 +544,24 @@ div.textoBack a{
   left: 14%;
 }
 section.rankings {
-  padding-top: 10%;
+  padding-top: 6%;
+}
+nav.miniPlayer iframe {
+  top: 5%;
+  right: 0%;
+}
+.uk-grid>* {
+  padding-left: 46px;
 }
 }
-@media screen and (max-width: 500px){
-#searchButton {
-  left: 18%;
+@media screen and (max-width: 598px){
+ div.container.itemcontenedor li.uk-active{
+  width: 98%;
+  margin: 0 auto;
+}
+.flexsearch--input-wrapper {
+  top: 14%;
+  left: 36%;
 }
 div.playerbutton ul.playerbuttons li.ultimo{
   display: block;
@@ -541,7 +574,7 @@ button.textoLink {
   margin-left: 0%;
 }
 .uk-subnav-pill>.uk-active>a {
-  font-size: 15px;
+  font-size: 17px;
 }
 div.btnback div.textoBack a {
   font-size: 20px;
@@ -551,13 +584,13 @@ div.btnback div.circulo {
   height: 18px;
 }
 section.rankings {
-  padding-top: 20%;
+  padding-top: 13%;
 }
 .flexsearch--input {
   width: 90%;
 }
 .uk-subnav>*>:first-child {
-  font-size: 15px;
+  font-size: 19px;
 }
 div.btnback div.textoBack a {
   font-size: 18px;
@@ -590,12 +623,13 @@ div.container.itemcontenedor button.repro {
 nav.miniPlayer {
   position: fixed;
   top: 2%;
-  left: 3%;
   z-index: 15;
 }
 nav.miniPlayer iframe {
-  height: 70px;
-  width: 96%;
+  height: 60px;
+  width: 100%;
+  right: 0%;
+  left: 0%;
 }
 div.container.itemcontenedor button.save{
   top: 58%;
@@ -604,15 +638,64 @@ div.container.itemcontenedor button.save{
   height: 28px;
 }
 #menuButton {
-  top: 15%;
+  top: 14%;
+}
+#searchButton {
+  left: 40%;
+  top: 14%;
 }
 #generoButton {
 
-  top: 15%;
-  left: 15%;
+  top: 14%;
+  left: 20%;
 }
-.flexsearch--input-wrapper {
-  top: 15%;
-  right: 0%;
-  left: auto;
-}}
+}
+@media screen and (max-width: 355px){
+  .uk-grid>* {
+    padding-left: 70px;
+}
+.uk-child-width-1-2>* {
+  width: 89%;
+}
+section.rankings {
+  padding-top: 24%;
+}
+div.container.itemcontenedor button.repro {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+div.container.itemcontenedor button.save {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+div.container.itemcontenedor.imgArt button.repro {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+  left: 32%;
+}
+div.container.itemcontenedor.imgArt button.save {
+  top: 75%;
+  left: 36%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+.container.itemcontenedor {
+  width: 100%;
+  position: relative;
+  height: 44vh;
+}
+
+div.btnback div.textoBack a {
+  font-size: 24px;
+}
+.uk-subnav>*>:first-child {
+  font-size: 15px;
+}
+}
