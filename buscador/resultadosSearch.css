@@ -25,11 +25,9 @@ header{
 
 }
 #pintadito{
-    color: red;
+    color: rgb(255, 0, 55);
 }
-button.saveAlbum #pintadito{
-    color: red;
-}
+
 .banner{
     position: absolute;
     top: 0px;

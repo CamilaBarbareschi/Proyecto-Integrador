@@ -109,7 +109,7 @@ window.addEventListener("load", function() {
                     
                             for (let i = 0; i < porPintar.length; i++) {
                                 cancionButtonSave[i].onclick = function (){
-                                    document.querySelectorAll("i.fas.fa-heart").innerHTML = "<i class='fas fa-heart' id='pintadito'></i>"
+                                    document.querySelectorAll("i.fas.fa-heart").innerHTML += "id='pintadito'"
                                 }
                             }   
         
@@ -162,7 +162,9 @@ window.addEventListener("load", function() {
                              "<button class='repro' id-album='" + albumID + "'><i class='fas fa-play'></i></button>" +
                              "<button class='saveAlbum' id-album='" + albumID + "'><i class='fas fa-heart'></i></button>" +
                              "</div></div></li>"
+
                         } else{
+
                                 albumNuevoHTML = 
                              "<li><div class='uk-card uk-card-small uk-card-default'>" +
                              "<div class='uk-card-media-top'>" +
@@ -172,6 +174,7 @@ window.addEventListener("load", function() {
                              "<button class='repro' id-album='" + albumID + "'><i class='fas fa-play'></i></button>" +
                              "<button class='saveAlbum' id-album='" + albumID + "'><i class='fas fa-heart' id='pintadito'></i></button>" +
                              "</div></div></li>"
+                             
                         }
                         document.querySelector("ul.resultadoAlbum").innerHTML += albumNuevoHTML
                     }
