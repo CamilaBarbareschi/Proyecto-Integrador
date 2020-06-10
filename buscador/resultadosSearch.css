@@ -12,6 +12,7 @@ html {
    text-decoration: none;
    cursor: pointer;
 }
+
 div.tarjetas.albumTarjeta.uk-position-relative.uk-visible-toggle.uk-light.uk-slider-container{
     margin: 50px auto 0px auto;
 }
@@ -22,6 +23,12 @@ header{
     z-index: 1;
     background-image: url(../img/header-play.jpg);
 
+}
+#pintadito{
+    color: red;
+}
+button.saveAlbum #pintadito{
+    color: red;
 }
 .banner{
     position: absolute;

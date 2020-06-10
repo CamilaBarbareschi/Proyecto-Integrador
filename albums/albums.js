@@ -2,8 +2,8 @@ window.addEventListener("load", function() {
 
     let queryString = new URLSearchParams(location.search);
 
-    let codigoDelAlbum = queryString.get("idAlbum");
-    console.log (codigoDelAlbum)
+    let codigoDelAlbum = queryString.get("albumID");
+ 
 
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/" + codigoDelAlbum)
     .then(
@@ -13,9 +13,11 @@ window.addEventListener("load", function() {
     )
     .then(
         function(informacion) {
-            let album = informacion.title
-            let img = informacion.cover
-            console.log(img)
+            let resultadosAlbum = informacion.data
+            let album = resultadosAlbum.title
+            let img =  resultadosAlbum.cover
+            let fans = resultadosAlbum.fans
+            
         }
     )
 })
