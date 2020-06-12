@@ -109,38 +109,12 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   z-index: 6;
   font-size: 25px;
 }
-#searchButton {
-  position: fixed;
-  top: 5%;
-  color: #440875;
-  left: 15%;
-  z-index: 6;
-  font-size: 25px;
-}
-#generoButton {
-  position: fixed;
-  top: 5%;
-  color: #440875;
-  left: 9%;
-  z-index: 6;
-  font-size: 25px;
-}
 #menuButton:hover {
   color: #dbff4b ;
-}
-#generoButton:hover {
-  color: #dbff4b ;
-}
-li.uk-active.cadaGenero a:hover{
-  color: #dbff4b ;
-}
-li.uk-active.cadaGenero a{
-  color: #440875 ;
 }
 ul.redesSociales{
   display: grid;
   grid-template-columns: auto auto auto auto auto ;
-  margin-top: 30%
 }
 ul.mainMenu li.opcion a.menuLink{
   color: black;
@@ -151,7 +125,6 @@ ul.mainMenu li.opcion a.menuLink:hover{
 ul.mainMenu li.opcion{
   color: black;
   font-size: 1px;
-  padding-top: 5px;
 }
 li.opcion.icono ul.tool{
   display: grid;
@@ -165,9 +138,6 @@ ul.tool li.textMenu{
 }
 li.opcion.icono ul.tool i a:hover{
   color: #440875; 
-}
-li.opcion ul.tool  li a.textmenuLink{
-  font-size: 30px;
 }
 hr{
   color: black;
@@ -246,15 +216,9 @@ nav.miniPlayer{
 }
 nav.miniPlayer iframe{
   height: 70px;
-  position: absolute;
-    top: 5%;
-    right: 3%;
 }
 
 /*BUSCADOR*/
-div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
-  padding: 0%;
-}
 .flexsearch--wrapper {
   height: auto;
   width: 20%;
@@ -274,8 +238,7 @@ div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
   padding: 0px 20px 0 0;
   z-index: 25;
   position: fixed;
-  top: 11%;
-  left: 3%;
+  top: 5%;
 }
 .flexsearch--input {
   width: 100%;
@@ -323,15 +286,10 @@ color:  #480082;
 input:-moz-placeholder {
   color:  #480082;
 }
-.uk-dropdown-nav {
-  height: 60vh;
-  overflow-y: scroll;
-}
 /*RANKINGS*/
 button:focus{
 outline: 0px;
 }
-
 div.container.itemcontenedor.imgArt button.repro{
   width: 36px;
   height: 36px;
@@ -340,8 +298,8 @@ div.container.itemcontenedor.imgArt button.repro{
   border-radius: 50%;
   border: none;
   position: relative;
-  top: 67%;
-  left: 26%;
+  top: 69%;
+  left: 20%;
   transform: translateY(-69%);
   background-color: cornsilk;
 }
@@ -353,7 +311,7 @@ div.container.itemcontenedor  button.repro{
   border: none;
   cursor: pointer;
   position: relative;
-  top: 68%;
+  top: 69%;
   left: 5%;
   transform: translateY(-69%);
   background-color: cornsilk;
@@ -366,8 +324,8 @@ div.container.itemcontenedor.imgArt button.save{
   border-radius: 50%;
   border: none;
   position: relative;
-  top: 67%;
-  left: 30%;
+  top: 69%;
+  left: 23%;
   transform: translateY(-69%);
   background-color: cornsilk;
 }
@@ -379,7 +337,7 @@ div.container.itemcontenedor  button.save{
   cursor: pointer;
   text-align: center;
   position: relative;
-  top: 68%;
+  top: 69%;
   transform: translateY(-69%);
   left: 10%;
   background-color: cornsilk;
@@ -412,12 +370,10 @@ div.container.itemcontenedor  button.savePlaylist{
 }
 section.rankings{
   display: none;
-  padding-top: 3%;
+  padding-top: 2%;
 }
 a.nombreLink{
   text-decoration: none;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0);
 }
 ul.uk-switcher.uk-margin{
   width: 98%;
@@ -452,13 +408,11 @@ ul.uk-switcher.uk-margin{
 }
 img.imgSlide.slide.artistacontenedor{
   border-radius: 50%;
-  width: 100%;
 }
 .itemcontenedor img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
 }
 .container.itemcontenedor{
    width: 100%;
@@ -500,17 +454,7 @@ div.btnback div.textoBack a{
 }
 @media screen and (max-width: 930px){
 nav.miniPlayer{
-  width: 96%;
-  margin: 0px auto 0px auto;
-}
-ul.listadoAlbums{
-  width: 102%;
-}
-ul.listadoPlaylist{
-  width: 102%;
-}
-ul.listadoArtistas{
-  width: 102%;
+  display: none;
 }
 .spanLastSong{
   display: block;
@@ -537,7 +481,7 @@ button.repro {
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 68%;
+  top: 62%;
   left: 17%;
   background-color: cornsilk;
 }
@@ -549,8 +493,8 @@ div.btnback div.textoBack{
   font-size: 20px;
 }
 #searchButton {
-  left: 25%;
-  font-size: 25px;
+  left: 13%;
+  font-size: 22px;
 }
 .uk-subnav>*>:first-child {
   font-size: 26px;
@@ -565,39 +509,12 @@ div.btnback div.circulo {
 div.textoBack a{
   font-size: 18px;
 }
-
-.flexsearch--input {
-  width: 90%;
-}
-.flexsearch--input-wrapper {
-  top: 11%;
-  left: 3%;
-}
 #menuButton {
   font-size: 26px;
-}
-#generoButton {
-  left: 14%;
-}
-section.rankings {
-  padding-top: 6%;
-}
-nav.miniPlayer iframe {
-  top: 5%;
-  right: 0%;
-}
-.uk-grid>* {
-  padding-left: 46px;
-}
-}
-@media screen and (max-width: 598px){
- div.container.itemcontenedor li.uk-active{
-  width: 98%;
-  margin: 0 auto;
-}
-.flexsearch--input-wrapper {
-  top: 14%;
-  left: 36%;
+}}
+@media screen and (max-width: 500px){
+#searchButton {
+  left: 18%;
 }
 div.playerbutton ul.playerbuttons li.ultimo{
   display: block;
@@ -610,7 +527,7 @@ button.textoLink {
   margin-left: 0%;
 }
 .uk-subnav-pill>.uk-active>a {
-  font-size: 17px;
+  font-size: 15px;
 }
 div.btnback div.textoBack a {
   font-size: 20px;
@@ -620,13 +537,10 @@ div.btnback div.circulo {
   height: 18px;
 }
 section.rankings {
-  padding-top: 13%;
-}
-.flexsearch--input {
-  width: 90%;
+  padding-top: 12%;
 }
 .uk-subnav>*>:first-child {
-  font-size: 19px;
+  font-size: 15px;
 }
 div.btnback div.textoBack a {
   font-size: 18px;
@@ -655,17 +569,6 @@ div.container.itemcontenedor button.repro {
   transform: translateY(-64%);
   width: 28px;
   height: 28px;
-}
-nav.miniPlayer {
-  position: fixed;
-  top: 2%;
-  z-index: 15;
-}
-nav.miniPlayer iframe {
-  height: 60px;
-  width: 100%;
-  right: 0%;
-  left: 0%;
 }
 div.container.itemcontenedor button.save{
   top: 58%;
