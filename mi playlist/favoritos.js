@@ -114,6 +114,7 @@ window.addEventListener('load', function(){
                                 var buttonEliminarSong = document.querySelectorAll("button.saveSong")
                                 for (let i = 0; i < cancionesPreferidas.length; i++) {
                                     document.querySelectorAll("button.saveSong").onclick = function(){
+                                        
                                         confirm("¿Estas seguro de querer eliminar la canción de tu lista de favoritos?")
                                         if(confirm == true){
                                           localStorage.removeItem("cancionesPreferidas")
@@ -121,7 +122,7 @@ window.addEventListener('load', function(){
                                         }
                                     }
                                     
-                                }
+                                }//
                         }
                     ) 
                    
