@@ -29,7 +29,7 @@ window.addEventListener ("load", function () {
         document.querySelector ("header.contenedor").innerHTML = HTMLpresentacion    
         }
     )
-    ////TOP TRACK CORREGIR
+    ////TOP TRACK
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/"+codigoArtista+"/top")
     .then (
         function (respuestaTopTracks) {
@@ -82,7 +82,7 @@ window.addEventListener ("load", function () {
            ///console.log(infoAlbums);
            
            let informacionAlbums = infoAlbums.data;
-             let HTMLnuevoalbum = "";
+             
            for (let index = 0; index < 12; index++) {
                const cadaAlbum = informacionAlbums[index];
 
@@ -90,8 +90,9 @@ window.addEventListener ("load", function () {
                let tituloAlbum = cadaAlbum.title;
                let linkParaIngresar = cadaAlbum.id;
 
-             HTMLnuevoalbum +=`
-               
+              let HTMLnuevoalbum =
+              `
+ 
                <article class="Principal"> 
                <a href="../albums/albums.html?id-album=`+ linkParaIngresar +`"><img src="`+ imagenAlbum +`" alt=""></a>
                <a style="text-decoration: none;" href="../albums/albums.html?id-album=`+ linkParaIngresar +`"><h2 class="Titulo">`+ tituloAlbum +`</h2></a>
@@ -99,7 +100,7 @@ window.addEventListener ("load", function () {
                </article>
                 `
            }
-           document.querySelector ("#main").innerHTML = HTMLnuevoalbum;
+           document.querySelector ("#main").innerHTML += HTMLnuevoalbum;
        }
     )
     
@@ -126,7 +127,7 @@ window.addEventListener ("load", function () {
       <h1 class="nuevo"> Artista relacionado </h1>
       <nav class="fototexto"> 
           <div class="textos">
-            <div><a href= "artistas.html"?id-artista= `+ AidiDelArtista +`"><h1 class="thriller">`+ nameRelacionado +`</h1></a></div>
+            <div><a style="text-decoration: none;" href= "artistas.html?id-artista= `+ AidiDelArtista +`"><h1 class="thriller">`+ nameRelacionado +`</h1></a></div>
             <h2 class="fecha">`+ QfansRelacionado + " " +`fans </h2>
         </div>
         <div class="imagen">
