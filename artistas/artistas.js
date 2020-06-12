@@ -119,13 +119,14 @@ window.addEventListener ("load", function () {
         let imagenDeRelacionado = cadaRelacionado.picture_medium;
         let nameRelacionado = cadaRelacionado.name
         let QfansRelacionado = cadaRelacionado.nb_fan
+        let idartistaa = cadaRelacionado.id
       
       HTMLrelacionado +=
       `
       <h1 class="nuevo"> Artista relacionado </h1>
       <nav class="fototexto"> 
           <div class="textos">
-            <div><h1 class="thriller">`+ nameRelacionado +`</h1></div>
+            <div><a href="><h1 class="thriller">`+ nameRelacionado +`</h1></div>
             <h2 class="fecha">`+ QfansRelacionado + " " +`fans </h2>
         </div>
         <div class="imagen">

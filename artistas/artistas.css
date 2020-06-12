@@ -75,7 +75,17 @@ body {
        -webkit-box-shadow: -1px 2px 7px 3px rgba(41,41,41,1);
        -moz-box-shadow: -1px 2px 7px 3px rgba(41,41,41,1);
         box-shadow: -1px 2px 7px 3px rgba(41,41,41,1);
-   } 
+   }
+    /*Mini reproductor*/
+  nav.miniPlayer{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    z-index: 12;
+}
+nav.miniPlayer iframe{
+     height: 70px;
+}
     /*SECCION*/
    
    h1.tituloTop10 {
@@ -185,7 +195,12 @@ div.header ul.nav i.fas.fa-heart:hover{
        text-overflow: ellipsis;                        
       white-space: nowrap;            
       overflow: hidden;
+      color: black;
    }
+   aside.New a h1:hover {
+       text-decoration: underline;
+   }
+   
    h1.thriller {
     font-family: "Ubuntu";
     font-size: 32px;
@@ -293,6 +308,9 @@ ul.redesSociales i{
      
    .Principal a h2 {
        color: black;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       overflow: hidden;
    }
    .Principal a h2:hover {
        text-decoration: underline;
@@ -300,6 +318,9 @@ ul.redesSociales i{
    
      .Principal p {
          margin-top: 0px;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         overflow: hidden;
      }
    
    
@@ -532,4 +553,15 @@ ul.redesSociales i{
                  width: 46%;
                  height: 29%;
              }
+             /*Mini reproductor*/
+             nav.miniPlayer {
+                position: fixed;
+                top: 2%;
+                left: 3%;
+                z-index: 15;
+            }
+            nav.miniPlayer iframe {
+                height: 70px;
+                width: 96%;
+            }
             }
