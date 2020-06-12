@@ -13,30 +13,27 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="resultadosSearch.css">
+    <script src="resultadosSearch.js"></script>
+    <script src="../generos/generos.js"></script>
 </head>
 <body>
     <!-- Contenedor menu hamburguesa -->
     <header>
+        <div class="banner">
         <a href="#offcanvas-slide" class="uk-button" uk-toggle> <button><i class="fas fa-bars" id="menuButton"></i></button> </a>
             <div id="offcanvas-slide" uk-offcanvas>
                 <div class="uk-offcanvas-bar">
                     <ul class="uk-nav uk-nav-default mainMenu">
                         <li class="opcion icono">
                             <ul class="tool">
-                                <li><a class="uk-active menuLink" href="../index/index.html"><i class="fas fa-home"></i></a></li>
-                                <li class="textMenu"><a class="uk-active menuLink" href="../index/index.html">Home</a></li>
+                                <li><a class="uk-active menuLink textmenuLink" href="../index/index.html"><i class="fas fa-home"></i></a></li>
+                                <li class="textMenu"><a class="uk-active menuLink textmenuLink" href="../index/index.html">Home</a></li>
                             </ul>
                         </li>
                         <li class="opcion icono">
                             <ul class="tool">
-                                <li><a class="uk-active menuLink" href="../generos/generos.html"><i class="fas fa-music"></i></a></li>
-                                <li class="textMenu"><a class="uk-active menuLink" href="../generos/generos.html">Géneros</a></li>
-                            </ul>
-                        </li>
-                        <li class="opcion icono">
-                            <ul class="tool">
-                                <li><a class=" uk-active menuLink" href="../mi playlist/favoritos.html"><i class="fas fa-heart"></i></a></li>
-                                <li class="textMenu"><a class=" uk-active menuLink" href="../mi playlist/favoritos.html">Favoritos</a></li>
+                                <li><a class=" uk-active menuLink textmenuLink" href="../mi playlist/favoritos.html"><i class="fas fa-heart"></i></a></li>
+                                <li class="textMenu"><a class=" uk-active menuLink textmenuLink" href="../mi playlist/favoritos.html">Favoritos</a></li>
                             </ul>
                         <br> <br> <br>
                         <li class="opcion">
@@ -52,17 +49,30 @@
                     </ul>
                 </div>
         </div>
-        <div class="flexsearch--wrapper">
-            <form class="flexsearch--form" action="resultadosSearch.html" method="GET">
-                <div class="flexsearch--input-wrapper">
-                    <input class="flexsearch--input" name="search" type="search" placeholder="">
-                </div>
-            </form>
+        <div class="uk-inline generos">
+            <button class="uk-button uk-button-default" type="button"><i class="fas fa-music" id="generoButton"></i></button>
+            <div uk-dropdown="pos: right-center">
+                <ul class="uk-nav uk-dropdown-nav cadaGeneroContenedor">
+                  
+                </ul>
+            </div>
         </div>
+        <div class="uk-inline buscador">
+            <button class="uk-button uk-button-default" type="button"><i class="fas fa-search" id="searchButton"></i></button>
+                <div class="flexsearch--wrapper" uk-dropdown="mode: click">
+                     <form class="flexsearch--form" action="resultadosSearch.html" method="GET">
+                         <div class="flexsearch--input-wrapper">
+                               <input class="flexsearch--input" name="search" type="search" placeholder="">
+                        </div>
+                     </form>
+                </div> 
+        </div>
+        
         <!--Mini reproductor-->
         <nav class="miniPlayer"> 
-           
+            <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=false&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=artist&id=27&app_id=1" width="350" height="350"></iframe>
         </nav> 
+        </div>
     </header>
     <main class="resultadosDeBusqueda">
         <!-- Canciones -->
@@ -75,7 +85,7 @@
         </div>
 
         <!-- Artistas -->  
-    <div class="texto"> <p> Artistas </p></div>
+    <div class="texto artista"> <p> Artistas </p></div>
     <div class="tarjetas uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
         <ul class="resultadoArtista uk-slider-items uk-grid uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" uk-height-viewport=" true; offset-bottom: 60">
             
@@ -87,8 +97,8 @@
     </div>
 
         <!-- Álbumes-->
-    <div class="texto"> <p> Álbumes</p></div>
-    <div class="tarjetas uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+    <div class="texto albums"> <p class="tituloAlbum"> Álbumes</p></div>
+    <div class="tarjetas albumTarjeta uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
         <ul class="resultadoAlbum uk-slider-items uk-grid uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" uk-height-viewport=" true; offset-bottom: 60">
             
 
@@ -102,10 +112,10 @@
 
     <!-- SIN RESULTADOS DE BUSQUEDA -->  
     <div class="sinResultados">
-        <p>Lo sentimos, no hay resultados para tu busqueda. <br> Intenta utilizando otros términos</p>
+        <p>Lo sentimos, no hay resultados para tu busqueda. <br> Intenta utilizando otros términos.</p>
         <img src="../img/biboplog.png" alt="">
     </div>
 
 </body>
-<script src="resultadosSearch.js"></script>
+
 </html>

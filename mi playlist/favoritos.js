@@ -7,6 +7,26 @@ window.addEventListener('load', function(){
     } else {
         document.querySelector('div.user ul li.nombre').innerHTML += "Mis favoritos"
     } */
+    let cancionesFavoritas
+    if (localStorage.getItem("cancionesPreferidas") != null) {
+        cancionesFavoritas = localStorage.getItem("cancionesPreferidas").split(",")
+    } else {
+        cancionesFavoritas = []
+    }
+
+    let albumsFavoritos
+    if (localStorage.getItem("albumsPreferidos") != null) {
+        albumsFavoritos = localStorage.getItem("albumsPreferidos").split(",")
+    } else {
+        albumsFavoritos = []
+    }
+
+    let artistasFavoritos
+    if (localStorage.getItem("artistasPreferidos") != null) {
+        artistasFavoritos = localStorage.getItem("artistasPreferidos").split(",")
+    } else {
+        artistasFavoritos = []
+    }
 
         /*ARTIST*/
         if(localStorage.getItem("artistasPreferidos") != null) {

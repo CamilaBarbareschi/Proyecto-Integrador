@@ -46,13 +46,45 @@ header{
     z-index: 6;
     font-size: 25px;
 }
+li.uk-active.cadaGenero a{
+    color: #440875 ;
+  }
+  li.uk-active.cadaGenero a:hover{
+    color: #dbff4b ;
+  }
+  #searchButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 13%;
+    z-index: 6;
+    font-size: 25px;
+  }
+#generoButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 8%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  #generoButton:hover {
+    color: #dbff4b ;
+  }
+  #searchButton:hover {
+    color: #dbff4b ;
+  }
 #menuButton:hover {
     color: #dbff4b ;
 }
 ul.redesSociales{
     display: grid;
     grid-template-columns: auto auto auto auto auto ;
+    margin-top: 20%
 }
+li.opcion ul.tool  li a.textmenuLink{
+    font-size: 30px;
+  }
 ul.mainMenu li.opcion a.menuLink{
     color: black;
 }
@@ -92,6 +124,9 @@ ol, ul {
 .uk-open>.uk-offcanvas-bar {
     left: 0;
     background-color: #dcff4f ;
+}
+div.texto p.tituloAlbum {
+    padding-top: 0%;
 }
 .menu{
     padding-left: 4%;
@@ -133,6 +168,9 @@ li.ultimo a img {
 }
 /*MINI PLAYLIST*/
 /*BUSCADOR*/
+div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
+    padding: 0%;
+  }
 .flexsearch--wrapper {
     height: auto;
     width: 20%;
@@ -152,8 +190,13 @@ li.ultimo a img {
     padding: 0px 20px 0 0;
     z-index: 25;
     position: fixed;
-    top: 5%;
+    top: 10%;
+    left: 3%;
 }
+.uk-dropdown-nav {
+    height: 60vh;
+    overflow-y: scroll;
+  }
 .flexsearch--input {
     width: 100%;
     z-index: 25;
@@ -220,7 +263,7 @@ div.sinResultados{
 div.sinResultados p{
     color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 43px;
     padding-top: 60px;
 }
 div.sinResultados img{
@@ -243,6 +286,7 @@ main.resultadosDeBusqueda{
     width: 85%;
     margin: 0 auto;
     color: black;
+    padding-top: 13vh;
 }
 .uk-card-media-top img{
     border-radius: 3%;
@@ -257,9 +301,9 @@ div.uk-card.uk-card-small.uk-card-default a{
     font-size: 18px;
     font-family: "raleway";
     color: black;
-    margin-top: 6%;
     font-size: 30px;
     font-weight: bold;
+    padding-top: 5%;
 }
 .texto p:hover{
     color: #480082 ;
@@ -358,6 +402,20 @@ button.save {
     border: none;
     background-color: cornsilk;
 }
+button.saveAlbum {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
+button.saveArtista {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
 button.repro {
     width: 40px;
     height: 38px;
@@ -366,38 +424,100 @@ button.repro {
     background-color: cornsilk;
     margin-right: 10px;
 }
+button.reproArtista {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+    margin-right: 10px;
+}
 @media screen and (max-width: 690px){
-    div.cancionesContainer {
-        margin-top: 20%;
+    div.sinResultados p {
+        color: white;
+        text-align: center;
+        font-size: 38px;
+        padding-top: 26px;
+    }
+    div.sinResultados img {
+        position: absolute;
+        bottom: 5%;
+        width: 29%;
+        left: 1%;
     }
     .flexsearch--input-wrapper {
         padding: 0px 20px 0 0;
         z-index: 25;
         position: fixed;
-        top: 14%;
-        left: 3%;
+        top: 10%;
+        right: 71%;
+        left: auto;
     }
     #menuButton {
         position: fixed;
-        top: 6%;
+        top: 4%;
         color: #440875;
-        left: 6%;
+        left: 4%;
+        font-size: 28px;
     }
+    #generoButton {
+        position: fixed;
+        top: 4%;
+        color: #440875;
+        left: 12%;
+        z-index: 6;
+        font-size: 28px;
+    }
+    #searchButton {
+        position: fixed;
+        top: 4%;
+        color: #440875;
+        left: 21%;
+        z-index: 6;
+        font-size: 28px;
+    }
+   
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 530px){
 .texto p{
     font-size: 28px;
     padding-left: 17px;
-}
+} 
+.banner{
+        height: 23vh;
+    }
+header{
+    height: 23vh;
+};
 h3.uk-card-title {
     font-size: 16px;
+}
+.flexsearch--input-wrapper {
+    padding: 0px 20px 0 0;
+    z-index: 25;
+    top: 16%;
+    left: 29%;
+    right: 11%;
 }
 button.repro {
     width: 26px;
     height: 26px;
     margin-right: 2px;
 }
+button.reproArtista {
+    width: 26px;
+    height: 26px;
+    margin-right: 2px;
+}
 button.save{
+    width: 26px;
+    height: 26px;
+}
+button.saveAlbum{
+    width: 26px;
+    height: 26px;
+}
+button.saveArtista{
     width: 26px;
     height: 26px;
 }
@@ -408,7 +528,7 @@ section.resultadoArtista figure button.repro{
     margin-left: 28px;
 }
 .uk-card-small .uk-card-body, .uk-card-small.uk-card-body{
-    text-align: left;
+    text-align: center;
 }
 h1 {
     font-size: 28px;
@@ -420,24 +540,36 @@ img.portada{
 main.resultadosDeBusqueda{
     width: 98%;
     margin: 0 auto;
+   padding-top: 6%;
 }
 div.cancionesContainer{
     width: 100%;
-    margin-top: 30%;
+    padding-top: 19vh;
 }
-.flexsearch--input-wrapper {
-    padding: 0px 20px 0 0;
-    z-index: 25;
-    top: 14%;
-    left: 21%;
-}
+
 #menuButton {
     position: fixed;
-    top: 14%;
+    top: 16%;
     color: #440875;
     left: 9%;
     z-index: 6;
     font-size: 25px;
+}
+#searchButton {
+    position: fixed;
+    top: 16%;
+    color: #440875;
+    left: 31%;
+    z-index: 6;
+    font-size: 26px;
+}
+#generoButton {
+    position: fixed;
+    top: 16%;
+    color: #440875;
+    left: 19%;
+    z-index: 6;
+    font-size: 26px;
 }
 .canciones i{
     font-size: 15px;
@@ -456,7 +588,6 @@ nav.miniPlayer iframe {
     height: 70px;
     width: 96%;
 }
-<<<<<<< HEAD
 div.sinResultados p {
     color: white;
     text-align: center;
@@ -473,7 +604,4 @@ div.sinResultados img {
     width: 45%;
     left: 1%;
 }
-
-=======
->>>>>>> da03513edef646006d702c0cd8399648306d5b53
 }

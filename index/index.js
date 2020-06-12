@@ -50,7 +50,7 @@ window.addEventListener ("load", function (){
                   "></img>" + "<button class='repro'  id-album='" + cadaAlbumId + "'><i class='fas fa-play'></i></button>"+ 
                   "<button class='albumSave' id-album='" + cadaAlbumId + "'><i class='fas fa-heart'></i></button>"+
                   "<div class='uk-position-center uk-panel'>" + 
-                  "<a class='nombreLink' href='../albums/albums.html?idAlbum='" + cadaAlbumId + "'>" + 
+                  "<a class='nombreLink' href='../albums/albums.html?idAlbum ='" + cadaAlbumId + "'>" + 
                   "<h2 class='uk-transition-slide-bottom-small'>"+  tituloAlbums + 
                   "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
            }else{
@@ -61,7 +61,7 @@ window.addEventListener ("load", function (){
                   "></img>" + "<button class='repro'  id-album='" + cadaAlbumId+ "'><i class='fas fa-play'></i></button>"+ 
                   "<button class='albumSave' id-album='" + cadaAlbumId + "'><i class='fas fa-heart' id='pintadito' ></i></button>"+
                   "<div class='uk-position-center uk-panel'>" + 
-                  "<a class='nombreLink' href='../albums/albums.html?id-album='" + cadaAlbumId + "'>" + 
+                  "<a class='nombreLink' href='../albums/albums.html?id-album ='" + cadaAlbumId + "'>" + 
                   "<h2 class='uk-transition-slide-bottom-small'>"+  tituloAlbums + 
                   "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
             }
@@ -102,6 +102,7 @@ window.addEventListener ("load", function (){
           const cadaArtista = artistas[index];
 
             let imgArtista = cadaArtista.picture_medium 
+         
             let nombreArtista = cadaArtista.name
             let artistaId = cadaArtista.id
             
@@ -114,7 +115,7 @@ window.addEventListener ("load", function (){
                   "></img>" + "<button class='repro artista' id-artista='" + artistaId + "'><i class='fas fa-play'></i></button>"+ 
                   "<button class='save' id-artista='" +  artistaId + "'><i class='fas fa-heart'></i></button>" +
                   "<div class='uk-position-center uk-panel'>" + 
-                  "<a class='nombreLink' href='../artistas/artistas.html?id-artista='" + artistaId + "'>"  + 
+                  "<a class='nombreLink' href='../artistas/artistas.html?id-artista ='" + artistaId + "'>"  + 
                   "<h2 class='uk-transition-slide-bottom-small'>" +  nombreArtista + 
                   "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"
             }else{
@@ -125,7 +126,7 @@ window.addEventListener ("load", function (){
                   "></img>" + "<button class='repro artista' id-artista='" + artistaId + "'><i class='fas fa-play'></i></button>"+ 
                   "<button class='save' id-artista='" +  artistaId + "'><i class='fas fa-heart' id='pintadito'></i></button>" +
                   "<div class='uk-position-center uk-panel'>" + 
-                  "<a class='nombreLink' href='../artistas/artistas.html?id-artista='" + artistaId + "'>"  + 
+                  "<a class='nombreLink' href='../artistas/artistas.html?id-artista ='" + artistaId + "'>"  + 
                   "<h2 class='uk-transition-slide-bottom-small'>" +  nombreArtista + 
                  "</h2>" + "</a>" + "</div>" + "</div>" + "</li>"             
             }
@@ -135,7 +136,7 @@ window.addEventListener ("load", function (){
         var buttonReproArtista = document.querySelectorAll("button.artista")
         for (let i = 0; i< buttonReproArtista.length; i++) {
           buttonReproArtista[i].onclick = function(){
-            document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=medium&type=artist&id=' + this.getAttribute("id-artista") +'&app_id=1" width="350" height="350"></iframe>'
+            document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=artist&id=' + this.getAttribute("id-artista") +'&app_id=1" width="350" height="350"></iframe>'
           }
          
         }
@@ -175,7 +176,7 @@ window.addEventListener ("load", function (){
                   "<div class='container itemcontenedor'>"+
                   "<a class='nombreLink' href='../playlist/playlist.html'>"  + 
                   "<img class='imgSlide' src=" + coverPlaylist +  "></img>" + 
-                  "</a>"+ "<button class='repro playlist' id-playlist=' " + previewPlaylist + "'><i class='fas fa-play'></i></button>"+ 
+                  "</a>"+ "<button class='repro playlist' id-playlist =' " + previewPlaylist + "'><i class='fas fa-play'></i></button>"+ 
                   "<button class='savePlaylist' id-playlist ='" + previewPlaylist + "'><i class='fas fa-heart'></i></button>"+ "</div>" + "</li>"
             }else{
               nuevoHtmlPlaylistSlideShow = 
@@ -183,7 +184,7 @@ window.addEventListener ("load", function (){
                   "<div class='container itemcontenedor'>"+
                   "<a class='nombreLink' href='../playlist/playlist.html'>"  + 
                   "<img class='imgSlide' src=" + coverPlaylist +  "></img>" + 
-                  "</a>"+ "<button class='repro playlist' id-playlist=' " + previewPlaylist + "'><i class='fas fa-play'></i></button>"+ 
+                  "</a>"+ "<button class='repro playlist' id-playlist =' " + previewPlaylist + "'><i class='fas fa-play'></i></button>"+ 
                   "<button class='savePlaylist' id-playlist ='" + previewPlaylist + "'><i class='fas fa-heart' id='pintadito'></i></button>"+ "</div>" + "</li>"
              }
               document.querySelector("ul.listadoPlaylist").innerHTML += nuevoHtmlPlaylistSlideShow
@@ -233,12 +234,11 @@ window.addEventListener ("load", function (){
   goGobackTexto.addEventListener ("mouseout", function(){
       goGobackTexto.style.color = "gray"
   });
-
-
   
  
   
 
+  
 
 
 

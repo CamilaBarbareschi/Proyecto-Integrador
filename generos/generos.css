@@ -235,20 +235,6 @@ li.footer{
 .logofooter{
     width: 30px ;
 }
-ul.redesSociales i:hover{
-    color:#dbff4b;
-}
-ul.redesSociales{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    list-style: none;
-    width: 40%;
-    margin: 0 auto;
-    padding: 5px 0px 0px 0px;
-}
-ul.redesSociales i{
-    color: black;
-}
 
 /*FIN DE FOOTER*/
 
@@ -257,9 +243,6 @@ ul.redesSociales i{
 
     img.logo {
         width: 18%;
-    }
-    li.footer{
-        font-size: 15px;
     }
    
    ul.nav {
@@ -286,9 +269,6 @@ ul.redesSociales i{
       li.ultimo{
           display: none;
       }
-      li.footer {
-        font-size: 10px;
-    }
      ul.nav {
           grid-template-columns: 27% 48% 13%;
       }
