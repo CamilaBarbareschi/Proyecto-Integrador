@@ -125,7 +125,7 @@ body {
 
 .latin{
   position: absolute;
-  top: 115px;
+  top: 146px;
   left: 32%;
   width: 32%;
   height: 55%;
@@ -133,10 +133,12 @@ body {
 }
  
 .playlist{
-    margin: 0 auto;
-    width: 75%;
-    margin-bottom: 10%;
-    font-family: 'Raleway', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  padding: 5px 25px;
     
 }
 
@@ -145,11 +147,16 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 5% 30% 30% 20%;
+    grid-template-columns: 4% 3% 30% 30% 20%;
     padding-top: 15px;
     border-top: 1px solid black;
-    font-size: 16px;
+    font-size: 18px;
+    color: black;
     
+}
+.musica div a {
+  color: black;
+  text-decoration: none;
 }
 .inicio{
     margin: 20px 50px;

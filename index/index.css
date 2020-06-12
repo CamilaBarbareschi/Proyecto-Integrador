@@ -152,6 +152,9 @@ ul.redesSociales li.redes i:hover{
 #searchButton:hover {
   color: #dbff4b;
 }
+#pintadito {
+  color: rgb(255, 0, 55);
+}
 ol, ul {
   padding-left: 0px;
 }
@@ -167,6 +170,13 @@ ol, ul {
   height: 100vh;
   z-index: 6;
   display: none;
+}
+[class*=uk-inline] {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  width: 0px;
+  vertical-align: middle;
 }
 a.menuLink{
   font-size: 28px;
@@ -328,6 +338,32 @@ div.container.itemcontenedor  button.save{
   text-align: center;
   position: relative;
   top: 69%;
+  transform: translateY(-69%);
+  left: 10%;
+  background-color: cornsilk;
+}
+div.container.itemcontenedor  button.albumSave{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  top: 68%;
+  transform: translateY(-69%);
+  left: 10%;
+  background-color: cornsilk;
+}
+div.container.itemcontenedor  button.savePlaylist{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  top: 68%;
   transform: translateY(-69%);
   left: 10%;
   background-color: cornsilk;
@@ -539,4 +575,90 @@ div.container.itemcontenedor button.save{
   transform: translateY(-64%);
   width: 28px;
   height: 28px;
-}}
+}
+div.container.itemcontenedor button.albumSave{
+  top: 58%;
+  transform: translateY(-64%);
+  width: 28px;
+  height: 28px;
+}
+div.container.itemcontenedor button.savePlaylist{
+  top: 58%;
+  transform: translateY(-64%);
+  width: 28px;
+  height: 28px;
+}
+#menuButton {
+  top: 14%;
+}
+#searchButton {
+  left: 40%;
+  top: 14%;
+}
+#generoButton {
+
+  top: 14%;
+  left: 20%;
+}
+}
+@media screen and (max-width: 355px){
+  .uk-grid>* {
+    padding-left: 70px;
+}
+.uk-child-width-1-2>* {
+  width: 91%;
+}
+section.rankings {
+  padding-top: 24%;
+}
+div.container.itemcontenedor button.repro {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+div.container.itemcontenedor button.save {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+div.container.itemcontenedor button.albumSave {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+div.container.itemcontenedor button.savePlaylist {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+div.container.itemcontenedor.imgArt button.repro {
+  top: 75%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+  left: 32%;
+}
+div.container.itemcontenedor.imgArt button.save {
+  top: 75%;
+  left: 36%;
+  transform: translateY(-64%);
+  width: 40px;
+  height: 40px;
+}
+.container.itemcontenedor {
+  width: 100%;
+  position: relative;
+  height: 44vh;
+}
+
+div.btnback div.textoBack a {
+  font-size: 24px;
+}
+.uk-subnav>*>:first-child {
+  font-size: 15px;
+}
+}

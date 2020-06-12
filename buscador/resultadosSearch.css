@@ -12,6 +12,31 @@ html {
    text-decoration: none;
    cursor: pointer;
 }
+
+div.tarjetas.albumTarjeta.uk-position-relative.uk-visible-toggle.uk-light.uk-slider-container{
+    margin: 50px auto 0px auto;
+}
+header{
+    width: 100%;
+    height: 16vh;
+    position: fixed;
+    z-index: 1;
+    background-image: url(../img/header-play.jpg);
+
+}
+#pintadito{
+    color: rgb(255, 0, 55);
+}
+
+.banner{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(225, 225, 225, 0.40);
+    height: 16vh;
+    width: 100%;
+    z-index: 2;
+}
 /*MENU HAMBURGUESA*/
 #menuButton {
     position: fixed;
