@@ -10,71 +10,225 @@ html {
     font-family: 'Oswald', sans-serif; 
     background-color: rgba(207, 182, 238, 0.781);
 }
-.buscador{
-    display: none;
+.uk-link, a {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+
 }
-div.user{
-    width: 87%;
-    margin: 15px auto 10px auto;
-    height: 20vh;
-    color: white;
-    font-family: "raleway";
-    background: linear-gradient(150deg,#dc3e0591,#f06d3ebd, #dc3e05b2, #9e00c5b6, #9e00c5a9, #9400cfa8);
+header{
+  width: 100%;
+  height: 16vh;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-image: url(../img/header-play.jpg);
+
+}
+.banner{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(225, 225, 225, 0.40);
+  height: 16vh;
+  width: 100%;
+  z-index: 2;
+}
+ul.uk-subnav.uk-subnav-pill{
+    background: linear-gradient(150deg,#dc3e0581,#f06d3e7c, #dc3e058a, #c5008385, #9e00c571, #9400cf85);
     background-size: 400% 300%;
-    animation: BgGradient 10s ease infinite;
-    text-align: center;
+    animation: BgGradient 7s ease infinite;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
 }
 @keyframes BgGradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
-div.user ul li{
+#menuButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 4%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  #searchButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 15%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  #generoButton {
+    position: fixed;
+    top: 5%;
+    color: #440875;
+    left: 9%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  #menuButton:hover {
+    color: #dbff4b ;
+  }
+  #generoButton:hover {
+    color: #dbff4b ;
+  }
+  li.uk-active.cadaGenero a:hover{
+    color: #dbff4b ;
+  }
+  li.uk-active.cadaGenero a{
+    color: #440875 ;
+  }
+  ul.redesSociales{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    margin-top: 30%
+  }
+  ul.mainMenu li.opcion a.menuLink{
+    color: black;
+  }
+  ul.mainMenu li.opcion a.menuLink:hover{
+    color: #440875;
+  }
+  ul.mainMenu li.opcion{
+    color: black;
+    font-size: 1px;
+    padding-top: 5px;
+  }
+  li.opcion.icono ul.tool{
+    display: grid;
+    grid-template-columns: 8% auto;
+  }
+  li.opcion.icono ul.tool i{
+    font-size: 18px;
+  }
+  ul.tool li.textMenu{
+    padding-left: 20px;
+  }
+  li.opcion.icono ul.tool i a:hover{
+    color: #440875; 
+  }
+  li.opcion ul.tool  li a.textmenuLink{
+    font-size: 30px;
+  }
+  hr{
+    color: black;
+  }
+  ul.redesSociales li.redes i{
+    color: black;
+    font-size: 25px;
+  }
+  ul.redesSociales li.redes i:hover{
+    color: #480075;
+  }
+  #searchButton:hover {
+    color: #dbff4b;
+  }
+  #pintadito {
+    color: rgb(255, 0, 55);
+  }
+  ol, ul {
+    padding-left: 0px;
+  }
+  .uk-open>.uk-offcanvas-bar {
+    left: 0;
+    background-color: #dcff4f ;
+  }
+  a.menuLink{
+    font-size: 28px;
+    color: grey;
+    text-decoration: none;
+  }
+  a.menuLink:hover{
+    color:#440875 ;
+  }
+  ul.mainMenu{
+    padding-top: 10%;
+  }
+  .uk-button{
+    padding: 0px 0px;
+  }
+  li {
+    position: relative;
     list-style: none;
-    font-size: 40px;
-    padding-top: 5vh;
-}
-.flexsearch--wrapper {
+    line-height: 55px;
+  }
+  li.ultimo {
+    padding-left: 12%;
+  }
+  li.ultimo a{
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  li.ultimo a img {
+    width: 7%;
+  }
+  
+/*MINI PLAYER*/
+  nav.miniPlayer{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    z-index: 12;
+   }
+   nav.miniPlayer iframe{
+     height: 70px;
+     position: absolute;
+       top: 5%;
+       right: 3%;
+   }
+   
+/*BUSCADOR*/
+div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
+    padding: 0%;
+  }
+  .flexsearch--wrapper {
     height: auto;
-    width: auto;
-    max-width: 100%;
+    width: 20%;
     overflow: hidden;
     background: transparent;
     margin: 0;
     position: static;
-}
-.flexsearch--form {
+    z-index: 25;
+  }
+  .flexsearch--form {
     overflow: hidden;
+    padding-left: 40%;
     position: relative;
-}
-.flexsearch--input-wrapper {
-    padding: 0 66px 0 0; 
-    overflow: hidden;
-}
-.flexsearch--input {
+    z-index: 25;
+  }
+  .flexsearch--input-wrapper {
+    padding: 0px 20px 0 0;
+    z-index: 25;
+    position: fixed;
+    top: 11%;
+    left: 3%;
+  }
+  .flexsearch--input {
     width: 100%;
-}
-.flexsearch--input {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 25px;
-    padding: 2px 0px 0 12px;
-    border-color: rgba(250, 108, 61, 0.74);
-    border-radius: 35px;
+    z-index: 25;
+    height: 20px;
+    padding: 2px 0px 2px 12px;
+    border-color: #480082;
+    border-radius: 20px;
     border-style: solid;
     border-width: 2px;
+    box-sizing: content-box;
     color: #480082;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-.flexsearch--submit {
+  }
+  .flexsearch--submit {
     position: absolute;
     right: 0;
     top: 0;
     display: block;
+    z-index: 25;
     width: 60px;
     height: 60px;
     padding: 0;
@@ -86,203 +240,181 @@ div.user ul li{
     font-family: "Raleway", sans-serif;
     font-size: 40px;
     line-height: 60px;
-}
-.flexsearch--input:focus {
+  }
+  .flexsearch--input:focus {
     outline: none;
     border-color: #dbff4b;
-}
-.flexsearch--submit:hover { 
+  }
+  .flexsearch--submit:hover { 
     color: #dbff4b;
     cursor: pointer;
-}
-::-webkit-input-placeholder {
-color:  #480082;  
-}
-input:-moz-placeholder {
+  }
+  ::-webkit-input-placeholder {
+  color:  #480082;  
+  }
+  input:-moz-placeholder {
     color:  #480082;
-}
-ul.nav {
-    display: grid;
-    grid-template-columns: 80% 7% 5%;
-    padding-left: 325px;
-    margin: 0px;
-    padding-top: 16px;
-}
-ul.nav li {
-    list-style-type: none;
-    width: 90%;
-    font-size: 25px;
-    text-align: center;
-    color: white;
-    margin-bottom: none;
-    padding-left: none;
-}
-ul.nav a{
-    text-decoration: none;
-    color: white;    
-}
- ul.nav a:hover {
-    color: #dbff4b;
-}
-img.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 10%;
-    height: auto;
-    border-radius: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
-}
-.container{
-    background-image: url(../img/header-play.jpg);
-    height: 65px;
-}
-header{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(225, 225, 225, 0.40);
-    height: 65px;
-    width: 100%;
-}
-
-.playlist {
-    width: 90%;
+  }
+  .uk-dropdown-nav {
+    height: 60vh;
+    overflow-y: scroll;
+  }
+  
+  ul.uk-switcher.uk-margin{
+    width: 98%;
     margin: 0 auto;
-    margin-bottom: 5%;
-    font-family: 'Raleway', sans-serif;
-    color: black;
-    padding: 5px 25px;
-}
-.musica{
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns:  4% 5% 5% 30% 30% 30%;
-    padding-top: 15px;
-    border-top: 1px solid white;
-    font-size: 18px;
-}
-.inicio{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 30% 31% 16%;
-    font-size: 18px;
-    font-weight: bold;
-}
-.musica div a {
-    color: black;
-    text-decoration: none;
-}
-.musica div a:hover{
+  }
+  .uk-subnav-pill>.uk-active>a {
     color: #480082;
-    font-weight: bold;
-}
-.musica div button{
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    font-size: 17px;
-}
-.musica div button i:hover{
+    font-size: 30px;
+    font-family: sans-serif;
+    border-bottom: 2px solid #480082;
+    background-color: #ffffff00;
+  }
+  .uk-subnav {
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-bottom: 35px;
+  }
+  .uk-subnav-pill>.uk-active>a {
+    background-color: none;
+    color: none;
+  }
+  .uk-subnav-pill>*>:first-child {
+    padding: 5px 10px;
+    background: 0 0;
     color: #480082;
-}
-/*FOOTER*/
-footer {
-    background-color: rgba(250, 108, 61, 0.925);
-}
-footer ul  {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 0;
-    padding: 10px;
-}
-li.footer a {
-    text-decoration: none;
-}
-li.footer{
-    list-style-type: none; 
-    color: black;
-    padding-top: 10px;
-    font-size: 18px;
-    text-align: center;
-    font-family: "raleway";
-}
-.logofooter{
-    width: 30px ;
-}
-ul.redesSociales i:hover{
-    color:#dbff4b;
-}
-ul.redesSociales{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    list-style: none;
-    width: 40%;
-    margin: 0 auto;
-    padding: 5px 0px 0px 0px;
-}
-ul.redesSociales i{
-    color: black;
-}
-@media screen and (max-width: 800px){
-li.footer{
-    font-size: 15px;
-}
-.musica{
-    font-size: 16px;
-}
-div.user ul li{
-    list-style: none;
-    font-size: 35px;
-}
-.playlist{
-    padding: 0px 0px 0px 0px;
-}
-ul.nav {
-    display: grid;
-    grid-template-columns: 74% 10% 16%;
-    padding-left: 248px;
-    margin: 0px;
-    padding-top: 16px;
-}
-img.logo {
-    position: absolute;
-    top: 12px;
-    left: 10px;
-    width: 18%;
-}
-}
-@media screen and (max-width: 550px){
-li.footer {
-    font-size: 10px;
-}
-.musica{
-    font-size: 12px;
-}
-img.logo {
-    width: 34%;
-    top: 18%;
-}
-li.buscador{
+  }
+  .uk-subnav>*>:first-child {
     display: block;
-}
-li.ultimo{
-    display: none;
-}
-ul.nav {
-    grid-template-columns: 34% 26% 34%;
-    padding-left: 136px;
-}
-img.logo{
-    width: 28%;
-}
-.musica div button {
-    font-size: 9px;
-}
-div.user ul li{
-    list-style: none;
-    font-size: 25px;
-}
-}
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  article.canciones{
+    display: grid;
+    grid-template-columns: 5% 29% 29% 29% 5% 5%;
+    width: 90%;
+    border-top: 1px solid white;
+    margin: 0 auto;
+    color: black;
+  }
+  .canciones i{
+    font-size: 18px;
+  }
+  .canciones i:hover{
+    color:#dbff4b;
+  
+  }
+  button{
+    border: none;
+    background: none;
+  }
+  button:focus{
+    outline: none;
+  }
+  article.artist{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-around;
+  }
+  article.artist h3{
+    text-align: center;
+    font-size: 10px;
+  }
+  article.artist img{
+    border-radius: 50%;
+  }
+  article.artist img:hover{
+    border: 3px solid #dbff4b;
+  }
+  article.album{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+  }
+  article.album img:hover{
+    border: 3px solid #dbff4b;
+  }
+  article.playlist{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+  }
+  article.playlist img:hover{
+    border: 3px solid #dbff4b;
+  }
+  .reproArtista{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: cornsilk;
+  }
+  .reproAlbum{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: cornsilk;
+  }
+  .reproPlaylist{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: cornsilk;
+  }
+  .unSavePlaylist{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: cornsilk;
+  }
+  .unSaveAlbum{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: cornsilk;
+  }
+  .unSaveArtist{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: cornsilk;
+  }
+  div.reproducir{
+    padding-left: 10px;
+  }
+  div.albumCancion a{
+    text-decoration: none;
+    color: black;
+  }
+  div.artistaCancion a{
+    text-decoration: none;
+    color: black;
+  }
+  div.artistaCancion a:hover{
+    color: #480082
+  }
+  div.albumCancion a:hover{
+    color: #480082
+  }
+  div.containerSong{
+    border-top: 1px solid white;
+  }
+  article.album h3.nombreArtista{
+    text-align: center;
+  }
+  
+  
+
