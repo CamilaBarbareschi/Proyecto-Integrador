@@ -67,7 +67,7 @@ window.addEventListener("load", function() {
                 "<div><button class='songRepro' id-song='"+ cancionID + "'><i class='fas fa-play'></i></button></div>" +
                 "<div  class='cancionName'>" + cancionTitulo + "</div>" +
                 "<div class='cancionTime'>" + cancionTimeInMinute +':'+ cancionTimeInSeconds + "</div>" + 
-                "<div><button class='saveSong' id-song='" + cancionID + "'><i class='fas fa-heart' id='porPintar'></i></button></div>" +
+                "<div><button class='saveSong' id-song='" + cancionID + "'><div class='porPintar'><i class='fas fa-heart'></i></div></button></div>" +
                 "</article>"
                
                 } else{
@@ -105,25 +105,14 @@ window.addEventListener("load", function() {
 
                             alert("Canción guardada en favoritos :)");
 
-                            var porPintar =  document.querySelectorAll("#porPintar")
+                            var porPintar =  document.querySelectorAll(".porPintar")
                     
-                            for (let i = 0; i < porPintar.length; i++) {
-                                cancionButtonSave[i].onclick = function (){
-                                    document.querySelectorAll("i.fas.fa-heart").innerHTML += "id='pintadito'"
-                                }
-                            }   
-        
-                        
-                        }else{ /*NO FUNCIONA*/
-                            confirm("¿Estas seguro de querer eliminar la canción de tu lista de favoritos?")
-                             if(confirm == true){
-                                 localStorage.removeItem("cancionesPreferidas", cancionesFavoritas )
-                                 alert("Canción eliminada de favoritos :)")   
-                                 /*aca se deberia de despintar*/
-                             }
-
-                        }
-                        
+                           /* for (let i = 0; i < porPintar.length; i++) { 
+                                  cancionButtonSave[i].onclick = function (){
+                                    document.querySelectorAll("i.fas.fa-heart").innerHTML += "id='pintadito'"  
+                                }*/
+                               
+                            }
                     })
                 }
         }

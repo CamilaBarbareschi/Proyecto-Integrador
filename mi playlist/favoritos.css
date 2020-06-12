@@ -10,6 +10,10 @@ html {
     font-family: 'Oswald', sans-serif; 
     background-color: rgba(207, 182, 238, 0.781);
 }
+.imgContenedor{
+  width: 100%;
+  height: auto;
+}
 .uk-link, a {
     color: gray;
     text-decoration: none;
@@ -293,7 +297,7 @@ div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
   }
   article.canciones{
     display: grid;
-    grid-template-columns: 5% 29% 29% 29% 5% 5%;
+    grid-template-columns: 5% 29% 29% 29% 5% 2%;
     width: 90%;
     border-top: 1px solid white;
     margin: 0 auto;
@@ -318,12 +322,9 @@ div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
       grid-template-columns: auto auto auto auto;
       justify-content: space-around;
   }
-  article.artist h3{
-    text-align: center;
-    font-size: 10px;
-  }
   article.artist img{
     border-radius: 50%;
+    width: 100%;
   }
   article.artist img:hover{
     border: 3px solid #dbff4b;
@@ -404,10 +405,10 @@ div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
     color: black;
   }
   div.artistaCancion a:hover{
-    color: #480082
+    color: #480082;
   }
   div.albumCancion a:hover{
-    color: #480082
+    color: #480082;
   }
   div.containerSong{
     border-top: 1px solid white;
@@ -415,6 +416,222 @@ div.flexsearch--wrapper.uk-dropdown.uk-open.uk-dropdown-bottom-left{
   article.album h3.nombreArtista{
     text-align: center;
   }
+  canvas, img, video {
+    max-width: none;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .itemContainer{
+   text-align: center;
+  }
+  .itemContainer a{
+    text-decoration: none;
+    color: black;
+  }
+  .itemContainer a:hover{
+    color: #480082;
+    font-weight: bold;
+  }
+  h3.nombreAlbum{
+    margin-bottom: 0%;
+    margin-top: 2%;
+    font-size: 25px;
+  }
+  div.albumContainer {
+   margin-bottom: 10px;
+  }
+  .reproAlbum{
+    margin-right: 3%;
+  }
+  .unSaveAlbum{
+    margin-left: 3%;
+  }
+  h3.nombrePlaylist{
+    margin-bottom: 0%;
+    margin-top: 2%;
+    font-size: 25px;
+  }
+  .reproPlaylist{
+    margin-right: 3%;
+  }
+  .unSavePlaylist{
+    margin-left: 3%;
+  }
+  div.playlistContainer{
+    margin-bottom: 10px;
+  }
+  .reproArtista{
+    margin-right: 3%;
+  }
+  .unSaveArtista{
+    margin-left: 3%;
+  }
+  h3.nombreArtista{
+    font-size: 25px;
+    margin-bottom: 0%;
+    margin-top: 2%;
+  }
+  div.albumContainer {
+    margin-bottom: 10px;
+  }
+  div.artistaContainer{
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 1060px){
+    #menuButton {
+      position: fixed;
+      top: 4%;
+      color: #440875;
+      left: 4%;
+      font-size: 28px;
+  }
+  #generoButton {
+      position: fixed;
+      top: 4%;
+      color: #440875;
+      left: 12%;
+      z-index: 6;
+      font-size: 28px;
+  }
+  #searchButton {
+      position: fixed;
+      top: 4%;
+      color: #440875;
+      left: 21%;
+      z-index: 6;
+      font-size: 28px;
+  }
+  .flexsearch--input-wrapper {
+    padding: 0px 20px 0 0;
+    z-index: 25;
+    position: fixed;
+    top: 10%;
+    right: 71%;
+    left: auto;
+  }
+  div.artistaContainer {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  div.playlistContainer {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  div.albumContainer {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  article.artist {
+    grid-template-columns: auto auto auto;
+  }
+  article.artist img{
+    width: 90%;
+  }
+  article.album {
+    grid-template-columns: auto auto auto;
+  }
+  article.album img{
+    width: 90%;
+  }
+  article.playlist {
+    grid-template-columns: auto auto auto;
+  }
+  article.playlist img{
+    width: 90%;
+  }
+}
+  @media screen and (max-width: 530px){
+    .banner{
+      height: 23vh;
+     }
+    header{
+      height: 23vh;
+     }
+     .flexsearch--input-wrapper {
+      padding: 0px 20px 0 0;
+      z-index: 25;
+      top: 16%;
+      left: 29%;
+      right: 11%;
+  }
+  .uk-subnav-pill>.uk-active>a {
+    font-size: 20px;
+}
+.uk-subnav>*>:first-child {
+    font-size: 20px;
+}
+div.albumCancion{
+  display: none;
+}
+#menuButton {
+  position: fixed;
+  top: 16%;
+  color: #440875;
+  left: 9%;
+  z-index: 6;
+  font-size: 25px;
+}
+#searchButton {
+  position: fixed;
+  top: 16%;
+  color: #440875;
+  left: 31%;
+  z-index: 6;
+  font-size: 26px;
+}
+#generoButton {
+  position: fixed;
+  top: 16%;
+  color: #440875;
+  left: 19%;
+  z-index: 6;
+  font-size: 26px;
+}
+nav.miniPlayer {
+  position: fixed;
+  top: 2%;
+  left: 3%;
+  z-index: 15;
+}
+nav.miniPlayer iframe {
+  height: 70px;
+  width: 96%;
+}
+article.artist img {
+  border-radius: 50%;
+  width: 94%;
+}
+article.artist {
+  grid-template-columns: auto auto;
+}
+h3.nombreArtista {
+  font-size: 22px;
+}
+article.album {
+  grid-template-columns: auto auto;
+}
+article.playlist {
+  grid-template-columns: auto auto;
+}
+h3.nombreAlbum {
+  font-size: 22px;
+}
+div.albumContainer {
+  margin-bottom: 10px;
+  text-align: center;
+}
+article.album img{
+  width: 94%;
+}
+article.playlist img{
+  width: 94%;
+}
+h3.nombrePlaylist {
+  font-size: 22px;
+}
+}
+  
+  
   
   
 

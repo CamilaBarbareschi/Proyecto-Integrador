@@ -24,13 +24,12 @@ window.addEventListener('load', function(){
                                   let artistName = artist.name
                                   let artistId = artist.id
                                   let artistImg = artist.picture_medium
-                                  let artistFans = artist.nb_fan
 
                                   let newHtmlArtist =
-                                  '<div class="artistaContainer"><a href="../artistas/artistas.html?id-artista="'+ artistId + '"><img src="'+ artistImg +'" alt="' + artistName + '"></a>' +
-                                  '<h3 class="nombreArtista"><a href="../artistas/artistas.html?id-artista="'+ artistId + '">'+ artistName+'</a></h3>' +
-                                  '<button class="unSaveArtist"><i class="fas fa-heart" id="pintadito"></i></button>' +
-                                  '<button class="reproArtista" id-artista="'+ artistId + '"><i class="fas fa-play"></i></button></div>' 
+                                  '<div class="artistaContainer"><div class="imgContenedor"><a href="../artistas/artistas.html?id-artista="'+ artistId + '"><img src="'+ artistImg +'" alt="' + artistName + '"></a></div>' +
+                                  '<div class="itemContainer"><h3 class="nombreArtista"><a href="../artistas/artistas.html?id-artista="'+ artistId + '">'+ artistName+'</a></h3>' +
+                                  '<button class="reproArtista" id-artista="'+ artistId + '"><i class="fas fa-play"></i></button>' +
+                                  '<button class="unSaveArtist"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
                                   
                                   document.querySelector(".artist").innerHTML += newHtmlArtist
                         
@@ -43,12 +42,8 @@ window.addEventListener('load', function(){
                     })
                
                 }
-        } else {
-                if (nombre = nombre) {
-                     alert ( nombre + " " +  "no tenes artistas guardados en favoritos!")
-        }  else{
-               alert ("no tenes artistas guardados en favoritos")
-        }}
+        } // else cambiar diseño
+           
 
         /*TRACKS*/
         if (localStorage.getItem("cancionesPreferidas") != null) {
@@ -90,23 +85,31 @@ window.addEventListener('load', function(){
                                     "</article>"
                                   document.querySelector(".cancionesContainer").innerHTML += newHtmlTrack 
         
-                             var buttonReproSong = document.querySelectorAll("button.songRepro")
+                                var buttonReproSong = document.querySelectorAll("button.songRepro")
                                 for (let i = 0; i < buttonReproSong.length; i++) {
                                     buttonReproSong[i].onclick = function (){
                                          document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-song") +'&app_id=1" width="350" height="350"></iframe>'
                                     }
                                 } 
+                                var buttonEliminarSong = document.querySelectorAll("button.saveSong")
+                                for (let i = 0; i < cancionesPreferidas.length; i++) {
+                                    document.querySelectorAll("button.saveSong").onclick = function(){
+                                        confirm("¿Estas seguro de querer eliminar la canción de tu lista de favoritos?")
+                                        if(confirm == true){
+                                          localStorage.removeItem("cancionesPreferidas")
+                                          alert("Canción eliminada de favoritos :)")   
+                                        }
+                                    }
+                                    
+                                }
                         }
                     ) 
                    
                 }
-        } else { //cambiar a un aviso por html 
-            if (nombre = nombre) {
-                 alert ( nombre + " " +  "no tenes artistas guardados en favoritos!")
-        }  else{
-           alert ("no tenes artistas guardados en favoritos")
-        }}
-       
+                
+    
+        } //cambiar a un aviso por html 
+           
         
         /*ALBUM*/
         if(localStorage.getItem("albumsPreferidos") != null) {
@@ -124,13 +127,13 @@ window.addEventListener('load', function(){
                             let albumName = album.title
                             let albumId = album.id
                             let albumImg = album.cover_medium
-                            console.log(albumImg)
+
                           
                            let newHtmlAlbum =
-                            '<div class="albumContainer"><a href="../albums/albums.html?id-album="'+ albumId + '"><img src="'+ albumImg +'" alt="' + albumName + '"></a>' +
-                            '<h3 class="nombreAlbum"><a href="../albums/albums.html?id-album="'+ albumId + '">'+ albumName+'</a></h3>' +
-                            '<button class="unSaveAlbum"><i class="fas fa-heart" id="pintadito"></i></button>' +
-                            '<button class="reproAlbum" id-album="'+ albumId + '"><i class="fas fa-play"></i></button></div>' 
+                            '<div class="albumContainer"><div class="imgContenedor"><a href="../albums/albums.html?id-album="'+ albumId + '"><img src="'+ albumImg +'" alt="' + albumName + '"></a></div>' +
+                            '<div class="itemContainer"><h3 class="nombreAlbum"><a href="../albums/albums.html?id-album="'+ albumId + '">'+ albumName+'</a></h3>' +
+                            '<button class="reproAlbum" id-album="'+ albumId + '"><i class="fas fa-play"></i></button>' +
+                            '<button class="unSaveAlbum"><i class="fas fa-heart" id="pintadito"></i></button></div>' + '</div>' 
                             
                             document.querySelector("article.album").innerHTML += newHtmlAlbum
                          
@@ -144,12 +147,7 @@ window.addEventListener('load', function(){
                     )
                             
                 }
-        } else {
-                if (nombre = nombre) {
-                     alert ( nombre + " " +  "no tenes artistas guardados en favoritos!")
-        }  else{
-               alert ("no tenes artistas guardados en favoritos")
-        }}
+        } 
 
         /*PLAYLIST*/
         if(localStorage.getItem("playlistPreferidas") != null) {
@@ -169,10 +167,10 @@ window.addEventListener('load', function(){
                             let  playlistImg =  playlist.picture_medium
                           
                            let newHtmlPlaylist =
-                            '<div class="playlistContainer"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '"><img src="'+  playlistImg +'" alt="' +  playlistName + '"></a>' +
-                            '<h3 class="nombrePlaylist"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '">'+  playlistName+'</a></h3>' +
-                            '<button class="unSavePlaylist"><i class="fas fa-heart" id="pintadito"></i></button>' +
-                            '<button class="reproPlaylist" id-playlist="'+  playlistId + '"><i class="fas fa-play"></i></button></div>' 
+                            '<div class="playlistContainer"><div class="imgContenedor"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '"><img src="'+  playlistImg +'" alt="' +  playlistName + '"></a></div>' +
+                            '<div class="itemContainer"><h3 class="nombrePlaylist"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '">'+  playlistName+'</a></h3>' +
+                            '<button class="reproPlaylist" id-playlist="'+  playlistId + '"><i class="fas fa-play"></i></button>' +
+                            '<button class="unSavePlaylist"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
                             
                             document.querySelector("article.playlist").innerHTML += newHtmlPlaylist
                              
@@ -185,10 +183,5 @@ window.addEventListener('load', function(){
                         }
                     )
                 }
-        } else {
-                if (nombre = nombre) {
-                     alert ( nombre + " " +  "no tenes artistas guardados en favoritos!")
-        }  else{
-               alert ("no tenes artistas guardados en favoritos")
-        }}
+        }
 })
