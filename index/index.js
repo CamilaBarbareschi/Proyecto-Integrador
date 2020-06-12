@@ -85,8 +85,9 @@ window.addEventListener ("load", function (){
 
                     localStorage.setItem("albumsPreferidos", albumsFavoritos);
                     
-                    alert("Álbum guardado en favoritos :)")
-                } /*else para remover album */
+                    UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Álbum guardado en favoritos', status: 'danger'})
+                   
+                } 
                    
             })
             
@@ -153,7 +154,8 @@ window.addEventListener ("load", function (){
 
                     localStorage.setItem("artistasPreferidos", artistasFavoritos)
                     
-                    alert("Artista guardado en favoritos :)")
+                    UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Artista guardado en favoritos', status: 'danger'})
+                    
                 } 
             })
             
@@ -203,7 +205,8 @@ window.addEventListener ("load", function (){
                 if (playlistFavoritas.includes(this.getAttribute("id-playlist")) == false ) {
                     playlistFavoritas.push(this.getAttribute("id-playlist"))
                     localStorage.setItem("playlistPreferidas", playlistFavoritas) 
-                    alert("Playlist guardado en favoritos :)")
+                    UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Playlist guardada en favoritos ', status: 'danger'})
+                  
                 } 
             })
             

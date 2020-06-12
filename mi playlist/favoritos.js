@@ -1,12 +1,5 @@
 window.addEventListener('load', function(){
 
-    /*let nombre = prompt ('Ingrese su nombre, por favor')
-
-    if (nombre = nombre){
-        document.querySelector('div.user ul li.nombre').innerHTML += "Favoritos de" + " " + nombre
-    } else {
-        document.querySelector('div.user ul li.nombre').innerHTML += "Mis favoritos"
-    } */
     let cancionesFavoritas
     if (localStorage.getItem("cancionesPreferidas") != null) {
         cancionesFavoritas = localStorage.getItem("cancionesPreferidas").split(",")
@@ -26,6 +19,12 @@ window.addEventListener('load', function(){
         artistasFavoritos = localStorage.getItem("artistasPreferidos").split(",")
     } else {
         artistasFavoritos = []
+    }
+    let playlistFavoritas
+    if (localStorage.getItem("playlistPreferidas") != null) {
+        playlistFavoritas = localStorage.getItem("playlistPreferidas").split(",")
+    } else {
+        playlistFavoritas = []
     }
 
         /*ARTIST*/
@@ -49,7 +48,7 @@ window.addEventListener('load', function(){
                                   '<div class="artistaContainer"><div class="imgContenedor"><a href="../artistas/artistas.html?id-artista="'+ artistId + '"><img src="'+ artistImg +'" alt="' + artistName + '"></a></div>' +
                                   '<div class="itemContainer"><h3 class="nombreArtista"><a href="../artistas/artistas.html?id-artista="'+ artistId + '">'+ artistName+'</a></h3>' +
                                   '<button class="reproArtista" id-artista="'+ artistId + '"><i class="fas fa-play"></i></button>' +
-                                  '<button class="unSaveArtist"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
+                                  '<button class="unSaveArtist" id-artista="'+ artistId + '"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
                                   
                                   document.querySelector(".artist").innerHTML += newHtmlArtist
                         
@@ -59,10 +58,29 @@ window.addEventListener('load', function(){
                                     document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=artist&id=' + this.getAttribute("id-artista") +'&app_id=1" width="350" height="350"></iframe>'
                             }
                         } 
+
+                    
+                        var buttonElimnarArtista = document.querySelectorAll(".unSaveArtist")
+                        for (let index = 0; index <  buttonElimnarArtista.length; index++) {
+                            buttonElimnarArtista[index].addEventListener('click', function (){
+                              let remove = confirm('Deseas eliminar el artista de favoritos?')
+                                if ( remove == true) {
+                                  let remove = artistasFavoritos.indexOf (this.getAttribute("id-artista"))
+                                  artistasFavoritos.splice (remove, 1)
+                                  localStorage.setItem("artistasPreferidos", artistasFavoritos)
+                                }
+                            })
+                            
+                        }
+
                     })
                
                 }
-        } // else cambiar diseño
+        } else{
+            document.querySelector("li.artistaSelector").onclick = function(){
+                UIkit.notification({message: 'No tienes artistas guardados en favoritos', pos: 'top-center'})
+            }
+        }
            
 
         /*TRACKS*/
@@ -101,7 +119,7 @@ window.addEventListener('load', function(){
                                     "<div class='artistaCancion'><a href='../artistas/artistas.html?id-artista='"+ trackArtistID + "'>" +  trackArtist + "</a></div>" +
                                     "<div class='albumCancion'><a href='../albums/albums.html?id-album='" + trackAlbumID + "'>" + trackAlbum + "</a></div>" +
                                     "<div class='cancionTime'>" + trackTimeInMinute + ":" + trackTimeInSeconds + "</div>" +
-                                    "<div><button class='saveSong'><i class='fas fa-heart' id='pintadito'></i></button></div>" +
+                                    "<div><button class='saveSong' id-track='"+ trackId +"'><i class='fas fa-heart' id='pintadito'></i></button></div>" +
                                     "</article>"
                                   document.querySelector(".cancionesContainer").innerHTML += newHtmlTrack 
         
@@ -110,26 +128,26 @@ window.addEventListener('load', function(){
                                     buttonReproSong[i].onclick = function (){
                                          document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-song") +'&app_id=1" width="350" height="350"></iframe>'
                                     }
-                                } 
-                                var buttonEliminarSong = document.querySelectorAll("button.saveSong")
-                                for (let i = 0; i < cancionesPreferidas.length; i++) {
-                                    document.querySelectorAll("button.saveSong").onclick = function(){
-                                        
-                                        confirm("¿Estas seguro de querer eliminar la canción de tu lista de favoritos?")
-                                        if(confirm == true){
-                                          localStorage.removeItem("cancionesPreferidas")
-                                          alert("Canción eliminada de favoritos :)")   
-                                        }
-                                    }
-                                    
-                                }//
+                                }   
+                                var buttonElimnarCancion = document.querySelectorAll(".saveSong")
+                                    for (let index = 0; index <  buttonElimnarCancion.length; index++) {
+                                        buttonElimnarCancion[index].addEventListener('click', function (){
+                                           let remove = confirm('Deseas eliminar la canción de favoritos?')
+                                                if ( remove == true) {
+                                                     let remove = cancionesFavoritas.indexOf (this.getAttribute("id-track"))
+                                                         cancionesFavoritas.splice (remove, 1)
+                                                         localStorage.setItem("cancionesPreferidas", cancionesFavoritas)
+                                                }
+                                         })
+                            
+                                    }  
                         }
                     ) 
                    
                 }
-                
-    
-        } //cambiar a un aviso por html 
+        } else{
+                UIkit.notification({message: 'No tienes canciones guardadas en favoritos', pos: 'top-center'})
+        }
            
         
         /*ALBUM*/
@@ -154,7 +172,7 @@ window.addEventListener('load', function(){
                             '<div class="albumContainer"><div class="imgContenedor"><a href="../albums/albums.html?id-album="'+ albumId + '"><img src="'+ albumImg +'" alt="' + albumName + '"></a></div>' +
                             '<div class="itemContainer"><h3 class="nombreAlbum"><a href="../albums/albums.html?id-album="'+ albumId + '">'+ albumName+'</a></h3>' +
                             '<button class="reproAlbum" id-album="'+ albumId + '"><i class="fas fa-play"></i></button>' +
-                            '<button class="unSaveAlbum"><i class="fas fa-heart" id="pintadito"></i></button></div>' + '</div>' 
+                            '<button class="unSaveAlbum" id-album="'+ albumId + '"><i class="fas fa-heart" id="pintadito"></i></button></div>' + '</div>' 
                             
                             document.querySelector("article.album").innerHTML += newHtmlAlbum
                          
@@ -163,12 +181,28 @@ window.addEventListener('load', function(){
                                     buttonReproAlbum[i].onclick = function (){
                                          document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=album&id=' + this.getAttribute("id-album") +'&app_id=1" width="350" height="350"></iframe>'
                                     }
-                                }         
+                                }   
+                                var buttonEliminarAlbum = document.querySelectorAll(".unSaveAlbum")
+                                for (let index = 0; index < buttonEliminarAlbum.length; index++) {
+                                    buttonEliminarAlbum[index].addEventListener('click', function (){
+                                       let remove = confirm('Deseas eliminar el album de favoritos?')
+                                            if (remove == true) {
+                                                 let remove = albumsFavoritos.indexOf (this.getAttribute("id-album"))
+                                                     albumsFavoritos.splice (remove, 1)
+                                                     localStorage.setItem("albumsPreferidos", albumsFavoritos)
+                                            }
+                                     })
+                        
+                                }        
                         }
                     )
                             
                 }
-        } 
+        } else{
+            document.querySelector("li.albumSelector").onclick = function(){
+                UIkit.notification({message: 'No tienes albums guardados en favoritos', pos: 'top-center'})
+            }
+        }
 
         /*PLAYLIST*/
         if(localStorage.getItem("playlistPreferidas") != null) {
@@ -191,7 +225,7 @@ window.addEventListener('load', function(){
                             '<div class="playlistContainer"><div class="imgContenedor"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '"><img src="'+  playlistImg +'" alt="' +  playlistName + '"></a></div>' +
                             '<div class="itemContainer"><h3 class="nombrePlaylist"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '">'+  playlistName+'</a></h3>' +
                             '<button class="reproPlaylist" id-playlist="'+  playlistId + '"><i class="fas fa-play"></i></button>' +
-                            '<button class="unSavePlaylist"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
+                            '<button class="unSavePlaylist" id-playlist="'+  playlistId + '"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
                             
                             document.querySelector("article.playlist").innerHTML += newHtmlPlaylist
                              
@@ -201,8 +235,26 @@ window.addEventListener('load', function(){
                                          document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=medium&type=playlist&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
                                     }
                                 }     
+                            
+                            var buttonEliminarPlaylist = document.querySelectorAll(".unSavePlaylist")
+                            for (let index = 0; index < buttonEliminarPlaylist.length; index++) {
+                                buttonEliminarPlaylist[index].addEventListener('click', function (){
+                                       let remove = confirm('Deseas eliminar la playlist de favoritos?')
+                                            if (remove == true) {
+                                                 let remove = playlistFavoritas.indexOf (this.getAttribute("id-playlist"))
+                                                     playlistFavoritas.splice (remove, 1)
+                                                     localStorage.setItem("playlistPreferidas", playlistFavoritas)
+                                            }
+                                        
+                                     })
+                        
+                                }    
                         }
                     )
                 }
+        }else{
+            document.querySelector("li.playlistSelector").onclick = function(){
+                UIkit.notification({message: 'No tienes playlists guardadas en favoritos', pos: 'top-center'})
+            }
         }
 })
