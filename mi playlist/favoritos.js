@@ -63,8 +63,8 @@ window.addEventListener('load', function(){
                         var buttonElimnarArtista = document.querySelectorAll(".unSaveArtist")
                         for (let index = 0; index <  buttonElimnarArtista.length; index++) {
                             buttonElimnarArtista[index].addEventListener('click', function (){
-                              let remove = confirm('Deseas eliminar el artista de favoritos?')
-                                if ( remove == true) {
+                              let removeConfirm = confirm('Deseas eliminar el artista de favoritos?')
+                                if (removeConfirm == true) {
                                   let remove = artistasFavoritos.indexOf (this.getAttribute("id-artista"))
                                   artistasFavoritos.splice (remove, 1)
                                   localStorage.setItem("artistasPreferidos", artistasFavoritos)
@@ -132,8 +132,8 @@ window.addEventListener('load', function(){
                                 var buttonElimnarCancion = document.querySelectorAll(".saveSong")
                                     for (let index = 0; index <  buttonElimnarCancion.length; index++) {
                                         buttonElimnarCancion[index].addEventListener('click', function (){
-                                           let remove = confirm('Deseas eliminar la canción de favoritos?')
-                                                if ( remove == true) {
+                                           let removeConfirm = confirm('Deseas eliminar la canción de favoritos?')
+                                                if (removeConfirm == true) {
                                                      let remove = cancionesFavoritas.indexOf (this.getAttribute("id-track"))
                                                          cancionesFavoritas.splice (remove, 1)
                                                          localStorage.setItem("cancionesPreferidas", cancionesFavoritas)
@@ -185,8 +185,8 @@ window.addEventListener('load', function(){
                                 var buttonEliminarAlbum = document.querySelectorAll(".unSaveAlbum")
                                 for (let index = 0; index < buttonEliminarAlbum.length; index++) {
                                     buttonEliminarAlbum[index].addEventListener('click', function (){
-                                       let remove = confirm('Deseas eliminar el album de favoritos?')
-                                            if (remove == true) {
+                                       let removeConfirm = confirm('Deseas eliminar el album de favoritos?')
+                                            if (removeConfirm == true) {
                                                  let remove = albumsFavoritos.indexOf (this.getAttribute("id-album"))
                                                      albumsFavoritos.splice (remove, 1)
                                                      localStorage.setItem("albumsPreferidos", albumsFavoritos)
@@ -239,8 +239,8 @@ window.addEventListener('load', function(){
                             var buttonEliminarPlaylist = document.querySelectorAll(".unSavePlaylist")
                             for (let index = 0; index < buttonEliminarPlaylist.length; index++) {
                                 buttonEliminarPlaylist[index].addEventListener('click', function (){
-                                       let remove = confirm('Deseas eliminar la playlist de favoritos?')
-                                            if (remove == true) {
+                                       let removeConfirm = confirm('Deseas eliminar la playlist de favoritos?')
+                                            if (removeConfirm == true) {
                                                  let remove = playlistFavoritas.indexOf (this.getAttribute("id-playlist"))
                                                      playlistFavoritas.splice (remove, 1)
                                                      localStorage.setItem("playlistPreferidas", playlistFavoritas)
@@ -248,7 +248,7 @@ window.addEventListener('load', function(){
                                         
                                      })
                         
-                                }    
+                            }    
                         }
                     )
                 }

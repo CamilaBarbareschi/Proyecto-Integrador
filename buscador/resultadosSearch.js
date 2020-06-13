@@ -103,25 +103,9 @@ window.addEventListener("load", function() {
 
                             localStorage.setItem("cancionesPreferidas", cancionesFavoritas);
 
-                            alert("Canción guardada en favoritos :)");
-
-                            var porPintar =  document.querySelectorAll("#porPintar")
-                    
-                            for (let i = 0; i < porPintar.length; i++) {
-                                cancionButtonSave[i].onclick = function (){
-                                    document.querySelectorAll("i.fas.fa-heart").innerHTML += "id='pintadito'"
-                                }
-                            }   
+                            UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Canción guardada en favoritos ', status: 'danger'})  
         
                         
-                        }else{ /*NO FUNCIONA*/
-                            confirm("¿Estas seguro de querer eliminar la canción de tu lista de favoritos?")
-                             if(confirm == true){
-                                 localStorage.removeItem("cancionesPreferidas", cancionesFavoritas )
-                                 alert("Canción eliminada de favoritos :)")   
-                                 /*aca se deberia de despintar*/
-                             }
-
                         }
                         
                     })
@@ -202,8 +186,8 @@ window.addEventListener("load", function() {
 
                                 localStorage.setItem("albumsPreferidos", albumsFavoritos);
                                 
-                                alert("Álbum guardado en favoritos :)")
-                            } /*else para remover album */
+                                UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Album guardado en favoritos ', status: 'danger'})
+                            } 
                                
                         })
                         
@@ -279,7 +263,7 @@ window.addEventListener("load", function() {
 
                         localStorage.setItem("artistasPreferidos", artistasFavoritos)
                         
-                        alert("Artista guardado en favoritos :)")
+                        UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Artista guardado en favoritos ', status: 'danger'})
                     } 
                     
                     
