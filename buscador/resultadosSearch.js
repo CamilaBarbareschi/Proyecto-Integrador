@@ -308,7 +308,7 @@ window.addEventListener("load", function() {
                                    "<li>" + "<div class='uk-card uk-card-small uk-card-default'>" +
                                    "<div class='uk-card-media-top'>" + "<img class='playlistsim' src='"+ playlistImg + "'>" +
                                    "</div> <div class='uk-card-body'>"+
-                                   "<a href='../playlists/playlists.html?id-playlist="+ playlistId +"'><h3 class='uk-card-title'>" + playlistName + "</h3></a>"+
+                                   "<a href='../playlist/playlist.html?id-playlist="+ playlistId +"'><h3 class='uk-card-title'>" + playlistName + "</h3></a>"+
                                    "<button class='reproPlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-play'></i></button>" +
                                    "<button class='savePlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-heart'></i></button>" +    
                                    "</div></div></li>"
@@ -317,7 +317,7 @@ window.addEventListener("load", function() {
                                    "<li>" + "<div class='uk-card uk-card-small uk-card-default'>" +
                                    "<div class='uk-card-media-top'>" + "<img class='playlistsim' src='"+ playlistImg + "'>" +
                                    "</div> <div class='uk-card-body'>"+
-                                   "<a href='../playlists/playlists.html?id-playlist="+ playlistId +"'><h3 class='uk-card-title'>" + playlistName + "</h3></a>"+
+                                   "<a href='../playlist/playlist.html?id-playlist="+ playlistId +"'><h3 class='uk-card-title'>" + playlistName + "</h3></a>"+
                                    "<button class='reproPlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-play'></i></button>" +
                                    "<button class='savePlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-heart' id='pintadito'></i></button>" +    
                                    "</div></div></li>"
