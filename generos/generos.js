@@ -11,8 +11,9 @@ window.addEventListener("load", function() {
             const cadaGenero = listadoGenero[index];
             
             let cadaGeneroNombre = cadaGenero.name
-            
-            let nuevoHTML ='<li class="uk-active cadaGenero"><a href="../generos/generos.html">'+ cadaGeneroNombre +'</a></li>' 
+            let cadaGeneroId = cadaGenero.id
+
+            let nuevoHTML ='<li class="uk-active cadaGenero"><a href="../generos/generos.html?id-generos='+ cadaGeneroId +'">'+ cadaGeneroNombre +'</a></li>' 
             document.querySelector (".cadaGeneroContenedor").innerHTML += nuevoHTML
         }
 

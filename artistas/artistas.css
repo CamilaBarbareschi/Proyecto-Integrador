@@ -138,6 +138,15 @@ div.header ul.nav i.fas.fa-heart{
 div.header ul.nav i.fas.fa-heart:hover{
     color: #480082;
 }
+button i{
+    font-size: 24px;
+    border: none;
+}
+button {
+    border: none;
+    background-color: #D1BAE3;
+}
+
   .simbolos {
       margin: 0 auto;
       padding-top: 8px;
@@ -153,7 +162,7 @@ div.header ul.nav i.fas.fa-heart:hover{
 .fas.fa-heart{
     color: black;
     cursor: pointer;
-    padding-left: 9px;
+    padding-left: 7px;
 }
 .fas.fa-heart:hover {
     color:#480082;
@@ -311,6 +320,7 @@ ul.redesSociales i{
        text-overflow: ellipsis;
        white-space: nowrap;
        overflow: hidden;
+       font-family: "Raleway";
    }
    .Principal a h2:hover {
        text-decoration: underline;
