@@ -265,21 +265,10 @@ window.addEventListener("load", function() {
                         
                         UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Artista guardado en favoritos ', status: 'danger'})
                     } 
-                    
-                    
-        
-                    
-                })
-                
+                }
+                )
             }
         }        
-       
-            
-            
-        
-            
-            
-        
     )
-
-})
+}
+)
