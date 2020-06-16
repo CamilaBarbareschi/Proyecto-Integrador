@@ -142,11 +142,17 @@ header{
     width: 100%;
 }
 /*FIN DE ENCABEZADO*/
+
+
+/*ARTICLE*/
 img {
     width: 300px;
 }
-/*ARTICLE*/
-
+h1 {
+    text-overflow: ellipsis;                        
+    white-space: nowrap;            
+    overflow: hidden;
+}
 /*FIN DE ARTICLE
 
 /*ARTICLE*/
