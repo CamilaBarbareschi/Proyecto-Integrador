@@ -21,7 +21,13 @@ window.addEventListener("load", function() {
     } else {
         artistasFavoritos = []
     }
-
+    
+    let playlistFavoritas
+    if (localStorage.getItem("playlistPreferidas") != null) {
+        playlistFavoritas = localStorage.getItem("playlistPreferidas").split(",")
+    } else {
+        playlistFavoritas = []
+    }
     
     /*Resultados de busqueda*/
     let queryString = new URLSearchParams(location.search)
@@ -272,7 +278,87 @@ window.addEventListener("load", function() {
                 })
                 
             }
-        }        
+        } 
+    )   
+
+    /*Resultados de busqueda - API de Playlist*/
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/playlist?q=" + resultadosBusqueda)
+    .then(
+        function(respuesta) {
+            return respuesta.json();            
+        }
+    )
+    
+    .then(
+        function(informacion) {       
+            let resultadoBusquedaPlaylist = informacion.data;
+           
+            if (resultadoBusquedaPlaylist.length != 0) {
+                 for (let index = 0; index < 10; index++) {
+                          const cadaPlaylist = resultadoBusquedaPlaylist[index];
+                
+                           let playlistName = cadaPlaylist.title
+                           let playlistId = cadaPlaylist.id
+                           let playlistImg = cadaPlaylist.picture_medium
+
+                           let  playlistNuevoHTML
+                             if(playlistFavoritas.includes("" + playlistId) == false ){
+
+                                playlistNuevoHTML = 
+                                   "<li>" + "<div class='uk-card uk-card-small uk-card-default'>" +
+                                   "<div class='uk-card-media-top'>" + "<img class='playlistsim' src='"+ playlistImg + "'>" +
+                                   "</div> <div class='uk-card-body'>"+
+                                   "<a href='../playlists/playlists.html?id-playlist="+ playlistId +"'><h3 class='uk-card-title'>" + playlistName + "</h3></a>"+
+                                   "<button class='reproPlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-play'></i></button>" +
+                                   "<button class='savePlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-heart'></i></button>" +    
+                                   "</div></div></li>"
+                            } else{
+                                playlistNuevoHTML = 
+                                   "<li>" + "<div class='uk-card uk-card-small uk-card-default'>" +
+                                   "<div class='uk-card-media-top'>" + "<img class='playlistsim' src='"+ playlistImg + "'>" +
+                                   "</div> <div class='uk-card-body'>"+
+                                   "<a href='../playlists/playlists.html?id-playlist="+ playlistId +"'><h3 class='uk-card-title'>" + playlistName + "</h3></a>"+
+                                   "<button class='reproPlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-play'></i></button>" +
+                                   "<button class='savePlaylist' id-playlist='"+ playlistId + "'><i class='fas fa-heart' id='pintadito'></i></button>" +    
+                                   "</div></div></li>"
+
+                            }
+                            document.querySelector("ul.resultadoPlaylist").innerHTML += playlistNuevoHTML
+                        }
+            } else{
+                document.querySelector("ul.resultadoPlaylist").style.display = "none"
+                document.querySelector("div.playlist").style.display = "none"      
+            }
+
+        var buttonReproPlaylist = document.querySelectorAll("button.reproPlaylist")
+        for (let i = 0; i < buttonReproPlaylist.length; i++) {
+          buttonReproPlaylist[i].onclick = function (){
+            document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=playlist&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
+          }
+        }
+       
+        var playlistButtonSave = document.querySelectorAll("button.savePlaylist")
+       
+        for (let i = 0; i <  playlistButtonSave.length; i++) {
+            
+            playlistButtonSave[i].addEventListener ('click', function(){
+
+                if (playlistFavoritas.includes(this.getAttribute("id-playlist")) == false ) {
+
+                    playlistFavoritas.push(this.getAttribute("id-playlist"))
+
+                    localStorage.setItem("playlistsPreferidos", playlistFavoritas)
+                    
+                    UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Playlist guardado en favoritos ', status: 'danger'})
+                } 
+                
+                
+    
+                
+            })
+            
+        }
+    }
        
             
             

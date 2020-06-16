@@ -402,6 +402,13 @@ button.save {
     border: none;
     background-color: cornsilk;
 }
+button.savePlaylist{
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
 button.saveAlbum {
     width: 40px;
     height: 38px;
@@ -417,6 +424,14 @@ button.saveArtista {
     background-color: cornsilk;
 }
 button.repro {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+    margin-right: 10px;
+}
+button.reproPlaylist {
     width: 40px;
     height: 38px;
     border-radius: 50%;
@@ -509,7 +524,16 @@ button.reproArtista {
     height: 26px;
     margin-right: 2px;
 }
+button.reproPlaylist {
+    width: 26px;
+    height: 26px;
+    margin-right: 2px;
+}
 button.save{
+    width: 26px;
+    height: 26px;
+}
+button.savePlaylist{
     width: 26px;
     height: 26px;
 }
