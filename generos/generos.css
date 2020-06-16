@@ -142,78 +142,27 @@ header{
     width: 100%;
 }
 /*FIN DE ENCABEZADO*/
+img {
+    width: 300px;
+}
+/*ARTICLE*/
 
-/*SECTION*/
-section {
-    padding-top: 14px;
-    margin: 0 auto;
-    margin-top: 60px;
-    width: 75%;
-    height: 50px;
-    padding-left: 18px;
-    display: grid;
-    grid-template-columns: 11% 35% 35% 14% ;
-    margin-bottom: -16px;
-}
-div.principal {
-    text-overflow: ellipsis;                        
-    white-space: nowrap;            
-    overflow: hidden;
-}
-strong{
-    color: black;
-    font-size: 19px;
-}
-/*FIN DEL SECTION*/
+/*FIN DE ARTICLE
 
-
-/*MAIN*/
-
-main{
-    width: 75%;
-    margin: 0 auto;
-    color: black;
-    margin-bottom: 60px;
- }
- .canciones{
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 5% 6% 35% 35% 14% 5%;;
-    padding-top: 15px;
-    padding-left: 18px;
-    border-top: 1px solid white;
-    font-size: 17px;
-}
-div i.fas.fa-heart {
-    color: black;
-}
-div i.fas.fa-heart:hover {
-    color: #dbff4b;
-}
-li.navEspecial i.fas.fa-heart {
-    color: white;
-}
-li.navEspecial i.fas.fa-heart:hover {
-    color: #480082
+/*ARTICLE*/
+article {
+    margin-left: 40px;
+    margin-top: 40px;
 }
 
-div.play {
-    text-overflow: ellipsis;                        
-      white-space: nowrap;            
-      overflow: hidden;
-}
-div.artistname {
-    text-overflow: ellipsis;                        
-    white-space: nowrap;            
-    overflow: hidden;
-}
-/* FIN DE MAIN */
+/*FIN DE ARTICLE*/
 
 /*FOOTER*/
 footer {
     background-color: rgba(250, 108, 61, 0.925);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 footer ul  {
     display: grid;
@@ -284,10 +233,5 @@ li.footer{
           height: 29%;
       }
        /*FIN DE ENCABEZADO*/
-       .canciones {
-        font-size: 12px;
-    }
-    Strong {
-        font-size: 14px;
-    }
+
      }
