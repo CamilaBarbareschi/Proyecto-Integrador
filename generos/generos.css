@@ -190,6 +190,23 @@ li.footer{
 .logofooter{
     width: 30px ;
 }
+ul.redesSociales i:hover{
+    color:#dbff4b;
+}
+ul.redesSociales{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style: none;
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px 0px 0px 0px;
+}
+ul.redesSociales i{
+    color: black;
+}
+     ol, ul {
+       padding-left: 0;
+     }
 
 /*FIN DE FOOTER*/
 
@@ -211,6 +228,9 @@ li.footer{
  main {
         width: 75%;
         margin-left: 12%;
+    }
+    li.footer{
+        font-size: 15px;
     }
 
     }
@@ -239,5 +259,7 @@ li.footer{
           height: 29%;
       }
        /*FIN DE ENCABEZADO*/
-
+       li.footer {
+        font-size: 10px;
+    }
      }
