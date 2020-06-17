@@ -169,7 +169,67 @@ figure div i {
   height: 57%;
   border-radius: 30px;
 }
- 
+div.toolbar {
+  display: grid;
+  grid-template-columns: 15% 25%;
+  margin-left: 10%;
+ }
+ button.escuchar {
+  width: 90%;
+}
+
+button {
+  cursor: pointer;
+  height: 32px;
+  display: inline-flex;
+  padding: 0 12px;
+  position: relative;
+  font-size: 12px;
+  max-width: 100%;
+  align-items: center;
+  font-weight: 600;
+  line-height: 30px;
+  border-radius: 3px;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: #480082;
+  border: 1px solid #480082;
+}
+button.escuchar ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  list-style: none;
+  padding: 0px 0px;
+  margin-top: 19px;
+}
+button {
+  cursor: pointer;
+  height: 32px;
+  display: inline-flex;
+  padding: 0 12px;
+  position: relative;
+  font-size: 12px;
+  max-width: 100%;
+  align-items: center;
+  font-weight: 600;
+  line-height: 30px;
+  border-radius: 3px;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: #480082;
+  border: 1px solid #480082;
+}
+button.agregar ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  list-style: none;
+  padding: 0px 0px;
+  margin-top: 19px;
+}
 .playlist{
   width: 80%;
   margin: 0 auto;
@@ -253,7 +313,12 @@ figure div i {
   left: 101px;
   font-size: 40px;
 }
- 
+div.toolbar {
+  grid-template-columns: 30% 25%;
+}
+ .playlist{
+  margin-top: 35px;
+ }
  
   .inicio{
     margin: 0px 50px;
@@ -308,14 +373,19 @@ img.portada {
     width: 191px;
     height: 191px;
     position: relative;
-    left: 17%;
+    left: 28%;
+}
+div.toolbar{
+  margin-left: 55px;
 }
 figure div i {
   position: relative;
-  left: 118px;
+  left: 138px;
 }
 .imagenes{
   height: 230px;
+  display: grid;
+  grid-template-columns: 60% 5%;
 }
 .inicio{
   margin-bottom: -6px;
