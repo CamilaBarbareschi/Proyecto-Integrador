@@ -5,7 +5,7 @@
 }
 html {
     font-family: 'Oswald', sans-serif; 
-    background-color: rgba(207, 182, 238, 0.781);
+    background-color:  #D1BAE3;;
 }
 /*ENCABEZADO*/
 .buscador{
@@ -241,6 +241,32 @@ button.escuchar ul li.icono i:hover{
 button.agregar ul li.icono i:hover {
     color: white;
 }
+ /*Mini reproductor*/
+ nav.miniPlayer{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    z-index: 12;
+}
+nav.miniPlayer iframe{
+     height: 70px;
+}
+.simbolos {
+    margin: 0 auto;
+}
+.fas.fa-play{
+    color: black;
+    cursor: pointer;
+}
+.fas.fa-play:hover {
+    color:#480082;
+}
+button.Repro {
+    border: none;
+    background-color: #D1BAE3;
+    padding-bottom: 7px;
+    font-size: 18px;
+}
 /*DETALLE*/
 main{
     width: 75%;
@@ -277,11 +303,11 @@ div.uk-card.uk-card-small.uk-card-default a{
 }
 .canciones{
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 4% 6% 71% 14% 5%;;
-    padding-top: 15px;
+    grid-template-columns:  6% 71% 14% 5%;;
+    padding-top: 17px;
     padding-left: 18px;
     border-top: 1px solid white;
     font-size: 17px;

@@ -52,10 +52,13 @@
                 let song = cadaplaylist.title;;
                 let artist = cadaplaylist.artist.name;
                 let album = cadaplaylist.album.title;
+                let AidiCancion = cadaplaylist.id
     
                     let htmlNuevo = `
                     <div class="musica">
-                    <div><i class="fas fa-play"></i></div>
+                    <div class="simbolos">
+                    <button class= "Repro" id-playlist=`+ AidiCancion +`><i class="fas fa-play"></i></button>
+                    </div>
                     <div> ` + song +` </div>
                     <div> <a href="../artistas/artistas.html"> ` + artist +` </a> </div>
                     <div> <a href="../albums/albums.html"> ` + album +` </a></div>
@@ -64,6 +67,12 @@
                     `
                     
                     document.querySelector(".playlistss").innerHTML += htmlNuevo
+                    var cancionButtonRepro = document.querySelectorAll(".Repro");
+                 for (let i = 0; i < cancionButtonRepro.length; i++) {
+                     cancionButtonRepro[i].onclick = function (){
+                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
+                     }
+                    }
                  }
              }
         )

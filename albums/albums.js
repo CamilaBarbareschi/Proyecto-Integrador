@@ -20,6 +20,7 @@ window.addEventListener("load", function() {
             let fans = informacion.fans
             let tiempo = informacion.duration 
             let fecha = informacion.release_date
+            
 
             let htmlimg = `
             <figure>
@@ -46,23 +47,38 @@ window.addEventListener("load", function() {
                 
                 
                 let song = cadaplaylist.title;;
+                let AidiCancion = cadaplaylist.id
+                let duracion = cadaplaylist.duration
+                let cancionTimeInMinute = duracion/60
+                cancionTimeInMinute = Math.floor(cancionTimeInMinute)
+                let cancionTimeInSeconds = duracion%60
+                
+                if(cancionTimeInSeconds<10){
+                    cancionTimeInSeconds = '0' + cancionTimeInSeconds
+                }
                
                     let htmlNuevo = `
                     <article class="canciones">
-                    <div class="numero">1</div>
-                    <div><i class="fas fa-play"></i></div>
+                    <div class="simbolos">
+                    <button class= "Repro" id-album=`+ AidiCancion +`><i class="fas fa-play"></i></button>
+                    </div>
                     <div  class="play">`+ song +`</div>
-                    <div> 03:39 </div>
+                    <div>`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + ` </div>
                     <div><i class="fas fa-heart"></i></div>
                     </article> 
                     `
                     
                     document.querySelector("main").innerHTML += htmlNuevo
-                 }
-
-
-
-        }
-
-    )
-})
+                 
+                 var cancionButtonRepro = document.querySelectorAll(".Repro");
+                 for (let i = 0; i < cancionButtonRepro.length; i++) {
+                     cancionButtonRepro[i].onclick = function (){
+                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-album") +'&app_id=1" width="350" height="350"></iframe>'
+                     }
+                    }
+             }
+         }
+      )
+        
+  })
+            
