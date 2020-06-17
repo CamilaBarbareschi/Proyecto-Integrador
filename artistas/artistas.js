@@ -90,7 +90,9 @@ window.addEventListener ("load", function () {
            ///console.log(infoAlbums);
            
            let informacionAlbums = infoAlbums.data;
-             let HTMLnuevoalbum = "";
+           
+           let HTMLnuevoalbum = ""
+           
            for (let index = 0; index < 12; index++) {
                const cadaAlbum = informacionAlbums[index];
 
@@ -98,16 +100,17 @@ window.addEventListener ("load", function () {
                let tituloAlbum = cadaAlbum.title;
                let linkParaIngresar = cadaAlbum.id;
 
-             HTMLnuevoalbum +=`
-               
+             HTMLnuevoalbum +=
+            `   
                <article class="Principal"> 
                <a href="../albums/albums.html?id-album=`+ linkParaIngresar +`"><img src="`+ imagenAlbum +`" alt=""></a>
                <a style="text-decoration: none;" href="../albums/albums.html?id-album=`+ linkParaIngresar +`"><h2 class="Titulo">`+ tituloAlbum +`</h2></a>
                <p>by `+ nombreArtistaGeneral +`</p>
                </article>
-                `
+            `
            }
            document.querySelector ("#main").innerHTML = HTMLnuevoalbum;
+
        }
     )
     
@@ -119,7 +122,6 @@ window.addEventListener ("load", function () {
         console.log(infoArtistaRelacionado);
     let artistaRelacionado = infoArtistaRelacionado.data
 
-    let HTMLrelacionado = ""
 
     for (let index = 0; index < 1; index++) {
         const cadaRelacionado = artistaRelacionado[index];
@@ -129,7 +131,7 @@ window.addEventListener ("load", function () {
         let QfansRelacionado = cadaRelacionado.nb_fan
         let AidiDelArtista = cadaRelacionado.id
       
-      HTMLrelacionado +=
+       let HTMLrelacionado =
       `
       <h1 class="nuevo"> Artista relacionado </h1>
       <nav class="fototexto"> 
@@ -142,9 +144,9 @@ window.addEventListener ("load", function () {
         </div>
         </nav>
       `
-        
+        document.querySelector (".New").innerHTML += HTMLrelacionado;
     }
-    document.querySelector (".New").innerHTML = HTMLrelacionado;   
+       
         
     })
 
