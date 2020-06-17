@@ -118,22 +118,60 @@ body {
         width: 100%;
        }
 
- .imagenes{
-  height: 550px;
+ 
+       .imagenes{
+        display: grid;
+        margin-top: 5%;
+        font-family: "raleway";
+        grid-template-columns: 250px auto;
+        padding-left: 11%;
+      
+    }
+
+    img.portada{
+      border-radius: 3%;
+      width: 250px;
+      height: 250px;
+  }
+  ul.datos-album{
+
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 30px;
+}
+ul.datos-album li{
+    list-style: none;
+    font-size: 12px;
+ }
+ 
+ .info-container{
+  margin-top: 100px;
+  margin-left: 5%
+  
 }
 
-
+.info-container a:hover{
+  color: #480082;
+  font-weight: bold;
+}
+figure div i {
+  color: black;
+  position: relative;
+  bottom: 60px;
+  left: 20px;
+  font-size: 40px;
+}
 .latin{
   position: absolute;
   top: 146px;
-  left: 32%;
-  width: 32%;
-  height: 55%;
+  left: 5%;
+  width: 38%;
+  height: 57%;
   border-radius: 30px;
 }
  
 .playlist{
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 5%;
   font-family: 'Raleway', sans-serif;
@@ -147,9 +185,9 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 5% 29% 31% 20%;
+    grid-template-columns: 5% 24% 31% 20%;
     padding-top: 15px;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
     font-size: 18px;
     color: black;
     
@@ -161,7 +199,7 @@ body {
 .inicio{
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: 33% 34% 20%;
+    grid-template-columns: 27% 35% 20%;
     margin-left: 5%;
     font-size: 18px;
 }
@@ -204,23 +242,25 @@ footer {
      width: 100%;
       }
   .imagenes {
-    height: 431px;
+    height: 322px;
 }
- .latin{
-   position: absolute;
-   top: 145px;
-   left: 27%;
-   width: 45%;
-   height: 42%;
-   border-radius: 100%;
- }
+img.portada{
+  border-radius: 50%;
+}
+figure div i {
+  position: relative;
+  bottom: 59px;
+  left: 101px;
+  font-size: 40px;
+}
+ 
  
   .inicio{
     margin: 0px 50px;
     display: grid;
-    grid-template-columns: 38% 43% 20%;
-    margin: 4%;
-    margin-left: 4%;
+    grid-template-columns: 35% 38% 20%;
+    margin: -2%;
+    margin-left: 6%;
     font-size: 15px;
  }
  .musica{
@@ -228,9 +268,8 @@ footer {
   margin-bottom: -8px;
   margin-top: 21px;
   display: grid;
-  grid-template-columns: 32% 38% 20%;
+  grid-template-columns: 7% 33% 36% 20%;
   padding-top: 13px;
-  border-top: 1px solid black;
   font-size: 13px;
  }
   footer ul {
@@ -262,15 +301,21 @@ footer {
 img.logo {
     width: 32%;
 }
-.latin{
-  position: absolute;
-    top: 122px;
-    left: 27%;
-    width: 46%;
-    height: 29%;
+.info-container {
+  visibility: hidden;
+}
+img.portada {
+    width: 191px;
+    height: 191px;
+    position: relative;
+    left: 17%;
+}
+figure div i {
+  position: relative;
+  left: 118px;
 }
 .imagenes{
-  height: 315px;
+  height: 230px;
 }
 .inicio{
   margin-bottom: -6px;
