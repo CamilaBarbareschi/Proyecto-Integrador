@@ -143,77 +143,32 @@ header{
 }
 /*FIN DE ENCABEZADO*/
 
-/*SECTION*/
-section {
-    padding-top: 14px;
-    margin: 0 auto;
-    margin-top: 60px;
-    width: 75%;
-    height: 50px;
-    padding-left: 18px;
-    display: grid;
-    grid-template-columns: 11% 35% 35% 14% ;
-    margin-bottom: -16px;
+
+/*ARTICLE*/
+img {
+    width: 300px;
 }
-div.principal {
+h1 {
     text-overflow: ellipsis;                        
     white-space: nowrap;            
     overflow: hidden;
 }
-strong{
-    color: black;
-    font-size: 19px;
-}
-/*FIN DEL SECTION*/
+/*FIN DE ARTICLE
 
-
-/*MAIN*/
-
-main{
-    width: 75%;
-    margin: 0 auto;
-    color: black;
-    margin-bottom: 60px;
- }
- .canciones{
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 5% 6% 35% 35% 14% 5%;;
-    padding-top: 15px;
-    padding-left: 18px;
-    border-top: 1px solid white;
-    font-size: 17px;
-}
-div i.fas.fa-heart {
-    color: black;
-}
-div i.fas.fa-heart:hover {
-    color: #dbff4b;
-}
-li.navEspecial i.fas.fa-heart {
-    color: white;
-}
-li.navEspecial i.fas.fa-heart:hover {
-    color: #480082
+/*ARTICLE*/
+article {
+    margin-left: 40px;
+    margin-top: 40px;
 }
 
-div.play {
-    text-overflow: ellipsis;                        
-      white-space: nowrap;            
-      overflow: hidden;
-}
-div.artistname {
-    text-overflow: ellipsis;                        
-    white-space: nowrap;            
-    overflow: hidden;
-}
-/* FIN DE MAIN */
+/*FIN DE ARTICLE*/
 
 /*FOOTER*/
 footer {
     background-color: rgba(250, 108, 61, 0.925);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 footer ul  {
     display: grid;
@@ -235,6 +190,23 @@ li.footer{
 .logofooter{
     width: 30px ;
 }
+ul.redesSociales i:hover{
+    color:#dbff4b;
+}
+ul.redesSociales{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style: none;
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px 0px 0px 0px;
+}
+ul.redesSociales i{
+    color: black;
+}
+     ol, ul {
+       padding-left: 0;
+     }
 
 /*FIN DE FOOTER*/
 
@@ -256,6 +228,9 @@ li.footer{
  main {
         width: 75%;
         margin-left: 12%;
+    }
+    li.footer{
+        font-size: 15px;
     }
 
     }
@@ -284,10 +259,7 @@ li.footer{
           height: 29%;
       }
        /*FIN DE ENCABEZADO*/
-       .canciones {
-        font-size: 12px;
-    }
-    Strong {
-        font-size: 14px;
+       li.footer {
+        font-size: 10px;
     }
      }

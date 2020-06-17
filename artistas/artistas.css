@@ -78,9 +78,9 @@ body {
    }
     /*Mini reproductor*/
   nav.miniPlayer{
-    position: fixed;
-    right: 2%;
-    top: 2%;
+    position: absolute;
+    right: 59%;
+    top: 74%;
     z-index: 12;
 }
 nav.miniPlayer iframe{
@@ -138,6 +138,15 @@ div.header ul.nav i.fas.fa-heart{
 div.header ul.nav i.fas.fa-heart:hover{
     color: #480082;
 }
+button i{
+    font-size: 24px;
+    border: none;
+}
+button {
+    border: none;
+    background-color: #D1BAE3;
+}
+
   .simbolos {
       margin: 0 auto;
       padding-top: 8px;
@@ -153,7 +162,7 @@ div.header ul.nav i.fas.fa-heart:hover{
 .fas.fa-heart{
     color: black;
     cursor: pointer;
-    padding-left: 9px;
+    padding-left: 7px;
 }
 .fas.fa-heart:hover {
     color:#480082;
@@ -311,6 +320,7 @@ ul.redesSociales i{
        text-overflow: ellipsis;
        white-space: nowrap;
        overflow: hidden;
+       font-family: "Raleway";
    }
    .Principal a h2:hover {
        text-decoration: underline;
@@ -490,6 +500,11 @@ ul.redesSociales i{
              li.footer{
                 font-size: 15px;
             }
+            nav.miniPlayer {
+                position: absolute;
+                z-index: 12;
+                left: 7%; 
+            }
        }
    
    
@@ -500,6 +515,11 @@ ul.redesSociales i{
                height: 208px;
                padding-left: 0;
                left: 0px;
+           }
+           nav.miniPlayer {
+            position: absolute;
+            z-index: 12;
+            left: 27%;
            }
            .icono{
                text-align: center;
@@ -555,13 +575,17 @@ ul.redesSociales i{
              }
              /*Mini reproductor*/
              nav.miniPlayer {
-                position: fixed;
-                top: 2%;
-                left: 3%;
-                z-index: 15;
+                position: absolute;
+                left: 5%;
+                width: 100%;
+                padding-right: 5%;
             }
             nav.miniPlayer iframe {
                 height: 70px;
-                width: 96%;
+                width: 92%;
+            }
+            div.imagen img {
+                width: 100%;
+                height: auto;
             }
             }

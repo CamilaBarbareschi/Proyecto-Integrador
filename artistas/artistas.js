@@ -46,6 +46,7 @@ window.addEventListener ("load", function () {
                
                let cancionName = cadaelemento.title
                let duracion = cadaelemento.duration
+               let AidiCancion = cadaelemento.id
                let cancionTimeInMinute = duracion/60
                 cancionTimeInMinute = Math.floor(cancionTimeInMinute)
                 let cancionTimeInSeconds = duracion%60
@@ -60,7 +61,7 @@ window.addEventListener ("load", function () {
                 <div class="numero"> ` + parseInt(index + 1)  +`. </div>
                 <div class="nombre" >`+ cancionName +`</div>
                 <div class="simbolos">
-                    <i class="fas fa-play"></i>
+                    <button class= "Repro" id-song=`+ AidiCancion +`><i class="fas fa-play"></i></button>
                      <i class="fas fa-heart"></i>
                  </div>
                 <div class="tiempo">`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + `  </div>
@@ -68,6 +69,13 @@ window.addEventListener ("load", function () {
                 `    
            }
             document.querySelector (".Top").innerHTML = HTMLtoptrack;
+            var cancionButtonRepro = document.querySelectorAll(".Repro");
+            for (let i = 0; i < cancionButtonRepro.length; i++) {
+                cancionButtonRepro[i].onclick = function (){
+                 document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-song") +'&app_id=1" width="350" height="350"></iframe>'
+                }
+            }
+        
        }
     )
     ///ALBUMS
@@ -82,7 +90,9 @@ window.addEventListener ("load", function () {
            ///console.log(infoAlbums);
            
            let informacionAlbums = infoAlbums.data;
-             
+           
+           let HTMLnuevoalbum = ""
+           
            for (let index = 0; index < 12; index++) {
                const cadaAlbum = informacionAlbums[index];
 
@@ -90,17 +100,17 @@ window.addEventListener ("load", function () {
                let tituloAlbum = cadaAlbum.title;
                let linkParaIngresar = cadaAlbum.id;
 
-              let HTMLnuevoalbum =
-              `
- 
+             HTMLnuevoalbum +=
+            `   
                <article class="Principal"> 
                <a href="../albums/albums.html?id-album=`+ linkParaIngresar +`"><img src="`+ imagenAlbum +`" alt=""></a>
                <a style="text-decoration: none;" href="../albums/albums.html?id-album=`+ linkParaIngresar +`"><h2 class="Titulo">`+ tituloAlbum +`</h2></a>
                <p>by `+ nombreArtistaGeneral +`</p>
                </article>
-                `
+            `
            }
-           document.querySelector ("#main").innerHTML += HTMLnuevoalbum;
+           document.querySelector ("#main").innerHTML = HTMLnuevoalbum;
+
        }
     )
     
@@ -112,7 +122,6 @@ window.addEventListener ("load", function () {
         console.log(infoArtistaRelacionado);
     let artistaRelacionado = infoArtistaRelacionado.data
 
-    let HTMLrelacionado = ""
 
     for (let index = 0; index < 1; index++) {
         const cadaRelacionado = artistaRelacionado[index];
@@ -122,7 +131,7 @@ window.addEventListener ("load", function () {
         let QfansRelacionado = cadaRelacionado.nb_fan
         let AidiDelArtista = cadaRelacionado.id
       
-      HTMLrelacionado +=
+       let HTMLrelacionado =
       `
       <h1 class="nuevo"> Artista relacionado </h1>
       <nav class="fototexto"> 
@@ -135,9 +144,10 @@ window.addEventListener ("load", function () {
         </div>
         </nav>
       `
-        
+        document.querySelector (".New").innerHTML += HTMLrelacionado;
     }
-    document.querySelector (".New").innerHTML = HTMLrelacionado;   
+       
         
     })
+
 })
