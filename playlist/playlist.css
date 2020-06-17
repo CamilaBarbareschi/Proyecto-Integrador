@@ -145,7 +145,7 @@ ul.datos-album li{
  }
  
  .info-container{
-  margin-top: 100px;
+  margin-top: 86px;
   margin-left: 5%
   
 }
@@ -161,13 +161,8 @@ figure div i {
   left: 20px;
   font-size: 40px;
 }
-.latin{
-  position: absolute;
-  top: 146px;
-  left: 5%;
-  width: 38%;
-  height: 57%;
-  border-radius: 30px;
+h1{
+  font-size: 10px;
 }
 div.toolbar {
   display: grid;
@@ -245,7 +240,7 @@ button.agregar ul {
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 5% 24% 31% 20%;
+    grid-template-columns: 5% 37% 31% 20%;
     padding-top: 15px;
     border-top: 1px solid white;
     font-size: 18px;
@@ -259,7 +254,7 @@ button.agregar ul {
 .inicio{
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: 27% 35% 20%;
+    grid-template-columns: 41% 34% 20%;
     margin-left: 5%;
     font-size: 18px;
 }
@@ -307,10 +302,13 @@ footer {
 img.portada{
   border-radius: 50%;
 }
+.info-container {
+  margin-top: 43px;
+}
 figure div i {
   position: relative;
   bottom: 59px;
-  left: 101px;
+  left: 107px;
   font-size: 40px;
 }
 div.toolbar {

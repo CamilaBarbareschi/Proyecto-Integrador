@@ -30,7 +30,7 @@
                 <div class="i"><i class="far fa-play-circle"></i></div>
                 </figure>
                 <div class="info-container">
-                <h1>`+ titulo +`</h1>
+                <h2>`+ titulo +`</h2>
                 <ul class="datos-album">
                 <li> `+numero+` canciones</li>
                 <li> `+ duration +`  segundos</li>

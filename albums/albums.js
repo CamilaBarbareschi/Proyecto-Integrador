@@ -2,10 +2,10 @@ window.addEventListener("load", function() {
 
     let queryString = new URLSearchParams(location.search);
 
-    let codigoDelAlbum = queryString.get("albumID");
+    let codigoDelAlbum = queryString.get("id-album");
  
 
-    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127" + codigoDelAlbum)
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/" + codigoDelAlbum)
     .then(
         function(respuesta) {
             return respuesta.json();            
@@ -15,10 +15,11 @@ window.addEventListener("load", function() {
         function(informacion) {
             console.log(informacion)
             
-            let album = informacion.title
+            let album = informacion.artist.name
             let img =  informacion.cover
             let fans = informacion.fans
             let tiempo = informacion.duration 
+            let fecha = informacion.release_date
 
             let htmlimg = `
             <figure>
@@ -28,6 +29,7 @@ window.addEventListener("load", function() {
             <div class="info-container">
             <h1>`+ album +`</h1>
             <ul class="datos-album">
+            <li>`+ fecha +`</li>
             <li> `+ tiempo +`  segundos</li>
             <li>`+ fans +` fans</li>
             </ul>
@@ -36,16 +38,15 @@ window.addEventListener("load", function() {
             `
              document.querySelector("section").innerHTML += htmlimg  
 
-             let albunes = informacion.tracks.data;
+                let playlists = informacion.tracks.data;
                 
                 for (let index = 0; index < 9; index++) {
     
-                const cadacancion = albunes[index];
+                const cadaplaylist = playlists[index];
                 
                 
-                let song = cadacancion.title;;
-                
-    
+                let song = cadaplaylist.title;;
+               
                     let htmlNuevo = `
                     <article class="canciones">
                     <div class="numero">1</div>
@@ -57,8 +58,11 @@ window.addEventListener("load", function() {
                     `
                     
                     document.querySelector("main").innerHTML += htmlNuevo
-                }
-            }
-       )
-       
-   })
+                 }
+
+
+
+        }
+
+    )
+})
