@@ -17,8 +17,33 @@
         .then(
             function(informacion) {
                 console.log (informacion)
+               
+                let img = informacion.picture;
+                let duration = informacion.duration
+                let fans = informacion.fans
+                let numero = informacion.nb_tracks   
+                let titulo = informacion.title
+
+                let htmlimg = `
+                <figure>
+                <div><img class="portada" src="`+ img +`" alt="Álbum Anti"></div>
+                <div class="i"><i class="far fa-play-circle"></i></div>
+                </figure>
+                <div class="info-container">
+                <h1>`+ titulo +`</h1>
+                <ul class="datos-album">
+                <li> `+numero+` canciones</li>
+                <li> `+ duration +`  segundos</li>
+                <li> 28/01/2016</li>
+                <li>`+ fans +` fans</li>
+                </ul>
+               </div>
+           
+                `
+                 document.querySelector(".imagenes").innerHTML += htmlimg  
+                
                 let playlists = informacion.tracks.data;
-    
+                
                 for (let index = 0; index < 9; index++) {
     
                 const cadaplaylist = playlists[index];
@@ -42,6 +67,10 @@
                  }
              }
         )
+        
     })
+
+    
+
 
     
