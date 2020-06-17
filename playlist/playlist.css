@@ -225,6 +225,32 @@ button.agregar ul {
   padding: 0px 0px;
   margin-top: 19px;
 }
+ /*Mini reproductor*/
+ nav.miniPlayer{
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  z-index: 12;
+}
+nav.miniPlayer iframe{
+   height: 70px;
+}
+.simbolos {
+  margin: 0 auto;
+}
+.fas.fa-play{
+  color: black;
+  cursor: pointer;
+}
+.fas.fa-play:hover {
+  color:#480082;
+}
+button.Repro {
+  border: none;
+  background-color: #D1BAE3;
+  padding-bottom: 7px;
+  font-size: 18px;
+}
 .playlist{
   width: 80%;
   margin: 0 auto;
