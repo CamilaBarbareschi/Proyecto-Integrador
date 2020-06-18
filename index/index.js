@@ -163,6 +163,7 @@ window.addEventListener ("load", function (){
 
 
         let playlist = informacion.playlists.data
+        console.log(playlist)
          
         for (let index = 0; index < playlist.length; index++) {
           
