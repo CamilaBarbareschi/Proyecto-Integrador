@@ -45,8 +45,8 @@ window.addEventListener('load', function(){
                                   let artistImg = artist.picture_medium
 
                                   let newHtmlArtist =
-                                  '<div class="artistaContainer"><div class="imgContenedor"><a href="../artistas/artistas.html?id-artista="'+ artistId + '"><img src="'+ artistImg +'" alt="' + artistName + '"></a></div>' +
-                                  '<div class="itemContainer"><h3 class="nombreArtista"><a href="../artistas/artistas.html?id-artista="'+ artistId + '">'+ artistName+'</a></h3>' +
+                                  '<div class="artistaContainer"><div class="imgContenedor"><a href="../artistas/artistas.html?id-artista='+ artistId + '"><img src="'+ artistImg +'" alt="' + artistName + '"></a></div>' +
+                                  '<div class="itemContainer"><h3 class="nombreArtista"><a href="../artistas/artistas.html?id-artista='+ artistId + '">'+ artistName+'</a></h3>' +
                                   '<button class="reproArtista" id-artista="'+ artistId + '"><i class="fas fa-play"></i></button>' +
                                   '<button class="unSaveArtist" id-artista="'+ artistId + '"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
                                   
@@ -116,8 +116,8 @@ window.addEventListener('load', function(){
                                     "<article class='canciones'" +
                                     "<div class='reproducir'><button class='songRepro' id-song='"+ trackId + "'><i class='fas fa-play'></i></button></div>"+
                                     "<div  class='cancionName'>" + trackTitle + "</div>" +
-                                    "<div class='artistaCancion'><a href='../artistas/artistas.html?id-artista='"+ trackArtistID + "'>" +  trackArtist + "</a></div>" +
-                                    "<div class='albumCancion'><a href='../albums/albums.html?id-album='" + trackAlbumID + "'>" + trackAlbum + "</a></div>" +
+                                    "<div class='artistaCancion'><a href='../artistas/artistas.html?id-artista="+ trackArtistID + "'>" +  trackArtist + "</a></div>" +
+                                    "<div class='albumCancion'><a href='../albums/albums.html?id-album=" + trackAlbumID + "'>" + trackAlbum + "</a></div>" +
                                     "<div class='cancionTime'>" + trackTimeInMinute + ":" + trackTimeInSeconds + "</div>" +
                                     "<div><button class='saveSong' id-track='"+ trackId +"'><i class='fas fa-heart' id='pintadito'></i></button></div>" +
                                     "</article>"
@@ -169,8 +169,8 @@ window.addEventListener('load', function(){
 
                           
                            let newHtmlAlbum =
-                            '<div class="albumContainer"><div class="imgContenedor"><a href="../albums/albums.html?id-album="'+ albumId + '"><img src="'+ albumImg +'" alt="' + albumName + '"></a></div>' +
-                            '<div class="itemContainer"><h3 class="nombreAlbum"><a href="../albums/albums.html?id-album="'+ albumId + '">'+ albumName+'</a></h3>' +
+                            '<div class="albumContainer"><div class="imgContenedor"><a href="../albums/albums.html?id-album='+ albumId + '"><img src="'+ albumImg +'" alt="' + albumName + '"></a></div>' +
+                            '<div class="itemContainer"><h3 class="nombreAlbum"><a href="../albums/albums.html?id-album='+ albumId + '">'+ albumName+'</a></h3>' +
                             '<button class="reproAlbum" id-album="'+ albumId + '"><i class="fas fa-play"></i></button>' +
                             '<button class="unSaveAlbum" id-album="'+ albumId + '"><i class="fas fa-heart" id="pintadito"></i></button></div>' + '</div>' 
                             
@@ -222,8 +222,8 @@ window.addEventListener('load', function(){
                             let  playlistImg =  playlist.picture_medium
                           
                            let newHtmlPlaylist =
-                            '<div class="playlistContainer"><div class="imgContenedor"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '"><img src="'+  playlistImg +'" alt="' +  playlistName + '"></a></div>' +
-                            '<div class="itemContainer"><h3 class="nombrePlaylist"><a href="../playlist/playlist.html?id-playlist="'+  playlistId + '">'+  playlistName+'</a></h3>' +
+                            '<div class="playlistContainer"><div class="imgContenedor"><a href="../playlist/playlist.html?id-playlist='+  playlistId + '"><img src="'+  playlistImg +'" alt="' +  playlistName + '"></a></div>' +
+                            '<div class="itemContainer"><h3 class="nombrePlaylist"><a href="../playlist/playlist.html?id-playlist='+  playlistId + '">'+  playlistName+'</a></h3>' +
                             '<button class="reproPlaylist" id-playlist="'+  playlistId + '"><i class="fas fa-play"></i></button>' +
                             '<button class="unSavePlaylist" id-playlist="'+  playlistId + '"><i class="fas fa-heart" id="pintadito"></i></button></div></div>' 
                             

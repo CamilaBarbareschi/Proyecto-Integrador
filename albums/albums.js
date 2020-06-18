@@ -9,9 +9,9 @@ window.addEventListener("load", function() {
      }
      let albumsFavoritos
      if (localStorage.getItem("albumsPreferidos") != null) {
-      albumsFavoritos = localStorage.getItem("albumsPreferidos").split(",")
+         albumsFavoritos = localStorage.getItem("albumsPreferidos").split(",")
      } else {
-      albumsFavoritos = []
+         albumsFavoritos = []
      }
 
     let queryString = new URLSearchParams(location.search);
@@ -63,8 +63,8 @@ window.addEventListener("load", function() {
             </div>
             <div> 
             <button class="agregar"> 
-               <ul class="botones">
-                   <li class="save" id-album="`+ albumId +`"><i class="fas fa-heart" id='pintadito'></i></li>
+               <ul class="botones  save" id-album="`+ albumId +`">
+                   <li class="save" id-album="`+ albumId +`"><i class="fas fa-heart" ></i></li>
                    <li>Agregar</li>
                </ul>
             </button>
@@ -119,7 +119,7 @@ window.addEventListener("load", function() {
                     </div>
                     <div  class="play">`+ song +`</div>
                     <div>`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + ` </div>
-                    <button class='saveAlbum' id-album="`+ cancionID +`"><i class='fas fa-heart'></i></button>
+                    <button class='saveAlbum' id-song="`+ cancionID +`"><i class='fas fa-heart'></i></button>
                     </article> 
                     `
                 }else{
@@ -130,7 +130,7 @@ window.addEventListener("load", function() {
                     </div>
                     <div  class="play">`+ song +`</div>
                     <div>`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + ` </div>
-                    <button class='saveAlbum' id-album="`+ cancionID +`"><i class='fas fa-heart' id='pintadito'></i></button>
+                    <button class='saveAlbum' id-song="`+ cancionID +`"><i class='fas fa-heart' id='pintadito'></i></button>
                     </article> 
                     `
                 }
@@ -143,20 +143,13 @@ window.addEventListener("load", function() {
                      }
                     }
                  var cancionButtonSave = document.querySelectorAll("button.saveAlbum")
-
-                 for (let i = 0; i < cancionButtonSave.length; i++) {
-                        
+                 for (let i = 0; i < cancionButtonSave.length; i++) {      
                     cancionButtonSave[i].addEventListener ('click', function(){
-    
                         if(cancionesFavoritas.includes(this.getAttribute("id-song")) == false ){
-
                             cancionesFavoritas.push(this.getAttribute("id-song"));
-
                             localStorage.setItem("cancionesPreferidas", cancionesFavoritas);
-
-                            UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Canción guardada en favoritos ', status: 'danger'})  
-        
-                        
+                            UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Canción guardada en favoritos ', status: 'danger'}
+                        )  
                         }
                                
                         })

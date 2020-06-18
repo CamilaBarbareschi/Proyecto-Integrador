@@ -1,7 +1,9 @@
 body {
     background-color: #D1BAE3;
     }
-
+button:focus{
+  outline: none;
+}
  /*ENCABEZADO*/
 .buscador{
   display: none;
@@ -233,7 +235,7 @@ button.agregar ul {
  nav.miniPlayer {
     position: absolute;
     right: 9%;
-    top: 57%;
+    top: 54%;
     z-index: 12;
   }
   nav.miniPlayer iframe{
@@ -255,15 +257,18 @@ button.agregar ul {
 }
 button.Repro {
   border: none;
-  background-color: #D1BAE3;
+  background-color: transparent;
   padding-bottom: 7px;
   font-size: 18px;
 }
 button.saveAlbum{
   border: none;
-  background-color: #D1BAE3;
+  background-color: transparent;
   padding-bottom: 7px;
   font-size: 18px;
+}
+button.saveAlbum i{
+ color: black;
 }
 .playlist{
   width: 80%;
@@ -294,8 +299,8 @@ button.saveAlbum{
 .inicio{
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: 46% 38% 10%;
-    margin-left: 9%;
+    grid-template-columns: 45% 37% 10%;
+    margin-left: 12%;
     font-size: 18px;
 }
 

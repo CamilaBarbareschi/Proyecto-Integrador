@@ -33,6 +33,7 @@
         .then(
             function(informacion) {
                 console.log (informacion)
+
                 
                 let img = informacion.picture;
                 let duration = informacion.duration
@@ -46,14 +47,12 @@
                 <section class="imagenes">
                 <figure>
                 <div><img class="portada" src="`+ img +`" alt="Álbum Anti"></div>
-                <div class="i"><i class="far fa-play-circle"></i></div>
                 </figure>
                 <div class="info-container">
                 <h2>`+ titulo +`</h2>
                 <ul class="datos-album">
                 <li> `+numero+` canciones</li>
                 <li> `+ duration +`  segundos</li>
-                <li> 28/01/2016</li>
                 <li>`+ fans +` fans</li>
                 </ul>
                </div>
@@ -61,7 +60,7 @@
                <div class="toolbar">
                <div> 
                    <button class="escuchar"> 
-                       <ul class="escucharbutton">
+                       <ul class="escucharbutton icono" id-playlist="`+ cancionID +`" >
                            <li class="icono" id-playlist="`+ cancionID +`"><i class="far fa-play-circle"></i></li>
                            <li>Escuchar</li>
                        </ul>
@@ -69,7 +68,7 @@
                </div>
                <div> 
                    <button class="agregar"> 
-                       <ul class="botones">
+                       <ul class="botones save" id-playlist="`+ cancionID +`">
                            <li class="save" id-playlist="`+ cancionID +`"><i class="fas fa-heart"></i></li>
                            <li>Agregar</li>
                        </ul>
@@ -82,7 +81,7 @@
                  var cancionButtonRepro = document.querySelectorAll(".icono");
                  for (let i = 0; i < cancionButtonRepro.length; i++) {
                      cancionButtonRepro[i].onclick = function (){
-                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
+                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=playlist&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
                      }
                     }
                     var playlistButtonSave = document.querySelectorAll(".save")
@@ -115,7 +114,7 @@
                     let htmlNuevo = `
                     <div class="musica">
                     <div class="simbolos">
-                    <button class='saveAlbum' id-playlist="`+ cancionID +`"><i class='fas fa-heart' id='pintadito'></i></button>
+                    <button class='saveAlbum' id-song="`+ cancionID +`"><i class='fas fa-heart' id='pintadito'></i></button>
                     </div>
                     <div class="simbolos">
                     <button class= "Repro" id-playlist=`+ cancionID +`><i class="fas fa-play"></i></button>
