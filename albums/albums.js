@@ -152,6 +152,72 @@ window.addEventListener("load", function() {
              }
          }
       )
+      fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/"+ codigoDelAlbum )
+      .then (function (respuestaArtista) {
+          return respuestaArtista.json()
+      })
+      .then (function (infoArtista) {
+          console.log(infoArtista);
+      
+          let informacionArtista = infoArtista.data;
+           
+          let HTMLnuevoalbum = ""
+      
+      for (let index = 0; index < 12; index++) {
+          const cadaAlbum = informacionArtista[index];
+
+          let imagenAlbum = cadaAlbum.cover_medium;
+          let tituloAlbum = cadaAlbum.title;
+          let linkParaIngresar = cadaAlbum.id;
+
+        HTMLnuevoalbum +=
+       `
+       <ul class="uk-slider-items uk-grid uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" uk-height-viewport=" true; offset-bottom: 60">   
+       <li>
+       <div class="uk-card uk-card-small uk-card-default">
+           <div class="uk-card-media-top">
+               <img class="artistasim" src="`+ imagenAlbum +`" alt="">
+           </div>
+           <div class="uk-card-body">
+              <a href="../artistas/artistas.html"> <h3 class="uk-card-title">`+ tituloAlbum +`</h3></a>
+           </div>
+       </div>                        
+       </li>
+        </ul>
+        <a class="slide-button uk-position-center-left uk-position-small uk-hidden-hover" href="#"uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="slide-button uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+       `
+      }
+      document.querySelector (".albunes").innerHTML = HTMLnuevoalbum;
+
+      let artistaRelacionado = infoArtista.data
+  
+  
+      for (let index = 0; index < 1; index++) {
+          const cadaRelacionado = artistaRelacionado[index];
+  
+          let imagenDeRelacionado = cadaRelacionado.picture_medium;
+          let nameRelacionado = cadaRelacionado.name
+          let AidiDelArtista = cadaRelacionado.id
         
+         let HTMLrelacionado = `
+         <ul class="uk-slider-items uk-grid uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" uk-height-viewport=" true; offset-bottom: 60">
+         <li>
+         <div class="uk-card uk-card-small uk-card-default">
+             <div class="uk-card-media-top">
+                 <img src="`+ imagenDeRelacionado +`" alt="">
+             </div>
+             <div class="uk-card-body">
+                <a href="../albums/albums.html"> <h3 class="uk-card-title">`+ nameRelacionado +`</h3></a>
+             </div>
+         </div>                        
+         </li>
+         </ul>
+         <a class="slide-button uk-position-center-left uk-position-small uk-hidden-hover" href="#"uk-slidenav-previous uk-slider-item="previous"></a>
+         <a class="slide-button uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        `
+          document.querySelector (".artistas").innerHTML += HTMLrelacionado;
+      }   
+      }) 
   })
             

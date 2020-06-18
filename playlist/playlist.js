@@ -33,13 +33,13 @@
         .then(
             function(informacion) {
                 console.log (informacion)
-                let playlist = informacion.tracks.data;
+                
                 let img = informacion.picture;
                 let duration = informacion.duration
                 let fans = informacion.fans
                 let numero = informacion.nb_tracks   
                 let titulo = informacion.title
-                let cancionID = playlist.id;
+                let cancionID = informacion.id;
 
 
                 let htmlimg = `

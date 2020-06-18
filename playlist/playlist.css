@@ -363,7 +363,6 @@ div.toolbar {
  nav.miniPlayer iframe {
   height: 70px;
   position: relative;
-  top: 317px;
   right: -20px;
 }
  
@@ -448,12 +447,13 @@ figure div i {
   .playlist{
     width: 80%;
     margin-bottom: 12%;
+    padding-bottom: 30px;
   }
   nav.miniPlayer iframe {
     height: 64px;
     width: 336px;
     position: relative;
-    top: 518px;
+    top: 467px;
     right: 32px;
 }
   .musica{
