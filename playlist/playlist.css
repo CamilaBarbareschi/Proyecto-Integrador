@@ -235,7 +235,7 @@ button.agregar ul {
  nav.miniPlayer {
     position: absolute;
     right: 9%;
-    top: 57%;
+    top: 61%;
     z-index: 12;
   }
   nav.miniPlayer iframe{
