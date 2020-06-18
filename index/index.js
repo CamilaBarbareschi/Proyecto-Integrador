@@ -41,7 +41,7 @@ window.addEventListener ("load", function (){
            let cadaAlbumId = cadaAlbum.id 
 
            let nuevoHtmlAlbumSlideShow 
-              if(albumsFavoritos.includes("" + cadaAlbumId) == false ){
+            if(albumsFavoritos.includes("" + cadaAlbumId) == false ){
               
               nuevoHtmlAlbumSlideShow =
                   "<li class='uk-transition-toggle' tabindex='0'>"+ 

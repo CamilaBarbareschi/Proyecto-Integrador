@@ -109,8 +109,21 @@ window.addEventListener("load", function() {
                 if(cancionTimeInSeconds<10){
                     cancionTimeInSeconds = '0' + cancionTimeInSeconds
                 }
-               
-                    let htmlNuevo = `
+                 
+                let htmlNuevo
+                if(cancionesFavoritas.includes("" + AidiCancion) == false ) {
+                    htmlNuevo   = `
+                    <article class="canciones">
+                    <div class="simbolos">
+                    <button class= "Repro" id-album=`+ AidiCancion +`><i class="fas fa-play"></i></button>
+                    </div>
+                    <div  class="play">`+ song +`</div>
+                    <div>`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + ` </div>
+                    <button class='saveAlbum' id-album="`+ cancionID +`"><i class='fas fa-heart'></i></button>
+                    </article> 
+                    `
+                }else{
+                    htmlNuevo = `
                     <article class="canciones">
                     <div class="simbolos">
                     <button class= "Repro" id-album=`+ AidiCancion +`><i class="fas fa-play"></i></button>
@@ -120,8 +133,8 @@ window.addEventListener("load", function() {
                     <button class='saveAlbum' id-album="`+ cancionID +`"><i class='fas fa-heart' id='pintadito'></i></button>
                     </article> 
                     `
-                    
-                    document.querySelector("main").innerHTML += htmlNuevo
+                }
+                document.querySelector("main").innerHTML += htmlNuevo
                  
                  var cancionButtonRepro = document.querySelectorAll(".Repro");
                  for (let i = 0; i < cancionButtonRepro.length; i++) {
