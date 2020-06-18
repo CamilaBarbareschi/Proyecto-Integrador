@@ -123,14 +123,14 @@ header{
 }
 
  
-       .imagenes{
-        display: grid;
-        margin-top: 5%;
-        font-family: "raleway";
-        grid-template-columns: 250px auto;
-        padding-left: 11%;
+ .imagenes{
+  display: grid;
+  margin-top: 5%;
+  font-family: "raleway";
+  grid-template-columns: 250px auto;
+  padding-left: 11%;
       
-    }
+  }
 
     img.portada{
       border-radius: 3%;
@@ -231,17 +231,14 @@ button.agregar ul {
 }
  /*Mini reproductor*/
  nav.miniPlayer {
-  position: fixed;
-  right: 2%;
-  top: 10%;
-  z-index: 12;
-}
-nav.miniPlayer iframe{
-   height: 70px;
-   position: relative;
-   top: 0px;
-   right: -5px;
-}
+    position: absolute;
+    right: 9%;
+    top: 57%;
+    z-index: 12;
+  }
+  nav.miniPlayer iframe{
+     height: 70px;
+     }
 .simbolos {
   margin: 0 auto;
 }
@@ -283,7 +280,7 @@ button.saveAlbum{
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 4% 5% 37% 31% 20%;
+    grid-template-columns: 6% 6% 37% 31% 20%;
     padding-top: 15px;
     border-top: 1px solid white;
     font-size: 18px;
@@ -297,7 +294,7 @@ button.saveAlbum{
 .inicio{
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: 43% 36% 20%;
+    grid-template-columns: 46% 38% 10%;
     margin-left: 9%;
     font-size: 18px;
 }
@@ -345,6 +342,9 @@ footer {
 img.portada{
   border-radius: 50%;
 }
+img.logo{
+  width: 20%;
+}
 .info-container {
   margin-top: 43px;
 }
@@ -360,18 +360,22 @@ div.toolbar {
  .playlist{
   margin-top: 35px;
  }
- nav.miniPlayer iframe {
-  height: 70px;
-  position: relative;
-  right: -20px;
+ nav.miniPlayer{
+  position: absolute;
+  height: 73px;
+  right: 65px;
+  top: 385px;
+
 }
- 
+nav.miniPlayer iframe {
+  width: 90px;
+}
   .inicio{
     margin: 0px 50px;
     display: grid;
-    grid-template-columns: 41% 26% 10%;
+    grid-template-columns: 42% 31% 10%;
     margin: -2%;
-    margin-left: 12%;
+    margin-left: 17%;
     font-size: 15px;
  }
  .musica{
@@ -379,7 +383,7 @@ div.toolbar {
   margin-bottom: -8px;
   margin-top: 21px;
   display: grid;
-  grid-template-columns: 5% 8% 36% 23% 28%;
+  grid-template-columns: 7% 10% 36% 26% 16%;
   padding-top: 13px;
   font-size: 13px;
  }
@@ -446,15 +450,19 @@ figure div i {
 
   .playlist{
     width: 80%;
-    margin-bottom: 12%;
+    margin-bottom: 9%;
     padding-bottom: 30px;
   }
-  nav.miniPlayer iframe {
-    height: 64px;
-    width: 336px;
-    position: relative;
-    top: 467px;
-    right: 32px;
+   /*Mini reproductor*/
+ nav.miniPlayer {
+  position: absolute;
+    top: 44%;
+    right: 8%;
+    width: 94px;
+}
+nav.miniPlayer iframe {
+  height: 70px;
+  width: 96%;
 }
   .musica{
     font-size: 10px;

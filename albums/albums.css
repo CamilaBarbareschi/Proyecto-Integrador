@@ -247,17 +247,14 @@ button.agregar ul li.icono.save i:hover {
 }
  /*Mini reproductor*/
  nav.miniPlayer {
-    position: fixed;
-    right: 2%;
-    top: 10%;
+    position: absolute;
+    right: 13%;
+    top: 58%;
     z-index: 12;
   }
   nav.miniPlayer iframe{
      height: 70px;
-     position: relative;
-     top: 0px;
-     right: -5px;
-  }
+     }
 .simbolos {
     margin: 0 auto;
 }
@@ -288,6 +285,8 @@ main{
     width: 75%;
     margin: 0 auto;
     color: black;
+    margin-bottom: 58px;
+    margin-top: 50px;
 }
 .uk-card-media-top img{
     border-radius: 3%;
@@ -384,9 +383,16 @@ h3.uk-card-title{
 }
 
 
-@media screen and (max-width: 710px){
+@media screen and (max-width: 768px){
 nav.miniPlayer{
-    display: none;
+    position: absolute;
+    height: 73px;
+    right: 94px;
+    top: 328px;
+
+}
+nav.miniPlayer iframe {
+    width: 90px;
 }
 li.footer{
     font-size: 16px;
@@ -472,6 +478,11 @@ img.portada {
     width: 195px;
     height: 195px;
 }
+main {
+    width: 75%;
+    margin-left: 12%;
+    margin-bottom: 39px;
+}
 section {
     display: grid;
     grid-template-columns: none;
@@ -509,13 +520,9 @@ button:focus{
 }
  /*Mini reproductor*/
  nav.miniPlayer {
-    position: fixed;
-    top: 2%;
-    left: 3%;
-    z-index: 15;
+    position: absolute;
+    top: 385px;
+    right: 55px;
 }
-nav.miniPlayer iframe {
-    height: 70px;
-    width: 96%;
-}
+
 }
