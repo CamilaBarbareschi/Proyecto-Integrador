@@ -1,4 +1,13 @@
 window.addEventListener ("load", function () {
+
+    /*Condiciones para crear arrays o guardar canciones en el LocalStorage*/
+    let cancionesFavoritas
+    if (localStorage.getItem("cancionesPreferidas") != null) {
+        cancionesFavoritas = localStorage.getItem("cancionesPreferidas").split(",")
+    } else {
+        cancionesFavoritas = []
+    }
+
     let queryString = new URLSearchParams (location.search);
     let codigoArtista = queryString.get ("id-artista")
 
@@ -55,6 +64,8 @@ window.addEventListener ("load", function () {
                     cancionTimeInSeconds = '0' + cancionTimeInSeconds
                 }
                
+                if(cancionesFavoritas.includes("" + AidiCancion) == false ){
+
                 HTMLtoptrack +=
                 `
                 <nav class="canciones">
@@ -62,18 +73,55 @@ window.addEventListener ("load", function () {
                 <div class="nombre" >`+ cancionName +`</div>
                 <div class="simbolos">
                     <button class= "Repro" id-song=`+ AidiCancion +`><i class="fas fa-play"></i></button>
-                     <i class="fas fa-heart"></i>
+                     <button class= "saveSong" id-song=`+ AidiCancion +`><i class="fas fa-heart" id="porPintar"></i></button>
                  </div>
                 <div class="tiempo">`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + `  </div>
                 </nav>
-                `    
+                ` 
+             } else {
+
+                 HTMLtoptrack +=
+
+                `
+                <nav class="canciones">
+                <div class="numero"> ` + parseInt(index + 1)  +`. </div>
+                <div class="nombre" >`+ cancionName +`</div>
+                <div class="simbolos">
+                    <button class= "Repro" id-song=`+ AidiCancion +`><i class="fas fa-play"></i></button>
+                     <button class= "saveSong" id-song=`+ AidiCancion +`><i class="fas fa-heart" id="pintadito"></i></button>
+                 </div>
+                <div class="tiempo">`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + `  </div>
+                </nav>
+                ` 
+             }
+
+              
            }
-            document.querySelector (".Top").innerHTML = HTMLtoptrack;
-            var cancionButtonRepro = document.querySelectorAll(".Repro");
+           document.querySelector (".Top").innerHTML = HTMLtoptrack;
+            
+           var cancionButtonRepro = document.querySelectorAll(".Repro");
             for (let i = 0; i < cancionButtonRepro.length; i++) {
                 cancionButtonRepro[i].onclick = function (){
                  document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-song") +'&app_id=1" width="350" height="350"></iframe>'
                 }
+            }
+            var cancionButtonSave = document.querySelectorAll("button.saveSong")
+            for (let i = 0; i < cancionButtonSave.length; i++) {
+                
+                cancionButtonSave[i].addEventListener ('click', function(){
+
+                    if(cancionesFavoritas.includes(this.getAttribute("id-song")) == false ){
+
+                        cancionesFavoritas.push(this.getAttribute("id-song"));
+
+                        localStorage.setItem("cancionesPreferidas", cancionesFavoritas);
+
+                        UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Canción guardada en favoritos ', status: 'danger'})  
+    
+                    
+                    }
+                    
+                })
             }
         
        }
