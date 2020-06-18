@@ -235,7 +235,7 @@ button.agregar ul {
  nav.miniPlayer {
     position: absolute;
     right: 9%;
-    top: 61%;
+    top: 54%;
     z-index: 12;
   }
   nav.miniPlayer iframe{
@@ -299,8 +299,8 @@ button.saveAlbum i{
 .inicio{
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: 46% 38% 10%;
-    margin-left: 9%;
+    grid-template-columns: 45% 37% 10%;
+    margin-left: 12%;
     font-size: 18px;
 }
 
