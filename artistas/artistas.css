@@ -135,6 +135,9 @@ nav.miniPlayer iframe{
 div.header ul.nav i.fas.fa-heart{
     color: white;
 }
+#pintadito{
+    color: rgb(255, 0, 55);
+}
 div.header ul.nav i.fas.fa-heart:hover{
     color: #480082;
 }
@@ -162,7 +165,7 @@ button {
 .fas.fa-heart{
     color: black;
     cursor: pointer;
-    padding-left: 7px;
+    padding-left: 1px;
 }
 .fas.fa-heart:hover {
     color:#480082;
