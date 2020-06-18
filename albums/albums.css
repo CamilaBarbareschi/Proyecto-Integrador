@@ -11,6 +11,9 @@ html {
 button:focus{
     outline: 0px;
 }
+#pintadito{
+    color: rgb(255, 0, 55);
+}
 /*ENCABEZADO*/
 .buscador{
     display: none;
@@ -534,9 +537,6 @@ li.ultimo{
 ul.nav {
     grid-template-columns: 11% 41% 14% 34%;
     padding-left: 134px;
-}
-#pintadito{
-    color: rgb(255, 0, 55);
 }
 img.logo {
     width: 28%;
