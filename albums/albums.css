@@ -420,6 +420,9 @@ img.portada {
     width: 225px;
     height: 225px;
 }
+.canciones{
+    grid-template-columns: 9% 71% 14% 5%;
+}
 
 section {
     width: 100%;
@@ -451,8 +454,16 @@ img.logo {
         width: 34%;
         top: 18%;
 }
+.simbolos {
+    margin: 0 auto;
+    position: relative;
+    bottom: 3px;
+}
 .canciones {
     font-size: 12px;
+    grid-template-columns: 14% 56% 14% 5%;
+    margin-bottom: -5%;
+    padding-top: 4%;
 }
 img.portada {
     width: 195px;
