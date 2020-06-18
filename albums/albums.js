@@ -27,11 +27,12 @@ window.addEventListener("load", function() {
     )
     .then(
         function(informacion) {
-            console.log(informacion)
-
+          
+            let album = informacion
+            let nombreAlbum =  album.title
+            let albumId =  album.id
             let playlist = informacion.tracks.data;
-            let album = informacion.artist.name
-            let img =  informacion.cover
+            let img = album.cover
             let fans = informacion.fans
             let tiempo = informacion.duration 
             let fecha = informacion.release_date
@@ -40,71 +41,65 @@ window.addEventListener("load", function() {
             let htmlimg = `
             <section>
             <figure>
-            <div><img class="portada" src="`+ img +`" alt="Álbum Anti"></div>
-            <div class="i"><i class="far fa-play-circle"></i></div>
+            <div><img class="portada" src="`+ img +`"></div>
             </figure>
             <div class="info-container">
-            <h1>`+ album +`</h1>
+            <h1>`+ nombreAlbum +`</h1>
             <ul class="datos-album">
             <li>`+ fecha +`</li>
-            <li> `+ tiempo +`  segundos</li>
+            <li> `+ tiempo +`segundos</li>
             <li>`+ fans +` fans</li>
             </ul>
-           </div>
-           </section>
-           <div class="toolbar">
-           <div> 
-           <button class="escuchar"> 
+            </div>
+            </section>
+            <div class="toolbar">
+            <div> 
+            <button class="escuchar icono" id-album="`+ albumId +`"> 
                <ul class="escucharbutton">
-                   <li class="icono" id-playlist="`+ cancionID +`"><i class="far fa-play-circle"></i></li>
+                   <li class="icono" id-album="`+ albumId +`"><i class="far fa-play-circle"></i></li>
                    <li>Escuchar</li>
                </ul>
-           </button>
-           </div>
-           <div> 
-           <button class="agregar"> 
+            </button>
+            </div>
+            <div> 
+            <button class="agregar"> 
                <ul class="botones">
-                   <li class="save" id-playlist="`+ cancionID +`"><i class="fas fa-heart"></i></li>
+                   <li class="save" id-album="`+ albumId +`"><i class="fas fa-heart" id='pintadito'></i></li>
                    <li>Agregar</li>
                </ul>
-           </button>
-           </div>
-           </div>
-            `
+            </button>
+            </div>
+            </div>`
+             
              document.querySelector(".bloque").innerHTML += htmlimg  
 
-             var cancionButtonRepro = document.querySelectorAll(".icono");
-                 for (let i = 0; i < cancionButtonRepro.length; i++) {
-                     cancionButtonRepro[i].onclick = function (){
-                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
-                     }
+            var cancionButtonRepro = document.querySelectorAll(".icono");
+                for (let i = 0; i < cancionButtonRepro.length; i++) {
+                    cancionButtonRepro[i].onclick = function (){
+                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=album&id=' + this.getAttribute("id-album") +'&app_id=1" width="350" height="350"></iframe>'
                     }
+                }
                    var albumButtonSave = document.querySelectorAll(".save")
-             for (let i = 0; i < albumButtonSave.length; i++) {
+            
+            for (let i = 0; i < albumButtonSave.length; i++) {
              albumButtonSave[i].addEventListener ('click', function(){
-
                 if (albumsFavoritos.includes(this.getAttribute("id-album")) == false ) {
-                   
-                    albumsFavoritos.push(this.getAttribute("id-album"));
-
+                    albumsFavoritos.push(this.getAttribute("id-album"))
                     localStorage.setItem("albumsPreferidos", albumsFavoritos);
-                    
                     UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Álbum guardado en favoritos', status: 'danger'})
-                   
-                } 
-                   
+                }  
             })
             
         }
 
-                let playlists = informacion.tracks.data;
+            let playlists = informacion.tracks.data;
                 
                 for (let index = 0; index < 9; index++) {
     
                 const cadaplaylist = playlists[index];
                 
                 let cancionID = cadaplaylist.id
-                let song = cadaplaylist.title;;
+                let song = cadaplaylist.title;
                 let AidiCancion = cadaplaylist.id
                 let duracion = cadaplaylist.duration
                 let cancionTimeInMinute = duracion/60

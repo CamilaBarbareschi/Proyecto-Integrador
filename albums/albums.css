@@ -8,6 +8,9 @@ html {
     background-color:  #D1BAE3;;
 
 }
+button:focus{
+    outline: 0px;
+}
 /*ENCABEZADO*/
 .buscador{
     display: none;
@@ -270,13 +273,13 @@ button.agregar ul li.icono.save i:hover {
 }
 button.Repro {
     border: none;
-    background-color: #D1BAE3;
+    background-color:transparent;
     padding-bottom: 7px;
     font-size: 18px;
 }
 button.saveAlbum{
     border: none;
-    background-color: #D1BAE3;
+    background-color:transparent;
     padding-bottom: 7px;
     font-size: 18px;
 }
@@ -477,6 +480,9 @@ ul.nav {
     grid-template-columns: 11% 41% 14% 34%;
     padding-left: 134px;
 }
+#pintadito{
+    color: rgb(255, 0, 55);
+}
 img.logo {
     width: 28%;
 }
@@ -486,6 +492,9 @@ ul.datos-album{
 button {
     max-width: 136%;
 
+}
+button:focus{
+    outline-width: 0px;
 }
  /*Mini reproductor*/
  nav.miniPlayer {
