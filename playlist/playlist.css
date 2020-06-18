@@ -2,121 +2,125 @@ body {
     background-color: #D1BAE3;
     }
 
-    .buscador{
-      display: none;
-    }
-    li.nav{
-        display: none;
-    }
-    .flexsearch--wrapper {
-        height: auto;
-        width: auto;
-        max-width: 100%;
-        overflow: hidden;
-        background: transparent;
-        margin: 0;
-        position: static;
-    }
-    .flexsearch--form {
-        overflow: hidden;
-        position: relative;
-    }
-    .flexsearch--input-wrapper {
-        padding: 0 66px 0 0; 
-        overflow: hidden;
-    }
-    .flexsearch--input {
-        width: 100%;
-    }
-    .flexsearch--input {
-        -webkit-box-sizing: content-box;
-        -moz-box-sizing: content-box;
-        box-sizing: content-box;
-        height: 25px;
-        padding: 2px 0px 0 12px;
-        border-color: rgba(250, 108, 61, 0.74);
-        border-radius: 35px;
-        border-style: solid;
-        border-width: 2px;
-        color: #480082;
-        font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
-    .flexsearch--submit {
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: block;
-        width: 60px;
-        height: 60px;
-        padding: 0;
-        border: none;
-        margin-top: 20px; 
-        margin-right: 5px; 
-        background: transparent;
-        color: #888;
-        font-family: "Raleway", sans-serif;
-        font-size: 40px;
-        line-height: 60px;
-    }
-    .flexsearch--input:focus {
-        outline: none;
-        border-color: #480082;
-    }
-    .flexsearch--submit:hover { 
-        color: #480082;
-        cursor: pointer;
-    }
-    ::-webkit-input-placeholder {
-        color:  #480082;  
-    }
-    input:-moz-placeholder {
-        color:  #480082;
-    }
-    ul.nav {
-        display: grid;
-        grid-template-columns: 80% 7% 10%;
-        padding-left: 325px;
-        margin: 0px;
-        padding-top: 16px;
-    }
-    ul.nav li {
-        list-style-type: none;
-        width: 90%;
-        font-size: 25px;
-        text-align: center;
-        color: white;
-        margin-bottom: none;
-        padding-left: none;
-    }
-    ul.nav a{
-        text-decoration: none;
-        color: white;    
-    }
-    ul.nav a:hover {
-        color: #480082;;
-    }
-    img.logo{
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 10%;
-        height: auto;
-    }
-    .container{
-        background-image: url(../img/header-play.jpg);
-        height: 65px;
-    }
-    .header{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-color: rgba(225, 225, 225, 0.40);
-        height: 65px;
-        width: 100%;
-       }
+ /*ENCABEZADO*/
+.buscador{
+  display: none;
+}
+li.nav{
+  display: none;
+}
+.flexsearch--wrapper {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  background: transparent;
+  margin: 0;
+  position: static;
+}
+.flexsearch--form {
+  overflow: hidden;
+  position: relative;
+}
+.flexsearch--input-wrapper {
+  padding: 0 66px 0 0; 
+  overflow: hidden;
+}
+.flexsearch--input {
+  width: 100%;
+}
+.flexsearch--input {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 25px;
+  padding: 2px 0px 0 12px;
+  border-color: rgba(250, 108, 61, 0.74);
+  border-radius: 35px;
+  border-style: solid;
+  border-width: 2px;
+  color: #480082;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.flexsearch--submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  margin-top: 20px; 
+  margin-right: 5px; 
+  background: transparent;
+  color: #888;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+}
+.flexsearch--input:focus {
+  outline: none;
+  border-color: #480082;
+}
+.flexsearch--submit:hover { 
+  color: #480082;
+  cursor: pointer;
+}
+::-webkit-input-placeholder {
+color:  #480082;  
+}
+input:-moz-placeholder {
+  color:  #480082;
+}
+ul.nav {
+  display: grid;
+  grid-template-columns: 78% 7% 7% 5%;
+  padding-left: 325px;
+  margin: 0px;
+  padding-top: 16px;
+}
+ul.nav li {
+  list-style-type: none;
+  width: 90%;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin-bottom: none;
+  padding-left: none;
+}
+ul.nav a{
+  text-decoration: none;
+  color: white;    
+}
+ul.nav a:hover {
+  color: #480082;;
+}
+img.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 10%;
+  height: auto;
+  border-radius: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+}
+.container{
+  background-image: url(../img/header-play.jpg);
+  height: 65px;
+}
+header{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(225, 225, 225, 0.40);
+  height: 65px;
+  width: 100%;
+}
 
  
        .imagenes{
@@ -226,14 +230,17 @@ button.agregar ul {
   margin-top: 19px;
 }
  /*Mini reproductor*/
- nav.miniPlayer{
+ nav.miniPlayer {
   position: fixed;
   right: 2%;
-  top: 2%;
+  top: 10%;
   z-index: 12;
 }
 nav.miniPlayer iframe{
    height: 70px;
+   position: relative;
+   top: 0px;
+   right: -5px;
 }
 .simbolos {
   margin: 0 auto;
@@ -245,7 +252,17 @@ nav.miniPlayer iframe{
 .fas.fa-play:hover {
   color:#480082;
 }
+#widget-player{
+  position: relative;
+  top: 60px;
+}
 button.Repro {
+  border: none;
+  background-color: #D1BAE3;
+  padding-bottom: 7px;
+  font-size: 18px;
+}
+button.saveAlbum{
   border: none;
   background-color: #D1BAE3;
   padding-bottom: 7px;
@@ -266,7 +283,7 @@ button.Repro {
     margin-bottom: 20px;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 5% 37% 31% 20%;
+    grid-template-columns: 4% 5% 37% 31% 20%;
     padding-top: 15px;
     border-top: 1px solid white;
     font-size: 18px;
@@ -280,8 +297,8 @@ button.Repro {
 .inicio{
     margin: 20px 50px;
     display: grid;
-    grid-template-columns: 41% 34% 20%;
-    margin-left: 5%;
+    grid-template-columns: 43% 36% 20%;
+    margin-left: 9%;
     font-size: 18px;
 }
 
@@ -316,9 +333,9 @@ footer {
   /*tablet*/
 @media screen and (max-width: 768px){
   ul.nav {
-    padding-left: 170px;
-    grid-template-columns: 68% 14% 10%;
-    }  
+    padding-left: 180px;
+    grid-template-columns: 64% 9% 16% 6%;
+}
      ul.nav li {
      width: 100%;
       }
@@ -343,13 +360,19 @@ div.toolbar {
  .playlist{
   margin-top: 35px;
  }
+ nav.miniPlayer iframe {
+  height: 70px;
+  position: relative;
+  top: 317px;
+  right: -20px;
+}
  
   .inicio{
     margin: 0px 50px;
     display: grid;
-    grid-template-columns: 35% 38% 20%;
+    grid-template-columns: 41% 26% 10%;
     margin: -2%;
-    margin-left: 6%;
+    margin-left: 12%;
     font-size: 15px;
  }
  .musica{
@@ -357,7 +380,7 @@ div.toolbar {
   margin-bottom: -8px;
   margin-top: 21px;
   display: grid;
-  grid-template-columns: 7% 33% 36% 20%;
+  grid-template-columns: 5% 8% 36% 23% 28%;
   padding-top: 13px;
   font-size: 13px;
  }
@@ -384,11 +407,13 @@ div.toolbar {
   li.ultimo{
     display: none;
 }
-  ul.nav {
-    grid-template-columns: 27% 48% 13%;
+  
+ul.nav {
+    grid-template-columns: 11% 41% 14% 34%;
+    padding-left: 134px;
 }
 img.logo {
-    width: 32%;
+  width: 28%;
 }
 .info-container {
   visibility: hidden;
@@ -416,19 +441,42 @@ figure div i {
   font-size: 11px;
   margin-left: 2px;
   margin-right: 22px;
-  
-  
+  grid-template-columns: 56% 30% 5%;
+  padding-left: 31px;
 }
 
   .playlist{
-    width: 70%;
+    width: 80%;
     margin-bottom: 12%;
   }
+  nav.miniPlayer iframe {
+    height: 64px;
+    width: 336px;
+    position: relative;
+    top: 518px;
+    right: 32px;
+}
   .musica{
     font-size: 10px;
     padding-top: 10px;
     margin-bottom: -11px;
-    margin-top: 20px
+    grid-template-columns: 3% 8% 45% 26% 20%;
+    margin-top: 14px
+    
+  }
+  .simbolos {
+    position: relative;
+    bottom: 6px;
+   }
+  button.Repro {
+    font-size: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  button.saveAlbum{
+    font-size: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   li.footer {

@@ -1,5 +1,19 @@
 window.addEventListener("load", function() {
 
+     /*Condiciones para crear arrays o guardar canciones en el LocalStorage*/
+     let cancionesFavoritas
+     if (localStorage.getItem("cancionesPreferidas") != null) {
+         cancionesFavoritas = localStorage.getItem("cancionesPreferidas").split(",")
+     } else {
+         cancionesFavoritas = []
+     }
+     let albumsFavoritos
+     if (localStorage.getItem("albumsPreferidos") != null) {
+      albumsFavoritos = localStorage.getItem("albumsPreferidos").split(",")
+     } else {
+      albumsFavoritos = []
+     }
+
     let queryString = new URLSearchParams(location.search);
 
     let codigoDelAlbum = queryString.get("id-album");
@@ -14,15 +28,17 @@ window.addEventListener("load", function() {
     .then(
         function(informacion) {
             console.log(informacion)
-            
+
+            let playlist = informacion.tracks.data;
             let album = informacion.artist.name
             let img =  informacion.cover
             let fans = informacion.fans
             let tiempo = informacion.duration 
             let fecha = informacion.release_date
-            
+            let cancionID = playlist.id;
 
             let htmlimg = `
+            <section>
             <figure>
             <div><img class="portada" src="`+ img +`" alt="Álbum Anti"></div>
             <div class="i"><i class="far fa-play-circle"></i></div>
@@ -35,9 +51,51 @@ window.addEventListener("load", function() {
             <li>`+ fans +` fans</li>
             </ul>
            </div>
-       
+           </section>
+           <div class="toolbar">
+           <div> 
+           <button class="escuchar"> 
+               <ul class="escucharbutton">
+                   <li class="icono" id-playlist="`+ cancionID +`"><i class="far fa-play-circle"></i></li>
+                   <li>Escuchar</li>
+               </ul>
+           </button>
+           </div>
+           <div> 
+           <button class="agregar"> 
+               <ul class="botones">
+                   <li class="save" id-playlist="`+ cancionID +`"><i class="fas fa-heart"></i></li>
+                   <li>Agregar</li>
+               </ul>
+           </button>
+           </div>
+           </div>
             `
-             document.querySelector("section").innerHTML += htmlimg  
+             document.querySelector(".bloque").innerHTML += htmlimg  
+
+             var cancionButtonRepro = document.querySelectorAll(".icono");
+                 for (let i = 0; i < cancionButtonRepro.length; i++) {
+                     cancionButtonRepro[i].onclick = function (){
+                      document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-playlist") +'&app_id=1" width="350" height="350"></iframe>'
+                     }
+                    }
+                   var albumButtonSave = document.querySelectorAll(".save")
+             for (let i = 0; i < albumButtonSave.length; i++) {
+             albumButtonSave[i].addEventListener ('click', function(){
+
+                if (albumsFavoritos.includes(this.getAttribute("id-album")) == false ) {
+                   
+                    albumsFavoritos.push(this.getAttribute("id-album"));
+
+                    localStorage.setItem("albumsPreferidos", albumsFavoritos);
+                    
+                    UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Álbum guardado en favoritos', status: 'danger'})
+                   
+                } 
+                   
+            })
+            
+        }
 
                 let playlists = informacion.tracks.data;
                 
@@ -45,7 +103,7 @@ window.addEventListener("load", function() {
     
                 const cadaplaylist = playlists[index];
                 
-                
+                let cancionID = cadaplaylist.id
                 let song = cadaplaylist.title;;
                 let AidiCancion = cadaplaylist.id
                 let duracion = cadaplaylist.duration
@@ -64,7 +122,7 @@ window.addEventListener("load", function() {
                     </div>
                     <div  class="play">`+ song +`</div>
                     <div>`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + ` </div>
-                    <div><i class="fas fa-heart"></i></div>
+                    <button class='saveAlbum' id-album="`+ cancionID +`"><i class='fas fa-heart' id='pintadito'></i></button>
                     </article> 
                     `
                     
@@ -75,6 +133,26 @@ window.addEventListener("load", function() {
                      cancionButtonRepro[i].onclick = function (){
                       document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-album") +'&app_id=1" width="350" height="350"></iframe>'
                      }
+                    }
+                 var cancionButtonSave = document.querySelectorAll("button.saveAlbum")
+
+                 for (let i = 0; i < cancionButtonSave.length; i++) {
+                        
+                    cancionButtonSave[i].addEventListener ('click', function(){
+    
+                        if(cancionesFavoritas.includes(this.getAttribute("id-song")) == false ){
+
+                            cancionesFavoritas.push(this.getAttribute("id-song"));
+
+                            localStorage.setItem("cancionesPreferidas", cancionesFavoritas);
+
+                            UIkit.notification({message: '<span uk-icon=\'icon: heart\'></span> Canción guardada en favoritos ', status: 'danger'})  
+        
+                        
+                        }
+                               
+                        })
+                        
                     }
              }
          }

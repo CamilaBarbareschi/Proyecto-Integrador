@@ -6,6 +6,7 @@
 html {
     font-family: 'Oswald', sans-serif; 
     background-color:  #D1BAE3;;
+
 }
 /*ENCABEZADO*/
 .buscador{
@@ -229,28 +230,31 @@ button.agregar ul{
     list-style: none;
     padding: 0px 0px;
 }
-button.agregar ul li.icono{
+button.agregar ul li.icono.save{
     padding-right: 10px;
 }
-button.escuchar ul li.icono{
+button.escuchar ul li.icono.save{
     padding-right: 10px;
 }
-button.escuchar ul li.icono i:hover{
+button.escuchar ul li.icono.save i:hover{
     color: white;
 }
-button.agregar ul li.icono i:hover {
+button.agregar ul li.icono.save i:hover {
     color: white;
 }
  /*Mini reproductor*/
- nav.miniPlayer{
+ nav.miniPlayer {
     position: fixed;
     right: 2%;
-    top: 2%;
+    top: 10%;
     z-index: 12;
-}
-nav.miniPlayer iframe{
+  }
+  nav.miniPlayer iframe{
      height: 70px;
-}
+     position: relative;
+     top: 0px;
+     right: -5px;
+  }
 .simbolos {
     margin: 0 auto;
 }
@@ -261,7 +265,16 @@ nav.miniPlayer iframe{
 .fas.fa-play:hover {
     color:#480082;
 }
+#widget-player{
+    position: relative;
+}
 button.Repro {
+    border: none;
+    background-color: #D1BAE3;
+    padding-bottom: 7px;
+    font-size: 18px;
+}
+button.saveAlbum{
     border: none;
     background-color: #D1BAE3;
     padding-bottom: 7px;
@@ -473,4 +486,16 @@ ul.datos-album{
 button {
     max-width: 136%;
 
-}}
+}
+ /*Mini reproductor*/
+ nav.miniPlayer {
+    position: fixed;
+    top: 2%;
+    left: 3%;
+    z-index: 15;
+}
+nav.miniPlayer iframe {
+    height: 70px;
+    width: 96%;
+}
+}
