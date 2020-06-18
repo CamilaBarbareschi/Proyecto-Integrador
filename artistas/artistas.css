@@ -18,7 +18,9 @@ body {
        50% {background-position: 100% 50%;}
        100% {background-position: 0% 50%;}
    }
-   
+   button:focus{
+    outline: 0px;
+}
    .contenedor{
            display: grid;
            grid-template-columns:35% 55% ;
@@ -139,7 +141,7 @@ div.header ul.nav i.fas.fa-heart{
     color: rgb(255, 0, 55);
 }
 div.header ul.nav i.fas.fa-heart:hover{
-    color: #480082;
+    color: #dbff4b;;
 }
 button i{
     font-size: 24px;
@@ -147,7 +149,7 @@ button i{
 }
 button {
     border: none;
-    background-color: #D1BAE3;
+    background-color: transparent;
 }
 
   .simbolos {
@@ -161,6 +163,9 @@ button {
 }
 .fas.fa-play:hover {
     color:#480082;
+}
+.primero i:hover{
+    color: #dbff4b;
 }
 .fas.fa-heart{
     color: black;

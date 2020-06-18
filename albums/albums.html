@@ -13,6 +13,7 @@
      <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Ubuntu&display=swap" rel="stylesheet">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
      <link rel="stylesheet" href="albums.css">
+     <script src="../generos/generos.js"></script>
  </head>
  <body>
 
@@ -25,16 +26,23 @@
           <li class="buscador"><i class="fas fa-search"></i></li>
           <li class="ultimo">
                <div class="flexsearch--wrapper">
-               <form class="flexsearch--form" action="resultados.html" method="GET">
-                   <div class="flexsearch--input-wrapper">
-                       <input class="flexsearch--input" name="search" type="search" placeholder="Realice su busqueda">
+                <form class="flexsearch--form" action="../buscador/resultadosSearch.html" method="GET">
+                    <div class="flexsearch--input-wrapper">
+                          <input class="flexsearch--input" name="search" type="search" placeholder="">
                    </div>
-               </form>
+                </form>
                </div>
           </li>
           <li class="primero"><a href="../index/index.html"><i class="fas fa-home"></i></a></li>
           <li class="navEspecial"><a href="../mi playlist/favoritos.html"><i class="fas fa-heart"></i></a></li>
-          <li class="generos"><a class="uk-active menuLink" href="../generos/generos.html"><i class="fas fa-music"></i></a></li></li>
+          <li><div class="uk-inline generos">
+            <button class="uk-button uk-button-default" type="button"><i class="fas fa-music" id="generoButton"></i></button>
+            <div uk-dropdown="pos: left-center mode: click">
+                <ul class="uk-nav uk-dropdown-nav cadaGeneroContenedor">
+                  
+                </ul>
+            </div>
+        </div></li>
        </ul> 
    </header>
    </div>

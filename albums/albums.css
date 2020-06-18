@@ -340,11 +340,43 @@ div.uk-card-body{
 i:hover{
     color:#dbff4b;
 }
+#generoButton {
+    color: white;
+    z-index: 6;
+    font-size: 25px;
+    border: none;
+  }
+.uk-dropdown-nav {
+    height: 60vh;
+    overflow-y: scroll;
+    white-space: nowrap;
+    font-size: 0.875rem
+  }
+  .uk-button-default {
+    background-color: transparent;
+    border: none;
+}
+#generoButton:hover {
+    color: #dbff4b ;
+  }
+  li.uk-active.cadaGenero a:hover{
+    color: #dbff4b ;
+  }
+  li.uk-active.cadaGenero a{
+    color: #440875 ;
+  }
 button.escuchar ul.escucharbutton li{
     padding-top: 20px;
 }
 button.agregar ul li{
     padding-top: 20px;
+}
+button.saveAlbum i{
+    color: black;
+    font-weight: 900;
+}
+button.saveAlbum i:hover{
+    color: #480082;
 }
 /*FOOTER*/
 footer {
@@ -473,6 +505,7 @@ img.logo {
     grid-template-columns: 14% 56% 14% 5%;
     margin-bottom: -5%;
     padding-top: 4%;
+    padding-left: 0%;
 }
 img.portada {
     width: 195px;
