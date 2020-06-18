@@ -63,8 +63,8 @@ window.addEventListener("load", function() {
             </div>
             <div> 
             <button class="agregar"> 
-               <ul class="botones">
-                   <li class="save" id-album="`+ albumId +`"><i class="fas fa-heart" id='pintadito'></i></li>
+               <ul class="botones  save" id-album="`+ albumId +`">
+                   <li class="save" id-album="`+ albumId +`"><i class="fas fa-heart" ></i></li>
                    <li>Agregar</li>
                </ul>
             </button>
