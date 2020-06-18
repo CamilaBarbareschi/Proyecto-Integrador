@@ -37,6 +37,29 @@ header{
     width: 100%;
     z-index: 2;
 }
+footer {
+    background-color: rgba(250, 108, 61, 0.925);
+}
+footer ul  {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    padding: 10px;
+}
+li.footer a {
+    text-decoration: none;
+}
+li.footer{
+    list-style-type: none; 
+    color: black;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "raleway";
+}
+.logofooter{
+    width: 30px ;
+}
 /*MENU HAMBURGUESA*/
 #menuButton {
     position: fixed;
@@ -402,6 +425,13 @@ button.save {
     border: none;
     background-color: cornsilk;
 }
+button.savePlaylist{
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+}
 button.saveAlbum {
     width: 40px;
     height: 38px;
@@ -417,6 +447,14 @@ button.saveArtista {
     background-color: cornsilk;
 }
 button.repro {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: cornsilk;
+    margin-right: 10px;
+}
+button.reproPlaylist {
     width: 40px;
     height: 38px;
     border-radius: 50%;
@@ -489,6 +527,9 @@ button.reproArtista {
 header{
     height: 23vh;
 };
+li.footer{
+    font-size: 16px;
+}
 h3.uk-card-title {
     font-size: 16px;
 }
@@ -509,7 +550,16 @@ button.reproArtista {
     height: 26px;
     margin-right: 2px;
 }
+button.reproPlaylist {
+    width: 26px;
+    height: 26px;
+    margin-right: 2px;
+}
 button.save{
+    width: 26px;
+    height: 26px;
+}
+button.savePlaylist{
     width: 26px;
     height: 26px;
 }
@@ -603,5 +653,8 @@ div.sinResultados img {
     bottom: 5%;
     width: 45%;
     left: 1%;
+}
+li.footer {
+    font-size: 10px;
 }
 }
