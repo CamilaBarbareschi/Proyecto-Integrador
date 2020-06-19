@@ -90,7 +90,7 @@ input:-moz-placeholder {
 }
 ul.nav {
     display: grid;
-    grid-template-columns: 78% 7% 7% 5%;
+    grid-template-columns: 71% 8% 8% 5%;
     padding-left: 325px;
     margin: 0px;
     padding-top: 16px;
@@ -348,6 +348,9 @@ i:hover{
     z-index: 6;
     font-size: 25px;
     border: none;
+    position: absolute;
+    top: 0px;
+    left: 5px;
   }
 .uk-dropdown-nav {
     height: 60vh;
@@ -478,7 +481,7 @@ div.toolbar {
 }
 ul.nav {
     padding-left: 180px;
-    grid-template-columns: 64% 9% 16% 6%;
+    grid-template-columns: 57% 9% 12% 4%;
 }  
 ul.nav li {
     width: 100%;
@@ -535,7 +538,7 @@ li.ultimo{
     display: none;
 }
 ul.nav {
-    grid-template-columns: 11% 41% 14% 34%;
+    grid-template-columns: 11% 41% 14% 15%;
     padding-left: 134px;
 }
 img.logo {
@@ -563,5 +566,22 @@ li.footer {
     top: 385px;
     right: 55px;
 }
-
+#searchButton {
+    position: absolute;
+    top: -6%;
+    color: white;
+    left: 13%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  [class*=uk-inline] {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    width: 0px;
+    vertical-align: middle;
+  }
+  button:focus{
+    outline: 0px;
+    }
 }

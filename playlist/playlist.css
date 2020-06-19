@@ -80,7 +80,7 @@ input:-moz-placeholder {
 }
 ul.nav {
   display: grid;
-  grid-template-columns: 78% 7% 7% 5%;
+  grid-template-columns: 72% 7% 7% 5%;
   padding-left: 325px;
   margin: 0px;
   padding-top: 16px;
@@ -124,7 +124,20 @@ header{
   width: 100%;
 }
 
- 
+#generoButton {
+  color: white;
+  z-index: 6;
+  font-size: 25px;
+  border: none;
+  position: absolute;
+  top: -3px;
+  left: 5px;
+}
+.uk-button-default {
+  background-color: transparent;
+  color: #333;
+  border: transparent !important;
+}
  .imagenes{
   display: grid;
   margin-top: 5%;
@@ -336,7 +349,7 @@ footer {
 @media screen and (max-width: 768px){
   ul.nav {
     padding-left: 180px;
-    grid-template-columns: 64% 9% 16% 6%;
+    grid-template-columns: 57% 6% 16% 4%;
 }
      ul.nav li {
      width: 100%;
@@ -417,7 +430,7 @@ nav.miniPlayer iframe {
 }
   
 ul.nav {
-    grid-template-columns: 11% 41% 14% 34%;
+    grid-template-columns: 15% 33% 14% 13%;
     padding-left: 134px;
 }
 img.logo {
@@ -498,5 +511,29 @@ nav.miniPlayer iframe {
   footer ul {
   padding: 0px;
   }
-
+  #searchButton {
+    position: absolute;
+    top: -6%;
+    color: white;
+    left: 13%;
+    z-index: 6;
+    font-size: 25px;
+  }
+  [class*=uk-inline] {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    width: 0px;
+    vertical-align: middle;
+  }
+  button:focus{
+    outline: 0px;
+    }
+  .uk-buttonuk-button-default{
+    border: transparent;
+    background-color: transparent;
+  }
+  .flexsearch--wrapper{
+    background-color: transparent !important;
+  }
 }
