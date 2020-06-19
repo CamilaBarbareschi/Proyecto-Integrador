@@ -25,7 +25,7 @@ html {
   opacity: 1;
   z-index: 3;
   position: absolute;
-  top: 70%;
+  top: 85%;
   left: -28%;
   background: rgba(255, 107, 57, 0.952);
   width: 100%;
@@ -40,14 +40,14 @@ html {
   opacity: 1;
   z-index: 4;
   background: rgba(225, 225, 225, 0.40);
-  top: 70%;
+  top: 85%;
   left: -32%;
 }
 .onda.-tres {
   animation: girar 6000ms infinite linear;
   opacity: 1;
   background: #840ce6e5;
-  top: 70%;
+  top: 85%;
   left: -36%;
   z-index: 2;
 }
