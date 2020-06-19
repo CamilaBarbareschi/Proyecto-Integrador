@@ -53,7 +53,6 @@
                 <ul class="datos-album">
                 <li> `+numero+` canciones</li>
                 <li> `+ duration +`  segundos</li>
-                <li> 28/01/2016</li>
                 <li>`+ fans +` fans</li>
                 </ul>
                </div>

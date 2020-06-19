@@ -47,17 +47,20 @@ body {
            font-family: "Roboto" ;
            font-weight: bolder;
            position: relative;
-           top: 52px ;
+           top: 85px ;
            right: 0px ;
+           color: black;
+           font-weight: bold;
            }
            
            h2.Subtitulo {
                font-family: "Raleway";
                font-weight: normal;
                position: relative;
-               top: 40px;
+               top: 48px;
                right: 0px ;
                font-size: 18px;
+               color: black;
            }
 
    article.Articulo {
@@ -94,11 +97,9 @@ nav.miniPlayer iframe{
        text-align: center !important;
        font-weight: bold;
        font-size: 32px;
-   }
-   
-   h1.tituloTop10 {
-       text-align: center;
-   }
+       padding-top: 10px;
+       color: black;   
+    }
 
    nav.canciones {
        display: grid;
@@ -118,7 +119,8 @@ nav.miniPlayer iframe{
   div.numero {
       text-align: center;
       padding-top: 7px;
-      border-bottom-color:1
+      border-bottom-color:1;
+      color: black;
   }
   .nombre a {
       text-decoration: none;
@@ -133,6 +135,10 @@ nav.miniPlayer iframe{
       white-space: nowrap;            
       overflow: hidden;
       padding-top: 7px;
+      color: black;
+  }
+  div.tiempo {
+    color: black;
   }
 div.header ul.nav i.fas.fa-heart{
     color: white;
@@ -206,12 +212,12 @@ button {
 
    
    aside.New h1 {
-       font-family: "Ubuntu";
        font-size: 32px;
        text-align: center;
        text-overflow: ellipsis;                        
       white-space: nowrap;            
       overflow: hidden;
+      font-weight: bold;
       color: black;
    }
    aside.New a h1:hover {
@@ -224,7 +230,7 @@ button {
     text-align: center;
     margin-top: 90px;
     font-size: 30px !important;
-    margin-bottom: -9px;
+    margin-bottom: -34px;
 }
 
 h2.fecha{
@@ -234,6 +240,11 @@ font-family: "Arial";
     text-overflow: ellipsis;                        
       white-space: nowrap;            
       overflow: hidden;
+      color: black;
+      font-weight: bold;
+}
+h1.nuevo {
+    padding-top: 20px;
 }
 
 
@@ -339,6 +350,7 @@ ul.redesSociales i{
          text-overflow: ellipsis;
          white-space: nowrap;
          overflow: hidden;
+         color: black;
      }
    
    
@@ -477,17 +489,19 @@ ul.redesSociales i{
            text-align: center;
        }
        .NombreDelArtista {
-           top: 0px;
+           top: 23px;
            text-align: center;
            bottom: 5px;
            
        }
        .Subtitulo {
-           top: 0px !important;
+           top: -13px !important;
            text-align: center;
        }
         main.Titulo h1 {
             width: 157px;
+            color: black;
+            font-weight: bold;
         }
    
         main#main {
@@ -535,7 +549,7 @@ ul.redesSociales i{
            .NombreDelArtista {
                top: 0px;
                text-align: center;
-               margin-bottom: -8px;
+               margin-bottom: -41px;
                
            }
            .Subtitulo {
