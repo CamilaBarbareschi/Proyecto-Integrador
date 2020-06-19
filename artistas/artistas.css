@@ -161,11 +161,13 @@ button {
   .simbolos {
       margin: 0 auto;
       padding-top: 8px;
+      margin-left: 0px;
+    margin-right: 0px;
   }
   .fas.fa-play{
     color: black;
     cursor: pointer;
-    padding-left: 11px;
+    padding-left: 0px;
 }
 .fas.fa-play:hover {
     color:#480082;
@@ -564,7 +566,7 @@ ul.redesSociales i{
                 grid-template-columns: 30% 30% 30%;
             } 
             article.Articulo {
-                width: 70%;
+                width: 73%;
             }
             .Top ol {
                margin-left: 40px;
@@ -610,4 +612,60 @@ ul.redesSociales i{
                 width: 100%;
                 height: auto;
             }
+            #encabezado .buscador{
+                display: block;
+             }
+             #encabezado button.uk-button uk-button-default:focus{
+                outline: 0px;
+                }
+            #encabezado [class*=uk-inline] {
+                    display: inline-block;
+                    position: relative;
+                    max-width: 100%;
+                    width: 0px;
+                    vertical-align: middle;
+                  }
+                  #searchButton {
+                    position: relative;
+                    top: 3%;
+                    color: white;
+                    left: -105%;
+                    z-index: 6;
+                    font-size: 25px;
+                  }
+                  .uk-button-default {
+                    background-color: transparent;
+                    color: #333;
+                    width: 0px;
+                    border-color: transparent;
+                    position: relative;
+                    top: 0px;
+                    right: 82px;
+                      }
+                  .uk-button-default:focus, .uk-button-default:hover {
+                    background-color: transparent;
+                    color: #333;
+                    border-color: transparent;
+                    position: relative;
+                    top: 0px;
+                    width: 0px;
+                    right: 82px;
+                      }
+                .flexsearch--wrapper {
+                    height: auto;
+                    width: auto;
+                    max-width: 100%;
+                    overflow: hidden;
+                    background: transparent;
+                    margin: 0;
+                    position: relative;
+                    right: 14% !important;
+                }
+                .flexsearch--input-wrapper {
+                    padding: 0 66px 0 0;
+                    overflow: hidden;
+                    width: 89%;
+                }
+
+                  
             }

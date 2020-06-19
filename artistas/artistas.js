@@ -47,9 +47,9 @@ window.addEventListener ("load", function () {
     )
     .then (
        function (infoTopTracks) {
-           ////console.log(infoTopTracks);
+           console.log(infoTopTracks);
            let informacion = infoTopTracks.data;
-           HTMLtoptrack = '<h1 class="tituloTop10"> Top tracks</h1>';
+          let HTMLtoptrack = '<h1 class="tituloTop10"> Top tracks</h1>';
            for (let index = 0; index < informacion.length; index++) {
                const cadaelemento = informacion[index];
                
@@ -63,7 +63,7 @@ window.addEventListener ("load", function () {
                 if(cancionTimeInSeconds<10){
                     cancionTimeInSeconds = '0' + cancionTimeInSeconds
                 }
-               
+
                 if(cancionesFavoritas.includes("" + AidiCancion) == false ){
 
                 HTMLtoptrack +=
@@ -93,13 +93,12 @@ window.addEventListener ("load", function () {
                 <div class="tiempo">`+ cancionTimeInMinute +`:`+ cancionTimeInSeconds + `  </div>
                 </nav>
                 ` 
-             }
-
-              
+             }  
            }
-           document.querySelector (".Top").innerHTML = HTMLtoptrack;
-            
+         document.querySelector (".Top").innerHTML = HTMLtoptrack;
+        
            var cancionButtonRepro = document.querySelectorAll(".Repro");
+
             for (let i = 0; i < cancionButtonRepro.length; i++) {
                 cancionButtonRepro[i].onclick = function (){
                  document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=tracks&id=' + this.getAttribute("id-song") +'&app_id=1" width="350" height="350"></iframe>'
