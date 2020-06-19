@@ -61,7 +61,7 @@ html {
 }
 ul.uk-subnav.uk-subnav-pill{
   background: linear-gradient(150deg,#dc3e0581,#f06d3e7c, #dc3e058a, #c5008385, #9e00c571, #9400cf85);
-  background-size: 400% 300%;
+  background-size: 400% 650%;
   animation: BgGradient 7s ease infinite;
   width: 98%;
   margin-left: 1%;

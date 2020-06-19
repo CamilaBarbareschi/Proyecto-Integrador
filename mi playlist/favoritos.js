@@ -182,7 +182,7 @@ window.addEventListener('load', function(){
                                          document.querySelector("nav.miniPlayer").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=clasic&autoplay=true&playlist=false&width=350&height=350&color=de00ff&layout=light&size=small&type=album&id=' + this.getAttribute("id-album") +'&app_id=1" width="350" height="350"></iframe>'
                                     }
                                 }   
-                                var buttonEliminarAlbum = document.querySelectorAll(".unSaveAlbum")
+                             var buttonEliminarAlbum = document.querySelectorAll(".unSaveAlbum")
                                 for (let index = 0; index < buttonEliminarAlbum.length; index++) {
                                     buttonEliminarAlbum[index].addEventListener('click', function (){
                                        let removeConfirm = confirm('Deseas eliminar el album de favoritos?')
@@ -192,7 +192,6 @@ window.addEventListener('load', function(){
                                                      localStorage.setItem("albumsPreferidos", albumsFavoritos)
                                             }
                                      })
-                        
                                 }        
                         }
                     )
