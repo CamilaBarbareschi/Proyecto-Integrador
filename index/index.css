@@ -15,7 +15,7 @@ html {
 /*PORTADA*/
 .ondasWrapper{
   width: 300%;
-  height: 635px;
+  height: 730px;
   position: fixed;
   overflow: hidden;
   transform: translate3d(0, 0, 90deg);
@@ -25,7 +25,7 @@ html {
   opacity: 1;
   z-index: 3;
   position: absolute;
-  top: 85%;
+  top: 70%;
   left: -28%;
   background: rgba(255, 107, 57, 0.952);
   width: 100%;
@@ -40,14 +40,14 @@ html {
   opacity: 1;
   z-index: 4;
   background: rgba(225, 225, 225, 0.40);
-  top: 85%;
+  top: 70%;
   left: -32%;
 }
 .onda.-tres {
   animation: girar 6000ms infinite linear;
   opacity: 1;
   background: #840ce6e5;
-  top: 85%;
+  top: 70%;
   left: -36%;
   z-index: 2;
 }
