@@ -187,6 +187,50 @@ button {
     text-align: start;
     padding-top: 8px;
 }
+/*Genero button*/
+#generoButton {
+    color: white;
+    z-index: 6;
+    font-size: 25px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+  }
+  .uk-dropdown-nav {
+    height: 60vh;
+    overflow-y: scroll;
+    white-space: nowrap;
+    font-size: 0.875rem
+  }
+  .uk-dropdown {
+    
+    display: none;
+    position: absolute;
+    z-index: 1020;
+    box-sizing: border-box;
+    min-width: 200px;
+    padding: 25px;
+    background: #fff;
+    color: #666;
+    box-shadow: 0 5px 12px rgba(0,0,0,.15);
+    width: 300px;
+
+    }
+  .uk-button-default {
+    background-color: transparent;
+    border: none;
+}
+#generoButton:hover {
+    color: #dbff4b ;
+  }
+  li.uk-active.cadaGenero a:hover{
+    color: #dbff4b !Important;
+  }
+  li.uk-active.cadaGenero a{
+    color: #440875 !Important;
+    font-size: 18px;
+  }
   
    /*ACA TERMINA LA SECCION*/
      /*ASIDE*/
@@ -432,11 +476,11 @@ ul.redesSociales i{
      }
 
      #encabezado ul.nav {
-         display: grid;
-         grid-template-columns: 80% 7% 10%;
-         padding-left: 325px;
-         margin: 0px;
-         padding-top: 16px;
+        display: grid;
+        grid-template-columns: 67% 10% 10% 10%;
+        padding-left: 325px;
+        margin: 0px;
+        padding-top: 16px;
      }
      #encabezado ul.nav li {
          list-style-type: none;
@@ -515,8 +559,8 @@ ul.redesSociales i{
         }
    
         #encabezado ul.nav {
-           padding-left: 170px;
-           grid-template-columns: 68% 14% 10%;
+            padding-left: 170px;
+            grid-template-columns: 64% 13% 12% 10%;
            }  
            #encabezado ul.nav li {
             width: 100%;
@@ -585,8 +629,8 @@ ul.redesSociales i{
                  display: none;
              }
              #encabezado ul.nav {
-                 grid-template-columns: 27% 48% 13%;
-             }
+                grid-template-columns: 27% 28% 10% 10%;         
+                }
              #encabezado img.logo {
                  width: 32%;
              }
@@ -600,9 +644,8 @@ ul.redesSociales i{
              /*Mini reproductor*/
              nav.miniPlayer {
                 position: absolute;
-                left: 5%;
+                left: 0%;
                 width: 100%;
-                padding-right: 5%;
             }
             nav.miniPlayer iframe {
                 height: 70px;
@@ -666,6 +709,18 @@ ul.redesSociales i{
                     overflow: hidden;
                     width: 89%;
                 }
+                #encabezado ul.nav a {
+                    text-decoration: none;
+                    color: white;
+                    position: relative;
+                    left: 32px;
+                }
+                .fa-music:before {
+                    content: "\f001";
+                    position: relative;
+                    bottom: 18px;
+                    right: 22px;
+                }
 
-                  
             }
+           
