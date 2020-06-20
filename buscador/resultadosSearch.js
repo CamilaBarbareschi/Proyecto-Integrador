@@ -148,7 +148,7 @@ window.addEventListener("load", function() {
                              "<div class='uk-card-media-top'>" +
                              "<img src='"+ albumCover +"'></div>" +
                              "<div class='uk-card-body'>" +
-                             "<a href='../albums/albums.html?albumID=" + albumID + "'><h3 class='uk-card-title'>"+ albumTitulo + "</h3></a>" +
+                             "<a href='../albums/albums.html?id-album=" + albumID + "'><h3 class='uk-card-title'>"+ albumTitulo + "</h3></a>" +
                              "<button class='repro' id-album='" + albumID + "'><i class='fas fa-play'></i></button>" +
                              "<button class='saveAlbum' id-album='" + albumID + "'><i class='fas fa-heart'></i></button>" +
                              "</div></div></li>"
